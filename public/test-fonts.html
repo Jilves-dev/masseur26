@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Test</title>
+  <style>
+    @font-face {
+      font-family: 'Zaslia';
+      src: url('/src/fonts/Zaslia.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Brillant';
+      src: url('/src/fonts/brillant.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      padding: 2rem;
+      background: #f0f0f0;
+    }
+
+    .test-zaslia {
+      font-family: 'Zaslia', serif;
+      font-size: 3rem;
+      color: red;
+      margin-bottom: 1rem;
+    }
+
+    .test-brillant {
+      font-family: 'Brillant', serif;
+      font-size: 3rem;
+      color: blue;
+      margin-bottom: 1rem;
+    }
+
+    .test-system {
+      font-family: Arial, sans-serif;
+      font-size: 3rem;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="test-zaslia">Zaslia Font Test</h1>
+  <h2 class="test-brillant">Brillant Font Test</h2>
+  <p class="test-system">System Font (Arial) Test</p>
+</body>
+</html>

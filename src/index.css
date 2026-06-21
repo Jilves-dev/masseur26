@@ -1,0 +1,1231 @@
+/* ========================================
+   1. MUKAUTETUT FONTIT LOGOA VARTEN
+   ======================================== */
+
+@font-face {
+  font-family: LibreCaslonDisplay-Regular;
+  src: url("../src/fonts/LibreCaslonDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: QuranSurah1-mLKO5;
+  src: url("../src/fonts/QuranSurah1-mLKO5.ttf");
+}
+
+@font-face {
+  font-family: Kedebideri-Regular;
+  src: url("../src/fonts/Kedebideri-Regular.ttf");
+}
+  
+@font-face {
+  font-family: 'Qiswah Regular';
+  src: url('../src/fonts/Qiswah.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zaslia';
+  src: url('../src/fonts/Zaslia.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oranienbaum';
+  src: url('../src/fonts/Oranienbaum-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fugaz One Regular';
+  src: url('../src/fonts/FugazOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FasterOne Regular';
+  src: url('../src/fonts/FasterOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RacingSansOne Regular';
+  src: url('../src/fonts/RacingSansOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Rookworst Regular';
+  src: url('../src/fonts/Rookworst.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sad Films';
+  src: url('../src/fonts/Sad\ Films.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sandoval Speed';
+  src: url('../src/fonts/Sandoval\ Speed.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heavy Heap RG';
+  src: url('../src/fonts/heavy\ heap\ rg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-VariableFont_wdth,wght';
+  src: url('../src/fonts/Roboto-VariableFont_wdth\,wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text Regular';
+  src: url('../src/fonts/CrimsonText-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+/* 3. Tuo Tailwindin tyylit */
+@import "tailwindcss";
+
+@theme {
+   --font-librecaslon: LibreCaslonDisplay-Regular, serif;
+   --font-zaslia: Zaslia, serif;
+}
+
+
+
+/* 3. Tuo Tailwindin tyylit */
+@import "tailwindcss";
+
+@theme {
+   --font-librecaslon: LibreCaslonDisplay-Regular, serif;
+   --font-zaslia: Zaslia, serif;
+   --font-qiswah: Qiswah Regular, serif;
+   --font-quransuhra: QuranSurah1-mLKO5, serif;
+   --font-kedebideri: Kedebideri-Regular, serif;
+   --font-fugazone: Fugaz One Regular, serif;
+   --font-fasterone: FasterOne Regular, serif;
+   --font-racingSansOne: RacingSansOne Regular, serif;
+   --font-rookworst: Rookworst Regular, serif;
+   --font-sadfilms: Sad Films, serif;
+   --font-sandovalspeed: Sandoval Speed, serif;
+   --font-heavyheaprg: Heavy Heap RG, serif;
+   --font-robotoVariable: Roboto-VariableFont_wdth,wght, sans-serif;
+   --font-crimsontext: Crimson Text Regular, serif;
+}
+
+
+ /* ====================================
+   DESKTOP LOGO - MUKAUTETTU FONTTI
+   ==================================== */
+.desktop-logo {
+  letter-spacing: 0.02em; /* 5% fontin koosta - kokeile eri arvoja */
+  font-weight: bold !important; 
+    /* Simuloi paksumpaa fonttia text-shadowilla */
+  text-shadow: 
+    0.3x 0 0 currentColor,
+    -0.3px 0 0 currentColor,
+    0 0.3px 0 currentColor,
+    0 -0.3px 0 currentColor;
+}
+
+
+ /* ====================================
+   MODAL LOGO - MUKAUTETTU FONTTI
+   ==================================== */
+.modal-logotext-xl  {
+  letter-spacing: 0.14em; /* 5% fontin koosta - kokeile eri arvoja */
+}
+
+
+/* app värit: punainen  #E73725
+        vaalean vihreä  #0BA334
+        turkoosi sininen #0B7AA3
+        oliivin vihreä #010000
+        kirkkaan vihreä #0BA380
+        kirkkaan sininen #340BA3
+        harmaa #808080
+
+        tausta
+        #FFFFFF · pergamentti
+        #EFE5D2 · hiekka / aavikko
+        #FAF5EC · lämmin liina
+        #1F120C · espresso (tumma teema)
+*/
+
+/* Shopping cart badge (DESKTOP) */
+.items_count {
+  width: 20px;
+  height: 20px;
+  background: #E73725;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .items_count {
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    right: -20px;
+    font-size: 12px;
+  }
+}
+
+.items_count span {
+  font-size: inherit;
+  line-height: 1;
+}
+
+/* Banner responsive styles */
+.banner-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: 90%;
+}
+
+@media (min-width: 768px) {
+  .banner-items {
+    max-width: 600px;
+    padding: 2rem;
+  }
+}
+
+.banner-items h2 {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .banner-items h2 {
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+}
+
+.banner-items h1 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .banner-items h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-items h1 {
+    font-size: 56px;
+    line-height: 66px;
+  }
+}
+
+/* Button styles */
+.banner-items button,
+.bg-design-cover button,
+.addtocart button,
+.size-btn button,
+.mwa button:hover,
+.btn {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-width: 0px;
+  border-radius: 0px;
+  background-color: #E73725;
+  color: #fff;
+  padding: 0.25rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .banner-items button,
+  .bg-design-cover button,
+  .addtocart button,
+  .size-btn button,
+  .mwa button:hover,
+  .btn {
+    font-size: 14px;
+    padding: 1rem 2rem;
+  }
+}
+
+.btn:hover {
+  background-color: #c92516;
+  transform: translateY(-1px);
+}
+
+.slick-slide > div {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Slider arrows responsive */
+.slick-prev,
+.slick-next {
+  color: white !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+}
+
+.slick-prev {
+  left: 10px !important;
+}
+
+.slick-next {
+  right: 10px !important;
+}
+
+/* Slider dots for mobile */
+.slick-dots {
+  bottom: 20px !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+  font-size: 8px !important;
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .slick-dots li button:before {
+    font-size: 12px !important;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: #E73725 !important;
+}
+
+/* Category cards */
+.mwa button {
+  background-color: #ffffff;
+  color: #E73725;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.mwa button:hover {
+  background-color: #E73725;
+  color: white;
+  border-color: #E73725;
+}
+
+/* Feature products responsive */
+.features {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .features {
+    padding: 1rem;
+  }
+}
+
+/* Image container - varmistetaan että overflow toimii */
+.image-container {
+  overflow: hidden !important;
+  position: relative;
+  contain: layout;
+}
+
+/* Hover-efektit kuviin */
+.image-container img {
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.tag {
+  z-index: 15 !important;
+}
+
+/* Varmistetaan että elementit eivät mene päällekkäin */
+.features {
+  isolation: isolate;
+}
+
+/* Varmistetaan että elementit eivät mene päällekkäin */
+.features {
+  isolation: isolate;
+}
+
+/* Product grid responsive */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Like-painikkeen animaatio */
+.text-red-600 {
+  animation: heartbeat 0.3s ease-in-out;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Tähtiarvostelut - paremmat hover-efektit */
+.star-rating {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.star-rating:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 3px rgba(255, 193, 7, 0.6));
+}
+
+/* Tähtien glow-efekti */
+.text-yellow-500 {
+  filter: drop-shadow(0 0 2px rgba(255, 193, 7, 0.3));
+}
+
+/* Rating container */
+.rating-container {
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.rating-container:hover {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* Background images responsive */
+.bg-image {
+  background-image: url('/images/banner5.jpg');
+  padding: 3rem 0;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.bg-design-cover {
+  background-image: url('/images/banner2.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bg-image {
+    padding: 6rem 0;
+    background-attachment: fixed;
+  }
+}
+
+/* Tummennettu tausta Review-komponentille */
+.bg-image-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .bg-design-cover {
+    padding: 6rem 0;
+  }
+}
+
+/* Modal responsive styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  overflow: auto;
+  max-height: 90vh;
+  width: 100%;
+  max-width: 90vw;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 2rem;
+    max-width: 66.666667%;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+/* Navigation responsive fixes */
+.translate {
+  transform: translate(-50%, 50%);
+}
+
+/* Responsive typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+/* Mobile-first text sizes */
+.text-responsive-xl {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-xl {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-responsive-xl {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive-xl {
+    font-size: 2.25rem;
+  }
+}
+
+/* Responsive spacing utilities */
+.space-y-responsive > * + * {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .space-y-responsive > * + * {
+    margin-top: 1rem;
+  }
+}
+
+/* Footer responsive */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3.5rem 0;
+  }
+}
+
+/* Sidebar responsive */
+.sidebar {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 25%;
+    max-width: none;
+  }
+}
+
+/* ====================================
+   SHOP-SIVUN MOBILE HEADER
+   Korvaa Header.jsx:n logon Shop-sivulla
+   ==================================== */
+   
+@media (max-width: 767px) {
+  /*.shop-mobile-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 5rem;
+    background-color: #FFFFFF;
+  }*/
+
+  .shop-mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* keskittää koko ryhmän */
+  gap: 0.5rem;               /* <-- TÄSTÄ säädät osien väliä */
+  padding: 0.5rem 1rem;      /* sama kuin etusivun headerissa */
+  background-color: #FFFFFF;
+  }
+
+  /* Hamburger-painike */
+  .shop-mobile-hamburger {
+    font-size: 1.75rem;
+    color: #374151;
+    transition: color 0.2s ease;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .shop-mobile-hamburger:hover,
+  .shop-mobile-hamburger:active {
+    color: #E73725;
+  }
+
+  /* Kategoria-otsikko (Header-tyylillä) */
+  .shop-mobile-category {
+    font-size: 2.0rem;
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Lantern ikoni Shop headerissa */
+  .shop-mobile-lantern {
+    display: inline-block;
+    height: 1.2em;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 0.00rem;
+  }
+
+  .shop-mobile-cart {
+  display: flex;
+  align-items: center;
+  /* poistettu: justify-content: flex-end; ja padding-right */
+}
+
+  .shop-mobile-cart-button {
+    position: relative;
+    font-size: 1.5rem;
+    color: #374151;
+    transition: color 0.2s ease;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .shop-mobile-cart-button:hover,
+  .shop-mobile-cart-button:active {
+    color: #E73725;
+  }
+
+  /* Ostoskorin badge */
+  .shop-mobile-cart-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: #E73725;
+    color: white;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0 4px;
+  }
+
+  /* Pienemmät näytöt - säädöt ---------------------------------------- */
+  @media (max-width: 380px) {
+    .shop-mobile-header {
+      gap: 0.25rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.2rem;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      background-color: #FFFFFF;
+    }
+
+    .shop-mobile-category {
+      font-size: 1.4rem;
+    }
+
+    .shop-mobile-hamburger,
+    .shop-mobile-cart-button {
+      font-size: 1.5rem;
+      min-height: 40px;
+      min-width: 40px;
+    }
+
+    .shop-mobile-cart {
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .shop-mobile-header {
+      gap: 0.125rem;
+      padding: 0.5rem;
+      background-color: #FFFFFF;
+    }
+
+    .shop-mobile-category {
+      font-size: 1.1rem;
+    }
+
+    .shop-mobile-hamburger,
+    .shop-mobile-cart-button {
+      font-size: 1.35rem;
+      min-height: 38px;
+      min-width: 38px;
+      padding: 0.125rem;
+    }
+
+    .shop-mobile-cart-badge {
+      min-width: 16px;
+      height: 16px;
+      font-size: 9px;
+    }
+
+    .shop-mobile-cart {
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+  }
+}
+
+/* Touch targets for mobile */
+@media (max-width: 767px) {
+  button, a, input[type="button"], 
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .touch-target {
+    padding: 12px;
+  }
+  
+  /* Better touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Mobile menu specific styles */
+  .mobile-menu-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #FFFFFF;
+  }
+
+  /* ========================================
+                 MOBILE HEADER
+     Hamburger (vasen) | Logo (keski) | Cart (oikea) */
+     
+  
+  /* Mobile header - 3-osainen grid layout */
+  .mobile-header-simple {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.50rem 1rem;
+    background-color: #FFFFFF;
+  }
+
+  /* VASEN: Hamburger menu nappi */
+  .mobile-hamburger-simple {
+    font-size: 1.75rem;
+    color: #374151;
+    transition: color 0.2s ease;
+    padding: 0.25rem;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .mobile-hamburger-simple:hover,
+  .mobile-hamburger-simple:active {
+    color: #c92516;
+  }
+
+  /* KESKI: Logo (keskitetty) */
+  .mobile-logo-center {
+    padding-left: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Lantern ikoni logossa */
+  .mobile-lantern-icon {
+    display: inline-block;
+    height: 1.1em;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 0.00rem;
+  }
+
+  /* OIKEA: Ostoskori */
+  .mobile-cart-simple {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 18px;
+  }
+
+  .mobile-cart-button {
+    position: relative;
+    font-size: 1.5rem;
+    color: #374151;
+    transition: color 0.2s ease;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-cart-button:hover,
+  .mobile-cart-button:active {
+    color: #c92516;
+  }
+
+  /* Ostoskorin badge */
+  .mobile-cart-badge-simple {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: #E73725;
+    color: white;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0 4px;
+  }
+
+  /*------------------------------------------------------*/
+
+  /* REDMI 12C ja pienemmät näytöt (max 380px) */
+  @media (max-width: 380px) {
+    .mobile-header-simple {
+      gap: 0.25rem;
+      padding-top: 0.8rem;
+      padding-bottom: 0.2rem;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      background-color: #FFFFFF;
+    }
+
+    .mobile-logo-center {
+      font-size: 1.95rem;
+    }
+
+    .mobile-hamburger-simple {
+      font-size: 1.4rem;
+      min-height: 40px;
+      min-width: 40px;
+      padding-left: 4px;
+      padding-right: 1px;
+    }
+
+    .mobile-cart-button {
+      font-size: 1.4rem;
+      min-height: 40px;
+      min-width: 40px;
+      padding-left: 4px; 
+      padding-right: 0px;
+    }
+  }
+
+  /* Erittäin pienet näytöt (max 350px) */
+  @media (max-width: 350px) {
+    .mobile-header-simple {
+      gap: 0.125rem;
+      padding: 0.5rem;
+      background-color: #FFFFFF;
+    }
+
+    .mobile-logo-center {
+      font-size: 1.2rem;
+    }
+
+    .mobile-hamburger-simple,
+    .mobile-cart-button {
+      font-size: 1.35rem;
+      min-height: 38px;
+      min-width: 38px;
+      padding: 0.125rem;
+    }
+
+    .mobile-cart-badge-simple {
+      min-width: 16px;
+      height: 16px;
+      font-size: 9px;
+    }
+  }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive tables */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .table-responsive table {
+    font-size: 0.875rem;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile menu slide animation */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.3s ease-out;
+}
+
+/* Smooth transitions for mobile interactions */
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  animation: fadeIn 0.2s ease-in-out;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: #FFFFFF;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu-closing {
+  animation: fadeOut 0.2s ease-in-out;
+}
+
+/* Touch-friendly mobile menu items */
+.mobile-menu-item {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+  min-height: 3rem;
+}
+
+.mobile-menu-item:hover,
+.mobile-menu-item:active {
+  background-color: #f8f9fa;
+}
+
+/* Mobile menu categories larger text */
+.mobile-category-link {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 1rem 0;
+}
+
+/* Mobile menu other links */
+.mobile-other-link {
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 0.75rem 0;
+}
+
+/* Social media icons mobile */
+.mobile-social-icon {
+  font-size: 2rem;
+  transition: color 0.2s ease;
+}
+
+/* LISÄTTY: Hamburger menu sijoittelu */
+.hamburger-menu {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Right icons container mobile */
+.right-icons-mobile {
+  display: flex;
+  align-items: center;
+  gap: 0.20rem;
+}
+
+.right-icons-mobile .icon-button {
+  padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estä mobile menu taakse skrollaus */
+body.mobile-menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Mobile menu header */
+.mobile-menu-header {
+  display: flex;
+  text-align: left !important;
+  margin-left: 1rem; 
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Mobile menu content area */
+.mobile-menu-content {
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+/* Category section mobile */
+.mobile-categories {
+  margin-bottom: 2rem;
+}
+
+.mobile-categories h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #374151;
+}
+
+/* Other links section mobile */
+.mobile-other-links {
+  margin-bottom: 2rem;
+}
+
+/* Social section mobile */
+.mobile-social {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}
+
+.mobile-social h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.mobile-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Mani.jsx-sivun lyhty-ikonin koko */
+.mani-lantern-icon {
+  height: 2.8rem; /* Voit muuttaa tätä arvoa, esim. 10rem, 5rem jne. */
+}
