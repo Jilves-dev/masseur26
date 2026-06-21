@@ -3,7 +3,7 @@ import Home from './Home';
 import Mani from './Mani';
 import Shop from './Shop';
 import Cart from './Cart';
-import Contact from './Contact';
+//import Contact from './Contact';
 import About from './About';
 import Repairs from './Repairs';
 import NotFoundPage from './NotFoundPage';
@@ -18,7 +18,7 @@ export {
   Header,
   Footer,
   Mani,
-  Contact,
+  //Contact,
   About,
   Repairs,
   NotFoundPage,

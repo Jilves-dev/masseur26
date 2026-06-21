@@ -12,7 +12,6 @@ import {
   Cart,
   Header,
   Footer,
-  Contact,
   About,
   Repairs,
   NotFoundPage,
@@ -60,7 +59,7 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/mani" element={<Mani />} />
-        <Route path="/contact" element={<Contact />} />
+         {/* <Route path="/contact" element={<Contact />} />  Contact,  */}
         <Route path="/about" element={<About />} />
         <Route path="/repairs" element={<Repairs />} />
         <Route path="/booking" element={<BookingPage />} />
@@ -150,7 +149,7 @@ function AppContent() {
       </Routes>
 
       <DevTools />
-      <Footer />
+      {/* <Footer />*/}
     </div>
   );
 }

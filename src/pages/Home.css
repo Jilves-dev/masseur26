@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  background-color: #F5F2EE;
+}
+
+
+
+
+ /*og .gradient-text {
+  background: linear-gradient(to top, #D8C3A5, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  overflow: hidden;
+  border-right: 0px solid #fff;
+  animation: typing-text 7s steps(60) infinite, blink 0.3s infinite;
+  white-space: nowrap; * Corrected from text-wrap *
+  display: inline-block;
+  width: 0;
+}
+
+.gradient-text {
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  border-right: 0px solid #fff;
+  animation: typing-text 7s steps(60) infinite, blink 0.3s infinite;
+  white-space: nowrap; 
+  display: inline-block;
+  width: 0;
+}
+
+@keyframes typing-text {
+  from {
+      width: 0%;
+  }
+  to {
+      width: 100%;
+  }
+}
+*/
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes videoFadeIn {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.video-fade {
+  animation: videoFadeIn var(--video-duration, 10s) ease-in-out infinite;
+}
+
+
