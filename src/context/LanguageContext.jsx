@@ -5,11 +5,11 @@ import { translations } from '../translations';
 const LanguageContext = createContext(null);
 
 export const LanguageProvider = ({ children }) => {
-  const { language, setLanguage, toggleLanguage } = useLanguage('en');
+  const { language, setLanguage, toggleLanguage } = useLanguage('fi');
 
   const t = (key) => {
-    const dict = translations[language] ?? translations.en;
-    const val = dict[key] ?? translations.en[key];
+    const dict = translations[language] ?? translations.fi;
+    const val = dict[key] ?? translations.fi[key];
     return val ?? key;
   };
 

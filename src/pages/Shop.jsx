@@ -314,7 +314,7 @@ const Shop = () => {
   if (loading && products.length === 0) {
     return (
       <div className="font-racingSansOne font-medium text-xl text-center py-20">
-        Loading ...
+        Latautuu...
       </div>
     );
   }
@@ -345,12 +345,12 @@ const Shop = () => {
             <span className="font-medium text-4xl md:text-3xl black">
               {selectedCategory
                 ? selectedCategory.charAt(0).toUpperCase()
-                : 'S'}
+                : 'K'}
             </span>
             <span className="font-medium text-4xl md:text-3xl text-black">
               {selectedCategory
                 ? selectedCategory.slice(1).toUpperCase()
-                : 'HOP'}
+                : 'AUPPA'}
             </span>
             <img
               src="/images/lantern32.png"
@@ -384,8 +384,8 @@ const Shop = () => {
           ==================================== */}
       <div className="hidden md:block bg-[#FFFFFF]">
         <PageHeading
-          home={'HOME'}
-          pagename={selectedCategory ? selectedCategory.toUpperCase() : 'SHOP'}
+          home={'ETUSIVU'}
+          pagename={selectedCategory ? selectedCategory.toUpperCase() : 'KAUPPA'}
         />
       </div>
 
@@ -415,15 +415,8 @@ const Shop = () => {
               to="/"
               onClick={() => closeMenuAndNavigate('/')}
             >
-              <span className="text-[#E73725] text-3xl">F</span>
-              <span className="text-black text-3xl">REEWHEEL</span>
-              <span className="text-[#E73725] text-3xl">B</span>
-              <span className="text-black text-3xl">IKES</span>
-              <img
-                src="/33591.svg"
-                alt=""
-                style={{ height: '1.5em', width: 'auto', display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }}
-              />
+              <span className="text-[#E73725] text-3xl">URHEILU</span>
+              <span className="text-black text-3xl">HIEROJA</span>
             </Link>
           </div>
 
@@ -511,7 +504,7 @@ const Shop = () => {
               {isAdmin() && (
                 <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
                   <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                    Admin Dashboard
+                    Hallintapaneeli
                   </h3>
                   <nav className="space-y-3">
                     <Link
@@ -519,7 +512,7 @@ const Shop = () => {
                       className="block text-xl text-black font-md hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin')}
                     >
-                      Admin Dashboard
+                      Hallintapaneeli
                     </Link>
 
                     <Link
@@ -527,7 +520,7 @@ const Shop = () => {
                       className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/orders')}
                     >
-                      Order Management
+                      Tilaustenhallinta
                     </Link>
 
                     <Link
@@ -535,7 +528,7 @@ const Shop = () => {
                       className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/products')}
                     >
-                      Product Management
+                      Tuotehallinta
                     </Link>
 
                     <Link
@@ -543,7 +536,7 @@ const Shop = () => {
                       className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/users')}
                     >
-                      User Management
+                      Käyttäjähallinta
                     </Link>
                   </nav>
                 </div>
@@ -553,7 +546,7 @@ const Shop = () => {
               {currentUser && !isAdmin() && (
                 <div className="mb-8 font-racingSansOne font-medium border-b border-[#E73725] pb-6">
                   <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                    USER DASHBOARD
+                    OMAT TIEDOT
                   </h3>
                   <nav className="space-y-3">
                     <Link
@@ -561,7 +554,7 @@ const Shop = () => {
                       className="block text-xl text-black hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/profile')}
                     >
-                      PROFILE
+                      PROFIILI
                     </Link>
 
                     <Link
@@ -571,7 +564,7 @@ const Shop = () => {
                         closeMenuAndNavigate('/profile?tab=orders')
                       }
                     >
-                      MY ORDERS
+                      OMAT TILAUKSET
                     </Link>
 
                     <Link
@@ -581,7 +574,7 @@ const Shop = () => {
                         closeMenuAndNavigate('/profile?tab=password')
                       }
                     >
-                      CHANGE PASSWORD
+                      VAIHDA SALASANA
                     </Link>
                   </nav>
                 </div>
@@ -590,7 +583,7 @@ const Shop = () => {
               {/* Muut linkit */}
               <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
                 <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                  Pages
+                  Sivut
                 </h3>
                 <nav className="space-y-3">
                   <Link
@@ -598,7 +591,7 @@ const Shop = () => {
                     className="block text-xl font-md text-black hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/')}
                   >
-                    HOME
+                    ETUSIVU
                   </Link>
 
                   <Link
@@ -606,7 +599,7 @@ const Shop = () => {
                     className="block text-xl font-md text-black hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/repairs')}
                   >
-                    REPAIRS
+                    PALVELUT
                   </Link>
 
                   <Link
@@ -614,7 +607,7 @@ const Shop = () => {
                     className="block text-xl font-md text-black hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/contact')}
                   >
-                    CONTACT
+                    YHTEYSTIEDOT
                   </Link>
 
                   <Link
@@ -622,16 +615,15 @@ const Shop = () => {
                     className="block text-xl font-md text-black hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/about')}
                   >
-                    ABOUT US
+                    MEISTÄ
                   </Link>
                 </nav>
               </div>
 
               {/* Kategoriat */}
               <div className="mb-8 font-racingSansOne">
-                {/*<h3 className="text-xl font-bold mb-4 text-[#E73725]">Categories</h3>*/}
                 <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                  Shop
+                  Kauppa
                 </h3>
                 <nav className="space-y-3">
                   <Link
@@ -639,43 +631,31 @@ const Shop = () => {
                     className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors border-b border-gray-100"
                     onClick={() => closeMenuAndNavigate('/shop')}
                   >
-                    ALL PRODUCTS
+                    KAIKKI TUOTTEET
                   </Link>
 
                   <Link
-                    to={`/shop?category=${CATEGORIES.BIKES}`}
+                    to={`/shop?category=${CATEGORIES.GIFT_CARDS}`}
                     className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors border-b border-gray-100"
                     onClick={() =>
                       closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.BIKES}`
+                        `/shop?category=${CATEGORIES.GIFT_CARDS}`
                       )
                     }
                   >
-                    BIKES
+                    LAHJAKORTIT
                   </Link>
 
                   <Link
-                    to={`/shop?category=${CATEGORIES.PARTS}`}
+                    to={`/shop?category=${CATEGORIES.SUPPLEMENTS}`}
                     className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors border-b border-gray-100"
                     onClick={() =>
                       closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.PARTS}`
+                        `/shop?category=${CATEGORIES.SUPPLEMENTS}`
                       )
                     }
                   >
-                    PARTS
-                  </Link>
-
-                  <Link
-                    to={`/shop?category=${CATEGORIES.REPAIRS}`}
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors border-b border-gray-100"
-                    onClick={() =>
-                      closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.REPAIRS}`
-                      )
-                    }
-                  >
-                    REPAIRS
+                    LISÄRAVINTEET
                   </Link>
                 </nav>
               </div>
@@ -683,7 +663,7 @@ const Shop = () => {
               {/* Social Media - NYT NÄKYY! */}
               <div className="border-t border-[#E73725] pt-6 pb-8">
                 <h4 className="text-lg font-racingSansOne font-md text-black text-center mb-4 uppercase tracking-wider">
-                  Follow Us
+                  Seuraa meitä
                 </h4>
                 <div className="flex gap-6 justify-center">
                   <a
@@ -728,7 +708,7 @@ const Shop = () => {
             <input
               type="text"
               className="bg-white border border-grey-300 font-racingSansOne rounded-l rounded-r-none px-4 py-2 w-full md:w-60"
-              placeholder="Search products..."
+              placeholder="Hae tuotteita..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -753,7 +733,7 @@ const Shop = () => {
           <div className="hidden md:block md:w-1/4">
             <div className="bg-[#FFFFFF] p-4 rounded-lg border border-gray-400 shadow-xl">
               <h3 className="font-racingSansOne text-lg sm:text-2xl font-medium mb-4">
-                Categories
+                Kategoriat
               </h3>
               <ul className="space-y-2 text-base sm:text-xl">
                 <li>
@@ -761,7 +741,7 @@ const Shop = () => {
                     onClick={() => filterByCategory('')}
                     className={`w-full font-racingSansOne text-left px-2 py-1 rounded ${selectedCategory === '' ? 'text-[#E73725]' : ''}`}
                   >
-                    All Products
+                    Kaikki tuotteet
                   </button>
                 </li>
                 {Object.entries(CATEGORIES).map(([key, value]) => (
@@ -791,7 +771,7 @@ const Shop = () => {
             {filteredProducts.length === 0 ? (
               <div className="text-center py-8">
                 <p className="font-librecaslon font-medium text-xl mb-4">
-                  No products found
+                  Tuotteita ei löytynyt
                 </p>
                 <button
                   onClick={() => {
@@ -800,7 +780,7 @@ const Shop = () => {
                   }}
                   className="font-librecaslon font-medium text-xl text-black bg-[#E73725] hover:bg-red-700 px-4 py-2 rounded mx-auto block"
                 >
-                  Show all products
+                  Näytä kaikki tuotteet
                 </button>
               </div>
             ) : (
@@ -1036,7 +1016,7 @@ const Shop = () => {
                                          border border-[#010000] text-[#010000] rounded
                                          hover:bg-[#010000] hover:text-white transition-colors duration-200"
                             >
-                              Options
+                              Valinnat
                             </button>
                           </div>
                         </div>

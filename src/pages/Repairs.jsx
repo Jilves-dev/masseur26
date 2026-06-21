@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  FaWrench,
-  FaBicycle,
-  FaTools,
+  FaHandHoldingHeart,
+  FaSpa,
+  FaRunning,
+  FaDumbbell,
   FaCalendarAlt,
   FaCheckCircle,
   FaPhone,
@@ -23,46 +24,46 @@ const fadeUp = (delay = 0) => ({
 
 const services = [
   {
-    icon: <FaTools className="text-3xl" />,
-    title: 'Full Service Package',
-    desc: 'Complete overhaul: cleaning, lubrication, brake and gear adjustment, full safety check.',
-    price: '€79.99',
+    icon: <FaHandHoldingHeart className="text-3xl" />,
+    title: 'Urheiluhieronta 60 min',
+    desc: 'Tehokas koko kehon urheiluhieronta, joka parantaa verenkiertoa, vähentää lihasjäykkyyttä ja nopeuttaa palautumista.',
+    price: '€65',
     highlight: true,
-    tag: 'MOST POPULAR',
+    tag: 'SUOSITUIN',
   },
   {
-    icon: <FaWrench className="text-3xl" />,
-    title: 'Flat Tire Repair',
-    desc: 'Quick professional flat tire repair with tube replacement included. In and out fast.',
-    price: '€14.99',
+    icon: <FaSpa className="text-3xl" />,
+    title: 'Urheiluhieronta 30 min',
+    desc: 'Nopea ja kohdennettu hieronta esimerkiksi jalkoihin, niska-hartiaseutuun tai selkään.',
+    price: '€39',
     highlight: false,
   },
   {
-    icon: <FaWrench className="text-3xl" />,
-    title: 'Brake Adjustment',
-    desc: 'Professional brake adjustment and cable replacement for optimal stopping power.',
-    price: '€24.99',
+    icon: <FaDumbbell className="text-3xl" />,
+    title: 'Syvähieronta 60 min',
+    desc: 'Voimakas, syvältä lihaksistosta vapauttava hieronta krooniseen jännitykseen ja kipupisteisiin.',
+    price: '€70',
     highlight: false,
   },
   {
-    icon: <FaTools className="text-3xl" />,
-    title: 'Gear Tuning',
-    desc: 'Full derailleur and shifter adjustment for smooth, precise gear changes every ride.',
-    price: '€29.99',
+    icon: <FaHandHoldingHeart className="text-3xl" />,
+    title: 'Urheiluhieronta 90 min',
+    desc: 'Pitkäkestoinen hoito koko kehon huoltoon ennen kilpailukautta tai sen jälkeen.',
+    price: '€89',
     highlight: false,
   },
   {
-    icon: <FaBicycle className="text-3xl" />,
-    title: 'Chain Replacement',
-    desc: 'New chain fitted and drivetrain cleaned for a smooth and efficient ride.',
-    price: '€34.99',
+    icon: <FaSpa className="text-3xl" />,
+    title: 'Kuppaushoito',
+    desc: 'Perinteinen kuppaushoito edistää verenkiertoa ja vapauttaa pinttyneitä lihasjännityksiä.',
+    price: '€45',
     highlight: false,
   },
   {
-    icon: <FaCheckCircle className="text-3xl" />,
-    title: 'Safety Inspection',
-    desc: 'Full safety check: brakes, tyres, lights, frame, and all components inspected.',
-    price: '€19.99',
+    icon: <FaRunning className="text-3xl" />,
+    title: 'Liikkuvuus- ja venyttelyhoito',
+    desc: 'Ohjattu venyttely ja liikkuvuusharjoittelu parantaa nivelten liikelaajuutta ja ehkäisee vammoja.',
+    price: '€49',
     highlight: false,
   },
 ];
@@ -70,20 +71,20 @@ const services = [
 const steps = [
   {
     number: '01',
-    title: 'Book Online',
-    desc: 'Choose a time that suits you using our online booking calendar or give us a call.',
+    title: 'Varaa aika',
+    desc: 'Valitse sinulle sopiva aika online-ajanvarauskalenterista tai soita meille.',
     icon: <FaCalendarAlt className="text-4xl" />,
   },
   {
     number: '02',
-    title: 'Drop Off Your Bike',
-    desc: 'Bring your bike to our workshop in Tampere. Walk-ins are also welcome for smaller jobs.',
-    icon: <FaBicycle className="text-4xl" />,
+    title: 'Saavu hierontaan',
+    desc: 'Tule hierontatilaamme Tampereella. Otamme vastaan myös kävijöitä pienempiin hoitoihin.',
+    icon: <FaRunning className="text-4xl" />,
   },
   {
     number: '03',
-    title: 'Pick Up & Ride',
-    desc: 'Most repairs are done the same day. We call you when your bike is ready to collect.',
+    title: 'Rentoudu ja palaudu',
+    desc: 'Lähdet hieronnasta rentoutuneena ja palautuneena, valmiina seuraavaan suoritukseen.',
     icon: <FaCheckCircle className="text-4xl" />,
   },
 ];
@@ -119,7 +120,7 @@ const Repairs = () => {
           shadow-2xl flex items-center justify-center text-black hover:text-[#E73725]
           transition-all duration-300 ease-in-out
           ${isScrolled ? 'top-4' : 'top-22'}`}
-        aria-label="Back to menu"
+        aria-label="Takaisin valikkoon"
       >
         <BiMenu size={20} />
       </button>
@@ -140,7 +141,7 @@ const Repairs = () => {
               animate="show"
               className="font-zaslia text-4xl md:text-6xl text-white font-bold mb-4"
             >
-              Bike Repairs
+              Urheiluhieroja
             </motion.h1>
             <motion.p
               variants={fadeUp(0.25)}
@@ -148,7 +149,7 @@ const Repairs = () => {
               animate="show"
               className="font-librecaslon text-white text-lg md:text-xl mb-8 max-w-xl"
             >
-              Fast, honest, and expert repairs by certified mechanics in Tampere.
+              Kahden ammattilaisen urheiluhierontaa Tampereella — palautumiseen, vammojen ehkäisyyn ja suorituskyvyn tukemiseen.
             </motion.p>
 
             {/* ==============================
@@ -168,10 +169,10 @@ const Repairs = () => {
                   transition-all duration-300 hover:scale-105 hover:shadow-red-400/40"
               >
                 <FaCalendarAlt className="text-xl" />
-                Book an Appointment
+                Varaa hierontaaika
               </button>
               <p className="font-librecaslon text-white/70 text-sm mt-3">
-                Online booking calendar coming soon — contact us to book now
+                Online-ajanvarauskalenteri tulossa pian — ota yhteyttä ja varaa aika nyt
               </p>
             </motion.div>
           </div>
@@ -189,7 +190,7 @@ const Repairs = () => {
             whileInView="show"
             className="font-zaslia text-3xl md:text-4xl text-white text-center mb-12"
           >
-            How It Works
+            Näin se toimii
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -205,7 +206,7 @@ const Repairs = () => {
                   {step.icon}
                 </div>
                 <span className="font-librecaslon text-[#E73725] text-sm font-bold tracking-widest mb-1">
-                  STEP {step.number}
+                  VAIHE {step.number}
                 </span>
                 <h3 className="font-zaslia text-white text-xl mb-2">{step.title}</h3>
                 <p className="font-librecaslon text-white/70 text-sm leading-relaxed">
@@ -228,7 +229,7 @@ const Repairs = () => {
             whileInView="show"
             className="font-zaslia text-3xl md:text-4xl text-[#010000] text-center mb-4"
           >
-            Services & Pricing
+            Palvelut ja hinnat
           </motion.h2>
           <motion.p
             variants={fadeUp(0.2)}
@@ -236,7 +237,7 @@ const Repairs = () => {
             whileInView="show"
             className="font-librecaslon text-gray-500 text-center mb-12 max-w-xl mx-auto"
           >
-            Transparent pricing with no hidden costs. Most repairs completed same day.
+            Avoimet hinnat ilman piilokuluja. Useimmiten aikoja vapaana samalla viikolla.
           </motion.p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -285,8 +286,8 @@ const Repairs = () => {
             whileInView="show"
             className="font-librecaslon text-gray-400 text-center text-sm mt-8"
           >
-            Prices include labour. Parts are charged separately at cost.
-            Contact us for a free estimate on larger repairs.
+            Hinnat sisältävät hieronnan ja tilan käytön.
+            Kysy tarjous ryhmä- tai yrityshieronnoista.
           </motion.p>
         </div>
       </section>
@@ -302,7 +303,7 @@ const Repairs = () => {
             whileInView="show"
             className="font-zaslia text-3xl md:text-4xl text-[#010000] text-center mb-12"
           >
-            Our Workshop
+            Hierontatilamme
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
@@ -317,7 +318,7 @@ const Repairs = () => {
                 >
                   <img
                     src={src}
-                    alt={`Workshop ${i + 1}`}
+                    alt={`Hierontatila ${i + 1}`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </motion.div>
@@ -339,11 +340,11 @@ const Repairs = () => {
             className="max-w-2xl mx-auto text-center"
           >
             <h2 className="font-zaslia text-3xl md:text-4xl text-white mb-4">
-              Ready to get your bike fixed?
+              Valmis rentoutumaan ja palautumaan?
             </h2>
             <p className="font-librecaslon text-white/85 text-lg mb-8">
-              Book an appointment online or drop by our workshop in Tampere.
-              Walk-ins welcome for smaller repairs.
+              Varaa aika verkossa tai tule käymään hierontatilassamme Tampereella.
+              Otamme vastaan myös kävijöitä pienempiin hoitoihin.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -354,7 +355,7 @@ const Repairs = () => {
                   hover:bg-[#010000] hover:text-white transition-all duration-300 shadow-lg"
               >
                 <FaCalendarAlt />
-                Book an Appointment
+                Varaa hierontaaika
               </button>
 
               <a
@@ -369,7 +370,7 @@ const Repairs = () => {
             </div>
 
             <p className="font-librecaslon text-white/70 text-sm mt-6">
-              Mon–Fri: 10–19 &nbsp;·&nbsp; Sat: 10–17 &nbsp;·&nbsp; Sun: 12–16
+              Ma–Pe: 10–19 &nbsp;·&nbsp; La: 10–17 &nbsp;·&nbsp; Su: 12–16
             </p>
           </motion.div>
         </div>

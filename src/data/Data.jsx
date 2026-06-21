@@ -48,18 +48,13 @@ export const banners = [
 export const bannar_down = [
   {
     img: '/images/ban21.jpg',
-    name: 'BIKES',
-    category: CATEGORIES.BIKES,
+    name: 'LAHJAKORTIT',
+    category: CATEGORIES.GIFT_CARDS,
   },
   {
     img: '/images/ban22.jpg',
-    name: 'PARTS',
-    category: CATEGORIES.PARTS,
-  },
-  {
-    img: '/images/ban23.jpg',
-    name: 'REPAIRS',
-    category: CATEGORIES.REPAIRS,
+    name: 'LISÄRAVINTEET',
+    category: CATEGORIES.SUPPLEMENTS,
   },
 ];
 

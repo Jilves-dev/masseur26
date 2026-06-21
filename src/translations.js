@@ -9,34 +9,35 @@ export const translations = {
     aboutPage: 'Meistä',
     galleryPage: 'Galleria',
     booking: 'Ajanvaraus',
+    shop: 'Lahjakortit',
     blog: 'Blogi',
 
     // Hero
     hey: 'Hei, me olemme',
-    role: 'Asianajotoimisto Advocatus',
+    role: 'Urheiluhieroja',
     heroDescription:
-      'Advocatus on kahden nuoren asianajajan perustama toimisto Helsingin sydämessä. Yhdistämme oikeudellisen asiantuntemuksen, modernin ajattelun ja aidosti henkilökohtaisen palvelun. Jokainen asiakkaamme saa selkeät vastaukset — ilman turhaa juridiikkaa.',
-    contactMe: 'Varaa konsultaatio',
+      'Urheiluhieroja on kahden kokeneen hierojan yritys Tampereen sydämessä. Yhdistämme ammattitaitoisen urheiluhieronnan, modernin osaamisen ja aidosti henkilökohtaisen palvelun. Autamme sinua palautumaan nopeammin, ehkäisemään vammoja ja voimaan paremmin — ilman turhia mutkia.',
+    contactMe: 'Varaa hierontaaika',
 
     // Palvelukortit (hero-grid)
-    service1: 'Perheasiat',
-    service2: 'Perintö & testamentti',
-    service3: 'Sopimukset',
-    service4: 'Yritysjuridiikka',
-    service5: 'Työ- ja virkamiesasiat',
+    service1: 'Urheiluhieronta',
+    service2: 'Syvähieronta',
+    service3: 'Kuppaushoito',
+    service4: 'Venyttely & liikkuvuus',
+    service5: 'Hyvinvointihieronta',
 
     // Hinnasto (fallback, Firebase services käytössä)
     services: [
-      { name: 'Konsultaatio',             price: '120 € / h' },
-      { name: 'Perheasiat & avioero',     price: '150 € / h' },
-      { name: 'Perintö & testamentti',    price: '150 € / h' },
-      { name: 'Sopimusasiat',             price: '180 € / h' },
-      { name: 'Työ- ja virkamiesasiat',   price: '150 € / h' },
-      { name: 'Yritysjuridiikka',         price: '200 € / h' },
+      { name: 'Urheiluhieronta 30 min',             price: '39 €' },
+      { name: 'Urheiluhieronta 60 min',             price: '65 €' },
+      { name: 'Urheiluhieronta 90 min',             price: '89 €' },
+      { name: 'Syvähieronta 60 min',                price: '70 €' },
+      { name: 'Kuppaushoito',                       price: '45 €' },
+      { name: 'Liikkuvuus- ja venyttelyhoito',      price: '49 €' },
     ],
 
     // Hinnasto-osion otsikko
-    technologiesTitle: 'Palvelut ja Hinnasto',
+    technologiesTitle: 'Palvelut ja hinnasto',
 
     // Yhteydenotto
     contactText: 'Ota yhteyttä alla olevalla lomakkeella, käytä ajanvarauskalenteriamme tai käytä ',
@@ -53,63 +54,63 @@ export const translations = {
     closed: 'Suljettu',
     footerCopyright: 'Kaikki oikeudet pidätetään',
     hours: [
-      { day: 'Maanantai',   time: '08:30 – 17:00' },
-      { day: 'Tiistai',     time: '08:30 – 17:00' },
-      { day: 'Keskiviikko', time: '08:30 – 17:00' },
-      { day: 'Torstai',     time: '08:30 – 17:00' },
-      { day: 'Perjantai',   time: '08:30 – 16:00' },
-      { day: 'Lauantai',    time: 'Suljettu' },
-      { day: 'Sunnuntai',   time: 'Suljettu' },
+      { day: 'Maanantai',   time: '10:00 – 19:00' },
+      { day: 'Tiistai',     time: '10:00 – 19:00' },
+      { day: 'Keskiviikko', time: '10:00 – 19:00' },
+      { day: 'Torstai',     time: '10:00 – 19:00' },
+      { day: 'Perjantai',   time: '10:00 – 19:00' },
+      { day: 'Lauantai',    time: '10:00 – 17:00' },
+      { day: 'Sunnuntai',   time: '12:00 – 16:00' },
     ],
 
     // About — hero
-    aboutTagline: 'Nuoret juristit, selkeät ratkaisut',
-    aboutHeroTitle: 'Laki selkokielellä',
+    aboutTagline: 'Kaksi hierojaa, yksi tavoite: parempi olo',
+    aboutHeroTitle: 'Hierontaa ammattitaidolla',
     aboutHeroText:
-      'Asianajotoimisto Advocatus on kahden nuoren asianajajan perustama toimisto Helsingin sydämessä. Uskomme, että jokainen ansaitsee ammattitaitoisen oikeudellisen neuvon — ilman turhaa monimutkaisuutta. Meille asiakkaan asia on aina pääasia.',
+      'Urheiluhieroja on kahden kokeneen hierojan perustama yritys Tampereen sydämessä. Uskomme, että jokainen ansaitsee ammattitaitoista hoitoa kehon hyvinvointiin — ilman turhaa monimutkaisuutta. Meille asiakkaan palautuminen ja hyvinvointi on aina pääasia.',
 
     // About — aikajana
     historyTitle: 'Tarinamme',
     timeline: [
       {
         year: '2019',
-        title: 'Opintovuodet & verkostot',
-        text: 'Sofia Laine ja Mikael Ström tutustuvat toisiinsa Helsingin yliopiston oikeustieteellisessä tiedekunnassa. Yhteinen visio selkeästä ja saavutettavasta oikeusavusta alkaa muotoutua.',
+        title: 'Yhteinen kiinnostus urheiluun ja hyvinvointiin',
+        text: 'Sofia Laine ja Mikael Ström tutustuvat toisiinsa hierojan koulutuksessa Tampereella. Yhteinen tausta kilpaurheilussa ja into auttaa muita palautumisessa alkaa muotoutua yhteiseksi visioksi.',
       },
       {
         year: '2021',
-        title: 'Advocatusin perustaminen',
-        text: 'Valmistuttuaan Sofia ja Mikael perustavat Asianajotoimisto Advocatusin Kampin lähelle. Toimiston nimi tulee latinan sanasta "lupus" — mutta ennen kaikkea se symbolisoi tarmokasta asiakkaan puolustamista.',
+        title: 'Urheiluhierojan perustaminen',
+        text: 'Valmistuttuaan Sofia ja Mikael perustavat Urheiluhierojan Tampereen keskustaan. Tavoitteena on tarjota ammattitaitoista urheiluhierontaa sekä kilpaurheilijoille että arkiliikkujille.',
       },
       {
         year: '2022',
-        title: 'Ensimmäiset suuret tapaukset',
-        text: 'Toimisto menestyi useissa perheoikeus- ja sopimusriidoissa, ja maine hyvänä sekä reiluna neuvonantajana alkoi levitä. Asiakaskunta kasvoi suosittelujen kautta.',
+        title: 'Ensimmäiset vakioasiakkaat',
+        text: 'Yritys saa ensimmäiset vakioasiakkaansa paikallisista urheiluseuroista, ja maine luotettavana ja taitavana hierojaparina alkaa levitä suosittelujen kautta.',
       },
       {
         year: '2023',
         title: 'Kasvua ja uusia palveluja',
-        text: 'Yritysjuridiikan palvelut laajennivat startup-yritysten kasvun myötä. Toimisto rekrytoi ensimmäisen harjoittelijan ja muutti tilavampiin toimistotiloihin Aleksanterinkadulla.',
+        text: 'Palveluvalikoima laajenee kuppaushoitoihin ja liikkuvuusharjoitteluun. Yritys muuttaa tilavampiin hierontatiloihin Tampereen keskustassa.',
       },
       {
         year: '2024',
         title: 'Tänään',
-        text: 'Advocatus palvelee useita kymmeniä asiakkaita kuukausittain. Toimisto tunnetaan asiantuntijuudestaan, selkeästä viestinnästä ja aidosti asiakaslähtöisestä toimintatavasta.',
+        text: 'Urheiluhieroja palvelee kymmeniä asiakkaita viikoittain. Yritys tunnetaan ammattitaidostaan, ystävällisestä palvelustaan ja aidosti asiakaslähtöisestä otteesta.',
       },
     ],
 
     // About — tiimi
-    teamTitle: 'Ihmiset takana',
+    teamTitle: 'Hierojat',
     team: [
       {
         name: 'Mikael Ström',
-        role: 'Osakas & asianajaja',
-        text: 'Mikael on erikoistunut yritysjuridiikkaan, työ- ja virkamiesasioihin sekä sopimusneuvotteluihin. Hän on kaksikielinen ja palvelee asiakkaita sekä suomeksi että ruotsiksi. Mikael on suorittanut osan opinnoistaan Tukholmassa.',
+        role: 'Hieroja & yrittäjä',
+        text: 'Mikael on erikoistunut urheiluhierontaan, syvähierontaan ja kuppaushoitoihin. Hänellä on tausta kilpaurheilussa, minkä ansiosta hän ymmärtää urheilijan kehon erityistarpeet. Mikael palvelee asiakkaita sekä suomeksi että ruotsiksi.',
       },
-        {
+      {
         name: 'Sofia Laine',
-        role: 'Osakas & asianajaja',
-        text: 'Sofia on erikoistunut perheoikeuteen, perintöasioihin ja sopimusjuridiikkaan. Hän valmistui oikeusnotaariksi Helsingin yliopistosta 2020 ja suoritti OTM-tutkinnon 2021. Sofia tunnetaan kyvystään selittää monimutkaiset asiat ymmärrettävästi.',
+        role: 'Hieroja & yrittäjä',
+        text: 'Sofia on erikoistunut liikkuvuusharjoitteluun, venyttelyyn ja hyvinvointihierontaan. Hän valmistui hierojaksi 2020 ja on täydentänyt osaamistaan urheiluhieronnan erikoiskursseilla. Sofia tunnetaan kyvystään räätälöidä hoito juuri asiakkaan tarpeisiin.',
       }
     ],
 
@@ -117,33 +118,33 @@ export const translations = {
     valuesTitle: 'Arvomme',
     values: [
       {
-        otsikko: 'Selkeys',
-        teksti: 'Juridiikan ei tarvitse olla sekavaa. Kerromme aina tilanteesi rehellisesti ja ymmärrettävästi.',
+        otsikko: 'Asiantuntemus',
+        teksti: 'Hieronnan ei tarvitse olla arvailua. Räätälöimme aina hoidon kehosi ja tarpeesi mukaan.',
       },
       {
         otsikko: 'Luottamus',
-        teksti: 'Asiakassuhde rakentuu luottamukselle. Jokainen asia käsitellään täydellä salassapitovelvollisuudella.',
+        teksti: 'Asiakassuhde rakentuu luottamukselle. Kuuntelemme ja huomioimme toiveesi joka käynnillä.',
       },
       {
-        otsikko: 'Tuloksellisuus',
-        teksti: 'Tavoitteemme on aina paras mahdollinen lopputulos asiakkaalle — nopeasti ja kustannustehokkaasti.',
+        otsikko: 'Palautuminen',
+        teksti: 'Tavoitteemme on aina auttaa sinua palautumaan nopeammin ja voimaan paremmin.',
       },
     ],
 
     // Galleria
     images: [
-      { caption: 'Toimistomme' },
-      { caption: 'Neuvotteluhuone' },
-      { caption: 'Sopimustyö' },
-      { caption: 'Lakikirjasto' },
-      { caption: 'Asiantuntijat' },
-      { caption: 'Advocatus-tiimi' },
+      { caption: 'Hierontatilamme' },
+      { caption: 'Hoitohuone' },
+      { caption: 'Urheiluhieronta' },
+      { caption: 'Hierontavälineet' },
+      { caption: 'Hierojamme' },
+      { caption: 'Urheiluhieroja-tiimi' },
     ],
 
     // Ajanvaraus
-    bookingTagline: 'Varaa konsultaatioaika helposti verkossa',
+    bookingTagline: 'Varaa hierontaaika helposti verkossa',
     bookingSelectService: 'Valitse palvelu',
-    bookingSelectServiceSub: 'Valitse haluamasi palvelu alta',
+    bookingSelectServiceSub: 'Valitse haluamasi hierontapalvelu alta',
     bookingSelectDate: 'Valitse päivä',
     bookingSelectDateSub: 'Merkityt päivät ovat varattavissa',
     bookingSelectTime: 'Valitse aika',
@@ -174,7 +175,7 @@ export const translations = {
     bookingNamePlaceholder: 'Etunimi Sukunimi',
     bookingEmailPlaceholder: 'sinun@email.fi',
     bookingPhonePlaceholder: '040 123 4567',
-    bookingNotePlaceholder: 'Kuvaile asiasi lyhyesti tai mainitse toivottu asianajaja...',
+    bookingNotePlaceholder: 'Kuvaile toivomuksesi lyhyesti tai mainitse toivottu hieroja...',
     bookingSlots: 'aikaa valittu',
     bookingLegendAvailable: 'Vapaita aikoja',
     bookingStep1: 'Palvelu',
@@ -194,37 +195,38 @@ export const translations = {
     aboutPage: 'Om oss',
     galleryPage: 'Galleri',
     booking: 'Tidsbokning',
+    shop: 'Presentkort',
     blog: 'Blogg',
 
     // Hero
     hey: 'Hej, vi är',
-    role: 'Advokatbyrå Advocatus',
+    role: 'Urheiluhieroja',
     heroDescription:
-      'Advocatus är en advokatbyrå grundad av två unga jurister i hjärtat av Helsingfors. Vi kombinerar juridisk expertis, modernt tänkande och genuint personlig service. Varje kund får tydliga svar — utan onödig juridisk jargong.',
-    contactMe: 'Boka konsultation',
+      'Urheiluhieroja är ett företag grundat av två erfarna massörer i hjärtat av Tammerfors. Vi kombinerar professionell idrottsmassage, modern kunskap och genuint personlig service. Vi hjälper dig återhämta dig snabbare, förebygga skador och må bättre.',
+    contactMe: 'Boka massagetid',
 
     // Tjänstkort (hero-grid)
-    service1: 'Familjeärenden',
-    service2: 'Arv & testamente',
-    service3: 'Avtal',
-    service4: 'Bolagsjuridik',
-    service5: 'Arbetsrätt',
+    service1: 'Idrottsmassage',
+    service2: 'Djupmassage',
+    service3: 'Cupping-behandling',
+    service4: 'Stretching & rörlighet',
+    service5: 'Avkopplande massage',
 
     // Prislista (fallback)
     services: [
-      { name: 'Konsultation',              price: '120 € / h' },
-      { name: 'Familjeärenden & skilsmässa', price: '150 € / h' },
-      { name: 'Arv & testamente',          price: '150 € / h' },
-      { name: 'Avtalsärenden',             price: '180 € / h' },
-      { name: 'Arbetsrättsliga ärenden',   price: '150 € / h' },
-      { name: 'Bolagsjuridik',             price: '200 € / h' },
+      { name: 'Idrottsmassage 30 min',              price: '39 €' },
+      { name: 'Idrottsmassage 60 min',              price: '65 €' },
+      { name: 'Idrottsmassage 90 min',              price: '89 €' },
+      { name: 'Djupmassage 60 min',                 price: '70 €' },
+      { name: 'Cupping-behandling',                 price: '45 €' },
+      { name: 'Rörlighets- och stretchbehandling',  price: '49 €' },
     ],
 
     // Prislista-rubrik
     technologiesTitle: 'Tjänster och prislista',
 
     // Kontakt
-    contactText: 'Kontakta oss via formuläret nedan, använd vår möteskalender eller  ',
+    contactText: 'Kontakta oss via formuläret nedan, använd vår bokningskalender eller  ',
     whatsapp: 'WhatsApp',
     namePlaceholder: 'Namn',
     emailPlaceholder: 'E-post',
@@ -238,63 +240,63 @@ export const translations = {
     closed: 'Stängt',
     footerCopyright: 'Alla rättigheter förbehållna',
     hours: [
-      { day: 'Måndag',   time: '08:30 – 17:00' },
-      { day: 'Tisdag',   time: '08:30 – 17:00' },
-      { day: 'Onsdag',   time: '08:30 – 17:00' },
-      { day: 'Torsdag',  time: '08:30 – 17:00' },
-      { day: 'Fredag',   time: '08:30 – 16:00' },
-      { day: 'Lördag',   time: 'Stängt' },
-      { day: 'Söndag',   time: 'Stängt' },
+      { day: 'Måndag',   time: '10:00 – 19:00' },
+      { day: 'Tisdag',   time: '10:00 – 19:00' },
+      { day: 'Onsdag',   time: '10:00 – 19:00' },
+      { day: 'Torsdag',  time: '10:00 – 19:00' },
+      { day: 'Fredag',   time: '10:00 – 19:00' },
+      { day: 'Lördag',   time: '10:00 – 17:00' },
+      { day: 'Söndag',   time: '12:00 – 16:00' },
     ],
 
     // About — hero
-    aboutTagline: 'Unga jurister, tydliga lösningar',
-    aboutHeroTitle: 'Juridik på klarspråk',
+    aboutTagline: 'Två massörer, ett mål: bättre mående',
+    aboutHeroTitle: 'Massage med yrkeskunskap',
     aboutHeroText:
-      'Advokatbyrå Advocatus grundades 2021 av två unga jurister i Helsingfors. Vi tror att alla förtjänar professionell juridisk rådgivning — utan onödig komplexitet. För oss är klientens ärende alltid i centrum.',
+      'Urheiluhieroja grundades av två erfarna massörer i hjärtat av Tammerfors. Vi tror att alla förtjänar professionell vård för kroppens välmående — utan onödig komplexitet. För oss är din återhämtning och ditt välmående alltid i centrum.',
 
     // About — tidslinje
     historyTitle: 'Vår historia',
     timeline: [
       {
         year: '2019',
-        title: 'Studier & nätverk',
-        text: 'Sofia Laine och Mikael Ström träffas vid juridiska fakulteten vid Helsingfors universitet. En gemensam vision om tydlig och tillgänglig juridisk hjälp börjar ta form.',
+        title: 'Gemensamt intresse för idrott och välmående',
+        text: 'Sofia Laine och Mikael Ström träffas under massageutbildningen i Tammerfors. En gemensam bakgrund inom tävlingsidrott och en vilja att hjälpa andra att återhämta sig växer till en gemensam vision.',
       },
       {
         year: '2021',
-        title: 'Grundandet av Advocatus',
-        text: 'Efter examen grundar Sofia och Mikael Advokatbyrå Advocatus nära Kampen. Byråns namn hämtar inspiration från latin — framför allt symboliserar det ett envist försvar av klientens intressen.',
+        title: 'Grundandet av Urheiluhieroja',
+        text: 'Efter examen grundar Sofia och Mikael Urheiluhieroja i centrala Tammerfors. Målet är att erbjuda professionell idrottsmassage för både tävlingsidrottare och vardagsmotionärer.',
       },
       {
         year: '2022',
-        title: 'Första stora uppdragen',
-        text: 'Byrån nådde framgång i flera familjerätts- och avtalsärenden, och ryktet som en kompetent och rättvis rådgivare spred sig. Klientbasen växte genom rekommendationer.',
+        title: 'Första stamkunderna',
+        text: 'Företaget får sina första stamkunder från lokala idrottsföreningar, och ryktet om ett kunnigt och pålitligt massörpar sprids genom rekommendationer.',
       },
       {
         year: '2023',
         title: 'Tillväxt och nya tjänster',
-        text: 'Bolagsjuridiktjänsterna expanderade i takt med startup-tillväxten. Byrån rekryterade sin första praktikant och flyttade till rymligare lokaler på Alexandersgatan.',
+        text: 'Utbudet växer med cupping-behandlingar och rörlighetsträning. Företaget flyttar till rymligare lokaler i centrala Tammerfors.',
       },
       {
         year: '2024',
         title: 'Idag',
-        text: 'Advocatus betjänar ett flertal klienter varje månad. Byrån är känd för sin expertis, tydliga kommunikation och genuint klientorienterade arbetssätt.',
+        text: 'Urheiluhieroja betjänar dussintals kunder varje vecka. Företaget är känt för sin yrkeskunskap, vänliga service och genuint kundorienterade arbetssätt.',
       },
     ],
 
     // About — team
-    teamTitle: 'Människorna bakom',
+    teamTitle: 'Massörerna',
     team: [
       {
         name: 'Mikael Ström',
-        role: 'Delägare & advokat',
-        text: 'Mikael är specialiserad på bolagsjuridik, arbetsrätt och avtalsförhandlingar. Han är tvåspråkig och betjänar klienter på både finska och svenska. Mikael har genomfört en del av sina studier i Stockholm.',
+        role: 'Massör & företagare',
+        text: 'Mikael är specialiserad på idrottsmassage, djupmassage och cupping-behandlingar. Han har en bakgrund inom tävlingsidrott, vilket ger honom förståelse för idrottarens kropp. Mikael betjänar kunder på både finska och svenska.',
       },
-        {
+      {
         name: 'Sofia Laine',
-        role: 'Delägare & advokat',
-        text: 'Sofia är specialiserad på familjerätt, arvsärenden och avtalsrätt. Hon avlade juristkandidatexamen vid Helsingfors universitet 2020 och JM-examen 2021. Sofia är känd för sin förmåga att förklara komplexa frågor på ett begripligt sätt.',
+        role: 'Massör & företagare',
+        text: 'Sofia är specialiserad på rörlighetsträning, stretching och avkopplande massage. Hon utbildade sig till massör 2020 och har kompletterat sin kompetens med specialkurser i idrottsmassage. Sofia är känd för sin förmåga att skräddarsy behandlingen efter kundens behov.',
       }
     ],
 
@@ -302,33 +304,33 @@ export const translations = {
     valuesTitle: 'Våra värderingar',
     values: [
       {
-        otsikko: 'Tydlighet',
-        teksti: 'Juridik behöver inte vara krångligt. Vi berättar alltid din situation ärligt och begripligt.',
+        otsikko: 'Sakkunskap',
+        teksti: 'Massage ska inte vara en gissningslek. Vi anpassar alltid behandlingen efter din kropp och dina behov.',
       },
       {
         otsikko: 'Förtroende',
-        teksti: 'Klientrelationen bygger på förtroende. Varje ärende hanteras med full sekretess.',
+        teksti: 'Kundrelationen bygger på förtroende. Vi lyssnar och tar hänsyn till dina önskemål vid varje besök.',
       },
       {
-        otsikko: 'Resultat',
-        teksti: 'Vårt mål är alltid bästa möjliga utfall för klienten — snabbt och kostnadseffektivt.',
+        otsikko: 'Återhämtning',
+        teksti: 'Vårt mål är alltid att hjälpa dig återhämta dig snabbare och må bättre.',
       },
     ],
 
     // Galleri
     images: [
-      { caption: 'Vårt kontor' },
-      { caption: 'Förhandlingsrum' },
-      { caption: 'Avtalsarbete' },
-      { caption: 'Juridisk litteratur' },
-      { caption: 'Experterna' },
-      { caption: 'Advocatus-teamet' },
+      { caption: 'Vår behandlingslokal' },
+      { caption: 'Behandlingsrum' },
+      { caption: 'Idrottsmassage' },
+      { caption: 'Massageutrustning' },
+      { caption: 'Våra massörer' },
+      { caption: 'Urheiluhieroja-teamet' },
     ],
 
     // Tidsbokning
-    bookingTagline: 'Boka konsultationstid enkelt online',
+    bookingTagline: 'Boka massagetid enkelt online',
     bookingSelectService: 'Välj tjänst',
-    bookingSelectServiceSub: 'Välj önskad tjänst nedan',
+    bookingSelectServiceSub: 'Välj önskad massagetjänst nedan',
     bookingSelectDate: 'Välj dag',
     bookingSelectDateSub: 'Markerade dagar är tillgängliga',
     bookingSelectTime: 'Välj tid',
@@ -359,7 +361,7 @@ export const translations = {
     bookingNamePlaceholder: 'Förnamn Efternamn',
     bookingEmailPlaceholder: 'din@email.fi',
     bookingPhonePlaceholder: '040 123 4567',
-    bookingNotePlaceholder: 'Beskriv ditt ärende kortfattat eller ange önskad advokat...',
+    bookingNotePlaceholder: 'Beskriv dina önskemål kortfattat eller ange önskad massör...',
     bookingSlots: 'tider valda',
     bookingLegendAvailable: 'Lediga tider',
     bookingStep1: 'Tjänst',
@@ -369,7 +371,6 @@ export const translations = {
     bookingStep5: 'Bekräftelse',
   },
 
-  
   en: {
     // Navigation
     palvelut: 'Services & Pricing',
@@ -379,35 +380,36 @@ export const translations = {
     frontPage: 'Home',
     aboutPage: 'About Us',
     galleryPage: 'Gallery',
-    booking: 'Book a Repair',
+    booking: 'Booking',
+    shop: 'Gift Cards',
     blog: 'Blog',
 
     // Hero
     hey: 'Hello, we are',
-    role: 'Law Firm Advocatus',
+    role: 'Urheiluhieroja',
     heroDescription:
-      'Advocatus is a law firm founded by two young lawyers in the heart of Helsinki. We combine legal expertise, modern thinking and genuinely personal service. Every client receives clear answers — without unnecessary legal jargon.',
-    contactMe: 'Book a Consultation',
- 
+      'Urheiluhieroja is a company founded by two experienced massage therapists in the heart of Tampere. We combine professional sports massage, modern expertise and genuinely personal service. We help you recover faster, prevent injuries and feel better.',
+    contactMe: 'Book a Massage',
+
     // Service cards
-    service1: 'Family Law',
-    service2: 'Inheritance & Wills',
-    service3: 'Contracts',
-    service4: 'Corporate Law',
-    service5: 'Employment Law',
- 
+    service1: 'Sports Massage',
+    service2: 'Deep Tissue Massage',
+    service3: 'Cupping Therapy',
+    service4: 'Stretching & Mobility',
+    service5: 'Relaxation Massage',
+
     // Pricing (fallback)
     services: [
-      { name: 'Consultation',          price: '120 € / h' },
-      { name: 'Family Law & Divorce',  price: '150 € / h' },
-      { name: 'Inheritance & Wills',   price: '150 € / h' },
-      { name: 'Contract Matters',      price: '180 € / h' },
-      { name: 'Employment Law',        price: '150 € / h' },
-      { name: 'Corporate Law',         price: '200 € / h' },
+      { name: 'Sports Massage 30 min',            price: '€39' },
+      { name: 'Sports Massage 60 min',            price: '€65' },
+      { name: 'Sports Massage 90 min',            price: '€89' },
+      { name: 'Deep Tissue Massage 60 min',       price: '€70' },
+      { name: 'Cupping Therapy',                  price: '€45' },
+      { name: 'Mobility & Stretching Treatment',  price: '€49' },
     ],
- 
+
     technologiesTitle: 'Services and Pricing',
- 
+
     // Contact
     contactText: 'Contact us via the form below, use our booking calendar or ',
     whatsapp: 'WhatsApp',
@@ -415,7 +417,7 @@ export const translations = {
     emailPlaceholder: 'Email',
     messagePlaceholder: 'Briefly describe your matter...',
     collaborate: 'Send Message',
- 
+
     // InfoFooter
     openingHours: 'Opening Hours',
     contactInfo: 'Contact Information',
@@ -423,97 +425,97 @@ export const translations = {
     closed: 'Closed',
     footerCopyright: 'All rights reserved',
     hours: [
-      { day: 'Monday',    time: '08:30 – 17:00' },
-      { day: 'Tuesday',   time: '08:30 – 17:00' },
-      { day: 'Wednesday', time: '08:30 – 17:00' },
-      { day: 'Thursday',  time: '08:30 – 17:00' },
-      { day: 'Friday',    time: '08:30 – 16:00' },
-      { day: 'Saturday',  time: 'Closed' },
-      { day: 'Sunday',    time: 'Closed' },
+      { day: 'Monday',    time: '10:00 – 19:00' },
+      { day: 'Tuesday',   time: '10:00 – 19:00' },
+      { day: 'Wednesday', time: '10:00 – 19:00' },
+      { day: 'Thursday',  time: '10:00 – 19:00' },
+      { day: 'Friday',    time: '10:00 – 19:00' },
+      { day: 'Saturday',  time: '10:00 – 17:00' },
+      { day: 'Sunday',    time: '12:00 – 16:00' },
     ],
- 
+
     // About — hero
-    aboutTagline: 'Young lawyers, clear solutions',
-    aboutHeroTitle: 'Law in plain language',
+    aboutTagline: 'Two therapists, one goal: feeling better',
+    aboutHeroTitle: 'Massage with expertise',
     aboutHeroText:
-      'Law Firm Advocatus was founded in 2021 by two young lawyers in the heart of Helsinki. We believe everyone deserves professional legal advice — without unnecessary complexity. For us, the client\'s matter is always the priority.',
- 
+      "Urheiluhieroja was founded by two experienced massage therapists in the heart of Tampere. We believe everyone deserves professional care for their body's wellbeing — without unnecessary complexity. For us, your recovery and wellbeing always come first.",
+
     // About — timeline
     historyTitle: 'Our Story',
     timeline: [
       {
         year: '2019',
-        title: 'Studies & Networks',
-        text: 'Sofia Laine and Mikael Ström meet at the Faculty of Law at the University of Helsinki. A shared vision of clear and accessible legal help begins to take shape.',
+        title: 'A Shared Passion for Sport and Wellbeing',
+        text: 'Sofia Laine and Mikael Ström meet during their massage therapy training in Tampere. A shared background in competitive sport and a drive to help others recover grows into a common vision.',
       },
       {
         year: '2021',
-        title: 'Founding of Advocatus',
-        text: 'After graduating, Sofia and Mikael establish Law Firm Advocatus near Kamppi. The firm\'s name draws from Latin — above all it symbolises a determined defence of the client\'s interests.',
+        title: 'Founding of Urheiluhieroja',
+        text: 'After graduating, Sofia and Mikael found Urheiluhieroja in central Tampere, aiming to offer professional sports massage for both competitive athletes and everyday active people.',
       },
       {
         year: '2022',
-        title: 'First Major Cases',
-        text: 'The firm succeeded in several family law and contract disputes, and a reputation as a competent and fair adviser began to spread. The client base grew through recommendations.',
+        title: 'First Regular Clients',
+        text: 'The company gains its first regular clients from local sports clubs, and a reputation as a skilled and reliable duo of therapists spreads through recommendations.',
       },
       {
         year: '2023',
         title: 'Growth and New Services',
-        text: 'Corporate law services expanded alongside startup growth. The firm recruited its first trainee and moved to more spacious offices on Aleksanterinkatu.',
+        text: 'The range of services grows to include cupping therapy and mobility training. The company moves to more spacious treatment premises in central Tampere.',
       },
       {
         year: '2024',
         title: 'Today',
-        text: 'Advocatus serves dozens of clients every month. The firm is known for its expertise, clear communication and genuinely client-centred approach.',
+        text: 'Urheiluhieroja serves dozens of clients every week. The company is known for its expertise, friendly service and genuinely client-centred approach.',
       },
     ],
- 
+
     // About — team
-    teamTitle: 'The People Behind',
+    teamTitle: 'The Therapists',
     team: [
       {
         name: 'Mikael Ström',
-        role: 'Partner & Attorney',
-        text: 'Mikael specialises in corporate law, employment law and contract negotiations. He is bilingual and serves clients in both Finnish and Swedish. Mikael completed part of his studies in Stockholm.',
+        role: 'Massage Therapist & Co-founder',
+        text: "Mikael specialises in sports massage, deep tissue massage and cupping therapy. His background in competitive sport gives him a deep understanding of an athlete's body. Mikael serves clients in both Finnish and Swedish.",
       },
       {
         name: 'Sofia Laine',
-        role: 'Partner & Attorney',
-        text: 'Sofia specialises in family law, inheritance matters and contract law. She graduated with a Bachelor of Laws from the University of Helsinki in 2020 and completed her Master of Laws in 2021. Sofia is known for her ability to explain complex matters clearly.',
+        role: 'Massage Therapist & Co-founder',
+        text: "Sofia specialises in mobility training, stretching and relaxation massage. She qualified as a massage therapist in 2020 and has completed further training in sports massage. Sofia is known for tailoring every treatment to the client's needs.",
       },
     ],
- 
+
     // About — values
     valuesTitle: 'Our Values',
     values: [
       {
-        otsikko: 'Clarity',
-        teksti: 'Law does not have to be confusing. We always explain your situation honestly and understandably.',
+        otsikko: 'Expertise',
+        teksti: "Massage shouldn't be guesswork. We always tailor the treatment to your body and your needs.",
       },
       {
         otsikko: 'Trust',
-        teksti: 'The client relationship is built on trust. Every matter is handled with full confidentiality.',
+        teksti: 'The client relationship is built on trust. We listen and take your wishes into account at every visit.',
       },
       {
-        otsikko: 'Results',
-        teksti: 'Our goal is always the best possible outcome for the client — quickly and cost-effectively.',
+        otsikko: 'Recovery',
+        teksti: 'Our goal is always to help you recover faster and feel better.',
       },
     ],
- 
+
     // Gallery
     images: [
-      { caption: 'Our Office' },
-      { caption: 'Conference Room' },
-      { caption: 'Contract Work' },
-      { caption: 'Legal Library' },
-      { caption: 'Our Experts' },
-      { caption: 'The Advocatus Team' },
+      { caption: 'Our Treatment Space' },
+      { caption: 'Treatment Room' },
+      { caption: 'Sports Massage' },
+      { caption: 'Massage Equipment' },
+      { caption: 'Our Therapists' },
+      { caption: 'The Urheiluhieroja Team' },
     ],
- 
+
     // Booking
-    bookingTagline: 'Book your bike repair online — quick and easy',
-    bookingSelectService: 'Select Repair Service',
-    bookingSelectServiceSub: 'Choose the repair service you need',
+    bookingTagline: 'Book your massage appointment online — quick and easy',
+    bookingSelectService: 'Select Massage Service',
+    bookingSelectServiceSub: 'Choose the massage service you need',
     bookingSelectDate: 'Select Date',
     bookingSelectDateSub: 'Marked dates are available',
     bookingSelectTime: 'Select Time',
@@ -544,7 +546,7 @@ export const translations = {
     bookingNamePlaceholder: 'First Last',
     bookingEmailPlaceholder: 'your@email.com',
     bookingPhonePlaceholder: '+358 40 123 4567',
-    bookingNotePlaceholder: 'Describe what needs fixing on your bike (optional)...',
+    bookingNotePlaceholder: 'Briefly describe your needs or mention your preferred therapist...',
     bookingSlots: 'times selected',
     bookingLegendAvailable: 'Available times',
     bookingStep1: 'Service',
@@ -553,7 +555,7 @@ export const translations = {
     bookingStep4: 'Details',
     bookingStep5: 'Confirmation',
   },
- 
+
   ru: {
     // Навигация
     palvelut: 'Услуги',
@@ -563,35 +565,36 @@ export const translations = {
     frontPage: 'Главная',
     aboutPage: 'О нас',
     galleryPage: 'Галерея',
-    booking: 'встреча',
+    booking: 'Запись на приём',
+    shop: 'Подарочные карты',
     blog: 'Блог',
 
     // Герой
     hey: 'Здравствуйте, мы —',
-    role: 'Адвокатское бюро Адвокатус',
+    role: 'Urheiluhieroja',
     heroDescription:
-      'Адвокатус — адвокатское бюро, основанное двумя молодыми юристами в центре Хельсинки. Мы сочетаем юридический профессионализм, современный подход и подлинно персональный сервис. Каждый клиент получает чёткие ответы — без лишней юридической терминологии.',
-    contactMe: 'Записаться на консультацию',
- 
+      'Urheiluhieroja — компания, основанная двумя опытными массажистами в центре Тампере. Мы объединяем профессиональный спортивный массаж, современный подход и подлинно персональный сервис. Мы помогаем вам быстрее восстановиться, предотвратить травмы и чувствовать себя лучше.',
+    contactMe: 'Записаться на массаж',
+
     // Карточки услуг
-    service1: 'Семейное право',
-    service2: 'Наследство и завещания',
-    service3: 'Договоры',
-    service4: 'Корпоративное право',
-    service5: 'Трудовое право',
- 
+    service1: 'Спортивный массаж',
+    service2: 'Глубокий массаж',
+    service3: 'Баночный массаж',
+    service4: 'Растяжка и подвижность',
+    service5: 'Расслабляющий массаж',
+
     // Прайс-лист (запасной)
     services: [
-      { name: 'Консультация',              price: '120 € / ч' },
-      { name: 'Семейные дела и развод',    price: '150 € / ч' },
-      { name: 'Наследство и завещания',    price: '150 € / ч' },
-      { name: 'Договорные вопросы',        price: '180 € / ч' },
-      { name: 'Трудовое право',            price: '150 € / ч' },
-      { name: 'Корпоративное право',       price: '200 € / ч' },
+      { name: 'Спортивный массаж 30 мин',   price: '39 €' },
+      { name: 'Спортивный массаж 60 мин',   price: '65 €' },
+      { name: 'Спортивный массаж 90 мин',   price: '89 €' },
+      { name: 'Глубокий массаж 60 мин',     price: '70 €' },
+      { name: 'Баночный массаж',            price: '45 €' },
+      { name: 'Растяжка и подвижность',     price: '49 €' },
     ],
- 
+
     technologiesTitle: 'Услуги и цены',
- 
+
     // Контакт
     contactText: 'Свяжитесь с нами через форму ниже, используйте наш календарь записи или ',
     whatsapp: 'WhatsApp',
@@ -599,7 +602,7 @@ export const translations = {
     emailPlaceholder: 'Электронная почта',
     messagePlaceholder: 'Кратко опишите ваш вопрос...',
     collaborate: 'Отправить сообщение',
- 
+
     // Нижний колонтитул
     openingHours: 'Часы работы',
     contactInfo: 'Контактная информация',
@@ -607,97 +610,97 @@ export const translations = {
     closed: 'Закрыто',
     footerCopyright: 'Все права защищены',
     hours: [
-      { day: 'Понедельник', time: '08:30 – 17:00' },
-      { day: 'Вторник',     time: '08:30 – 17:00' },
-      { day: 'Среда',       time: '08:30 – 17:00' },
-      { day: 'Четверг',     time: '08:30 – 17:00' },
-      { day: 'Пятница',     time: '08:30 – 16:00' },
-      { day: 'Суббота',     time: 'Закрыто' },
-      { day: 'Воскресенье', time: 'Закрыто' },
+      { day: 'Понедельник', time: '10:00 – 19:00' },
+      { day: 'Вторник',     time: '10:00 – 19:00' },
+      { day: 'Среда',       time: '10:00 – 19:00' },
+      { day: 'Четверг',     time: '10:00 – 19:00' },
+      { day: 'Пятница',     time: '10:00 – 19:00' },
+      { day: 'Суббота',     time: '10:00 – 17:00' },
+      { day: 'Воскресенье', time: '12:00 – 16:00' },
     ],
- 
+
     // О нас — герой
-    aboutTagline: 'Молодые юристы, чёткие решения',
-    aboutHeroTitle: 'Право простым языком',
+    aboutTagline: 'Два массажиста, одна цель: самочувствие лучше',
+    aboutHeroTitle: 'Массаж с профессионализмом',
     aboutHeroText:
-      'Адвокатское бюро Адвокатус основано в 2021 году двумя молодыми юристами в сердце Хельсинки. Мы убеждены, что каждый заслуживает профессиональной юридической консультации — без лишней сложности. Для нас дело клиента всегда на первом месте.',
- 
+      'Urheiluhieroja основана двумя опытными массажистами в центре Тампере. Мы убеждены, что каждый заслуживает профессионального ухода за телом — без лишней сложности. Для нас восстановление и самочувствие клиента всегда на первом месте.',
+
     // О нас — хронология
     historyTitle: 'Наша история',
     timeline: [
       {
         year: '2019',
-        title: 'Учёба и связи',
-        text: 'София Лайне и Микаэль Стрём встречаются на юридическом факультете Хельсинкского университета. Общее видение доступной и понятной юридической помощи начинает формироваться.',
+        title: 'Общий интерес к спорту и хорошему самочувствию',
+        text: 'София Лайне и Микаэль Стрём знакомятся во время обучения на массажистов в Тампере. Общий опыт в спорте высоких достижений и желание помогать другим восстанавливаться формируют общее видение.',
       },
       {
         year: '2021',
-        title: 'Основание Адвокатус',
-        text: 'После окончания учёбы София и Микаэль основывают адвокатское бюро Адвокатус вблизи Кампи. Название бюро восходит к латыни — прежде всего оно символизирует упорную защиту интересов клиента.',
+        title: 'Основание Urheiluhieroja',
+        text: 'После окончания учёбы София и Микаэль основывают компанию Urheiluhieroja в центре Тампере. Цель — предлагать профессиональный спортивный массаж как для спортсменов, так и для тех, кто просто активно занимается спортом.',
       },
       {
         year: '2022',
-        title: 'Первые крупные дела',
-        text: 'Бюро добилось успеха в нескольких делах в области семейного права и договорных споров, и репутация компетентного и честного советника начала распространяться. Клиентская база росла благодаря рекомендациям.',
+        title: 'Первые постоянные клиенты',
+        text: 'Компания получает первых постоянных клиентов из местных спортивных клубов, и репутация умелого и надёжного дуэта массажистов распространяется через рекомендации.',
       },
       {
         year: '2023',
         title: 'Рост и новые услуги',
-        text: 'Услуги в области корпоративного права расширились вместе с ростом стартапов. Бюро приняло первого стажёра и переехало в более просторный офис на Александерской улице.',
+        text: 'Перечень услуг расширяется баночным массажем и тренировкой подвижности. Компания переезжает в более просторное помещение в центре Тампере.',
       },
       {
         year: '2024',
         title: 'Сегодня',
-        text: 'Advocatus обслуживает десятки клиентов ежемесячно. Бюро известно своим профессионализмом, чёткой коммуникацией и подлинно клиентоориентированным подходом.',
+        text: 'Urheiluhieroja обслуживает десятки клиентов каждую неделю. Компания известна своим профессионализмом, дружелюбным сервисом и подлинно клиентоориентированным подходом.',
       },
     ],
- 
+
     // О нас — команда
-    teamTitle: 'Люди за бюро',
+    teamTitle: 'Наши массажисты',
     team: [
       {
         name: 'Микаэль Стрём',
-        role: 'Партнёр и адвокат',
-        text: 'Микаэль специализируется на корпоративном праве, трудовом праве и договорных переговорах. Он двуязычен и обслуживает клиентов на финском и шведском языках. Часть обучения Микаэль прошёл в Стокгольме.',
+        role: 'Массажист и совладелец',
+        text: 'Микаэль специализируется на спортивном массаже, глубоком массаже и баночной терапии. Его опыт в спорте высоких достижений помогает понимать особенности тела спортсмена. Микаэль обслуживает клиентов на финском и шведском языках.',
       },
       {
         name: 'София Лайне',
-        role: 'Партнёр и адвокат',
-        text: 'София специализируется на семейном праве, наследственных делах и договорном праве. Она окончила Хельсинкский университет в 2020 году и получила степень магистра права в 2021 году. София известна умением объяснять сложные вопросы простым языком.',
+        role: 'Массажист и совладелец',
+        text: 'София специализируется на тренировке подвижности, растяжке и расслабляющем массаже. Она получила квалификацию массажиста в 2020 году и прошла дополнительное обучение по спортивному массажу. София известна умением подбирать процедуру индивидуально под потребности клиента.',
       },
     ],
- 
+
     // О нас — ценности
     valuesTitle: 'Наши ценности',
     values: [
       {
-        otsikko: 'Ясность',
-        teksti: 'Право не должно быть запутанным. Мы всегда объясняем вашу ситуацию честно и понятно.',
+        otsikko: 'Профессионализм',
+        teksti: 'Массаж — это не догадки. Мы всегда подбираем процедуру под ваше тело и потребности.',
       },
       {
         otsikko: 'Доверие',
-        teksti: 'Отношения с клиентом строятся на доверии. Каждое дело ведётся с полным соблюдением конфиденциальности.',
+        teksti: 'Отношения с клиентом строятся на доверии. Мы слушаем и учитываем ваши пожелания при каждом визите.',
       },
       {
-        otsikko: 'Результат',
-        teksti: 'Наша цель — всегда наилучший исход для клиента: быстро и экономично.',
+        otsikko: 'Восстановление',
+        teksti: 'Наша цель — всегда помочь вам быстрее восстановиться и чувствовать себя лучше.',
       },
     ],
- 
+
     // Галерея
     images: [
-      { caption: 'Наш офис' },
-      { caption: 'Переговорная комната' },
-      { caption: 'Договорная работа' },
-      { caption: 'Юридическая библиотека' },
-      { caption: 'Наши эксперты' },
-      { caption: 'Команда Advocatus' },
+      { caption: 'Наше помещение' },
+      { caption: 'Кабинет процедур' },
+      { caption: 'Спортивный массаж' },
+      { caption: 'Массажное оборудование' },
+      { caption: 'Наши массажисты' },
+      { caption: 'Команда Urheiluhieroja' },
     ],
- 
+
     // Запись на приём
-    bookingTagline: 'Запишитесь на консультацию онлайн легко и быстро',
+    bookingTagline: 'Запишитесь на массаж онлайн легко и быстро',
     bookingSelectService: 'Выберите услугу',
-    bookingSelectServiceSub: 'Выберите нужную услугу ниже',
+    bookingSelectServiceSub: 'Выберите нужную услугу массажа ниже',
     bookingSelectDate: 'Выберите дату',
     bookingSelectDateSub: 'Отмеченные даты доступны для записи',
     bookingSelectTime: 'Выберите время',
@@ -728,7 +731,7 @@ export const translations = {
     bookingNamePlaceholder: 'Имя Фамилия',
     bookingEmailPlaceholder: 'ваш@email.com',
     bookingPhonePlaceholder: '+358 40 123 4567',
-    bookingNotePlaceholder: 'Кратко опишите ваше дело или укажите предпочтительного адвоката...',
+    bookingNotePlaceholder: 'Кратко опишите ваши пожелания или укажите предпочтительного массажиста...',
     bookingSlots: 'выбрано времён',
     bookingLegendAvailable: 'Свободное время',
     bookingStep1: 'Услуга',

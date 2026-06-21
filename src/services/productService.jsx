@@ -234,7 +234,6 @@ export const generateStars = (rating, maxStars = 5) => {
 
 // Kategorialista
 export const CATEGORIES = {
-  BIKES: 'Bikes',
-  PARTS: 'Parts',
-  REPAIRS: 'Repairs',
+  GIFT_CARDS: 'Lahjakortit',
+  SUPPLEMENTS: 'Lisäravinteet',
 };

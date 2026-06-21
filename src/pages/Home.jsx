@@ -34,7 +34,7 @@ function App() {
 
   const { documents: services } = useCollection('services');
 
-  const predefinedMessage = 'Hello, how can I help you?';
+  const predefinedMessage = 'Hei, miten voin auttaa?';
   const encodedMessage = encodeURIComponent(predefinedMessage);
 
     useEffect(() => {
@@ -106,6 +106,18 @@ function App() {
                     {t('booking')}
                   </Link>
                 </li>
+
+
+                <li>
+                   <Link
+                    to="/shop"
+                    className="text-[#d1bfa7] hover:text-[#FFFFFF] font-euphorigenic"
+                  >
+                    {t('shop')}
+                  </Link>
+                </li>
+
+
                 {/*<li>
                    <Link
                     to="/gallery"
@@ -239,24 +251,24 @@ function App() {
             <div className="mt-2 md:mt-18">
               <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 font-euphorigenic text-[#49494b] text-base text-center pt-4 sm:py-8">
                 <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
-                    <img className="w-42 mx-auto" src={palvelut1} alt="Mustat kengät" loading="lazy" />
+                    <img className="w-42 mx-auto" src={palvelut1} alt="Urheiluhieronta" loading="lazy" />
                   <p className="my-4"> {t('service1')}</p>
                 </div>
                 <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
-                  <img className="w-42 mx-auto" src={palvelut2} alt="KIILOITUS" loading="lazy" />
+                  <img className="w-42 mx-auto" src={palvelut2} alt="Syvähieronta" loading="lazy" />
                   <p className="my-4"> {t('service2')}</p>
                 </div>
                 <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
                   <img
                     className="w-41 mx-auto"
                     src={palvelut3}
-                    alt="ENTISÖINTI"
+                    alt="Kuppaushoito"
                     loading="lazy"
                   />
                   <p className="my-4"> {t('service3')}</p>
                 </div>
                 <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
-                  <img className="w-42 mx-auto" src={palvelut4} alt="TUOTTEET" loading="lazy" />
+                  <img className="w-42 mx-auto" src={palvelut4} alt="Venyttely ja liikkuvuus" loading="lazy" />
                   <p className="my-4"> {t('service4')}</p>
                 </div>
               </div>
@@ -297,7 +309,7 @@ function App() {
               <div className="flex justify-center">
                 <img
                   src={palvelut3}
-                  alt="Suutarin työ"
+                  alt="Urheiluhierontaa Tampereella"
                   className="w-full max-w-sm h-100 object-cover 
                   rounded-md shadow-md shadow-[#8E8D8A]"
                   loading="lazy"

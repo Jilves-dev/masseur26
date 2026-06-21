@@ -9,6 +9,7 @@ export const translations = {
     aboutPage: 'Meistä',
     galleryPage: 'Galleria',
     booking: 'Ajanvaraus',
+    shop: 'Verkkokauppa',
     blog: 'Blogi',
 
     // Hero
@@ -194,6 +195,7 @@ export const translations = {
     aboutPage: 'Om oss',
     galleryPage: 'Galleri',
     booking: 'Tidsbokning',
+    shop: 'Webbshop',
     blog: 'Blogg',
 
     // Hero
@@ -380,6 +382,7 @@ export const translations = {
     aboutPage: 'About Us',
     galleryPage: 'Gallery',
     booking: 'Booking Appointment',
+    shop: 'Webbshop',
     blog: 'Blog',
 
     // Hero

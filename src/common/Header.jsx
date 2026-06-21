@@ -134,10 +134,8 @@ const Header = () => {
 
             {/* KESKI: Logo */}
             <Link className="mobile-logo-center font-racingSansOne" to="/">
-              <span className="font-medium text-3xl text-[#E73725]">F</span>
-              <span className="font-medium text-3xl text-black">REEWHEEL</span>
-              <span className="font-medium text-3xl text-[#E73725]">B</span>
-              <span className="font-medium text-3xl text-black">IKES</span>
+              <span className="font-medium text-3xl text-[#E73725]">URHEILU</span>
+              <span className="font-medium text-3xl text-black">HIEROJA</span>
             </Link>
 
             {/* OIKEA: Ostoskori */}
@@ -166,28 +164,21 @@ const Header = () => {
                 className="desktop-logo font-racingSansOne text-2xl flex items-center"
                 to="/"
               >
-                <span className="text-[#ff1e00]">F</span>
-                <span className="text-black">REEWHEEL</span>
-                <span className="text-[#ff1e00]">B</span>
-                <span className="text-black">IKES</span>
-                <img
-                    src="/33591.svg"
-                    alt=""
-                    style={{ height: '1.5em', width: 'auto', display: 'inline-block', verticalAlign: 'middle' }}
-                  />
+                <span className="text-[#ff1e00]">URHEILU</span>
+                <span className="text-black">HIEROJA</span>
               </Link>
             </div>
 
             <ul className="desktop-menu flex flex-wrap font-racingSansOne text-black text-lg font-medium">
               <li className="mr-5">
                 <Link className="hover:text-[#E73725]" to="/">
-                  HOME
+                  ETUSIVU
                 </Link>
               </li>
 
               <li className="mr-5">
                 <Link className="hover:text-[#E73725]" to="/repairs">
-                  REPAIRS
+                  PALVELUT
                 </Link>
               </li>
 
@@ -196,7 +187,7 @@ const Header = () => {
                   className="hover:text-[#E73725] flex items-center"
                   onClick={toggleCategoryMenu}
                 >
-                  CATEGORYS
+                  KATEGORIAT
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4 ml-1"
@@ -220,31 +211,23 @@ const Header = () => {
                       className="font-racingSansOne text-base font-medium block px-4 py-2 hover:text-[#E73725]"
                       onClick={() => setShowCategoryMenu(false)}
                     >
-                      ALL PRODUCTS
+                      KAIKKI TUOTTEET
                     </Link>
 
                     <Link
-                      to={`/shop?category=${CATEGORIES.BIKES}`}
+                      to={`/shop?category=${CATEGORIES.GIFT_CARDS}`}
                       className="font-racingSansOne text-lg font-medium  block px-4 py-2 hover:text-[#E73725]"
                       onClick={() => setShowCategoryMenu(false)}
                     >
-                      BIKES
+                      LAHJAKORTIT
                     </Link>
 
                     <Link
-                      to={`/shop?category=${CATEGORIES.PARTS}`}
+                      to={`/shop?category=${CATEGORIES.SUPPLEMENTS}`}
                       className="font-racingSansOne text-lg font-medium  block px-4 py-2 hover:text-[#E73725]"
                       onClick={() => setShowCategoryMenu(false)}
                     >
-                      PARTS
-                    </Link>
-
-                    <Link
-                      to={`/shop?category=${CATEGORIES.REPAIRS}`}
-                      className="font-racingSansOne text-lg font-medium  block px-4 py-2 hover:text-[#E73725]"
-                      onClick={() => setShowCategoryMenu(false)}
-                    >
-                      REPAIRS
+                      LISÄRAVINTEET
                     </Link>
                   </div>
                 )}
@@ -252,19 +235,19 @@ const Header = () => {
 
               <li className="mr-5">
                 <Link className="hover:text-[#E73725]" to="/shop">
-                  SHOP
+                  KAUPPA
                 </Link>
               </li>
 
               <li className="mr-5">
                 <Link className="hover:text-[#E73725]" to="/contact">
-                  CONTACT
+                  YHTEYSTIEDOT
                 </Link>
               </li>
 
               <li className="mr-5">
                 <Link className="hover:text-[#E73725]" to="/about">
-                  ABOUT US
+                  MEISTÄ
                 </Link>
               </li>
             </ul>
@@ -342,15 +325,8 @@ const Header = () => {
               to="/"
               onClick={() => closeMenuAndNavigate('/')}
             >
-              <span className="text-[#E73725] text-3xl">F</span>
-              <span className="text-black text-3xl">REEWHEEL</span>
-              <span className="text-[#E73725] text-3xl">B</span>
-              <span className="text-black text-3xl">IKES</span>
-              <img
-                src="/33591.svg"
-                alt=""
-                style={{ height: '1.5em', width: 'auto', display: 'inline-block', verticalAlign: 'middle', marginLeft: '4px' }}
-              />
+              <span className="text-[#E73725] text-3xl">URHEILU</span>
+              <span className="text-black text-3xl">HIEROJA</span>
             </Link>
           </div>
 
@@ -445,7 +421,7 @@ const Header = () => {
               {isAdmin() && (
                 <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
                   <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                    Admin Dashboard
+                    Hallintapaneeli
                   </h3>
                   <nav className="space-y-3">
                     <Link
@@ -453,7 +429,7 @@ const Header = () => {
                       className="block text-xl text-black font-md hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin')}
                     >
-                      Admin Dashboard
+                      Hallintapaneeli
                     </Link>
 
                     <Link
@@ -461,7 +437,7 @@ const Header = () => {
                       className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/orders')}
                     >
-                      Order Management
+                      Tilaustenhallinta
                     </Link>
 
                     <Link
@@ -469,7 +445,7 @@ const Header = () => {
                       className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/products')}
                     >
-                      Product Management
+                      Tuotehallinta
                     </Link>
 
                     <Link
@@ -477,7 +453,7 @@ const Header = () => {
                       className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/users')}
                     >
-                      User Management
+                      Käyttäjähallinta
                     </Link>
 
                     <Link
@@ -503,7 +479,7 @@ const Header = () => {
               {currentUser && !isAdmin() && (
                 <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
                   <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                    User Dashboard
+                    Omat tiedot
                   </h3>
                   <nav className="space-y-3">
                     <Link
@@ -511,7 +487,7 @@ const Header = () => {
                       className="block text-xl text-black font-md hover:text-[#E73725] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/profile')}
                     >
-                      My Profile
+                      Profiili
                     </Link>
 
                     <Link
@@ -521,7 +497,7 @@ const Header = () => {
                         closeMenuAndNavigate('/profile?tab=orders')
                       }
                     >
-                      My Orders
+                      Omat tilaukset
                     </Link>
 
                     <Link
@@ -531,7 +507,7 @@ const Header = () => {
                         closeMenuAndNavigate('/profile?tab=password')
                       }
                     >
-                      Change Password
+                      Vaihda salasana
                     </Link>
                   </nav>
                 </div>
@@ -540,7 +516,7 @@ const Header = () => {
               {/* Muut linkit */}
               <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
                 <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                  Pages
+                  Sivut
                 </h3>
                 <nav className="space-y-3">
                   <Link
@@ -548,7 +524,7 @@ const Header = () => {
                     className="block text-xl text-black font-md hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/')}
                   >
-                    HOME
+                    ETUSIVU
                   </Link>
 
                   <Link
@@ -556,7 +532,7 @@ const Header = () => {
                     className="block text-xl text-black font-md hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/repairs')}
                   >
-                    REPAIRS
+                    PALVELUT
                   </Link>
 
                   <Link
@@ -564,7 +540,7 @@ const Header = () => {
                     className="block text-xl text-black font-md hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/contact')}
                   >
-                    CONTACT
+                    YHTEYSTIEDOT
                   </Link>
 
                   <Link
@@ -572,7 +548,7 @@ const Header = () => {
                     className="block text-xl text-black font-md hover:text-[#E73725] py-2"
                     onClick={() => closeMenuAndNavigate('/about')}
                   >
-                    ABOUT US
+                    MEISTÄ
                   </Link>
                 </nav>
               </div>
@@ -580,7 +556,7 @@ const Header = () => {
               {/* Kategoriat - Isolla tekstillä */}
               <div className="mb-8 font-racingSansOne">
                 <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
-                  Shop
+                  Kauppa
                 </h3>
                 <nav className="space-y-3">
                   <Link
@@ -588,43 +564,31 @@ const Header = () => {
                     className="block text-xl text-black font-md hover:text-[#E73725] py-3 transition-colors"
                     onClick={() => closeMenuAndNavigate('/shop')}
                   >
-                    ALL PRODUCTS
+                    KAIKKI TUOTTEET
                   </Link>
 
                   <Link
-                    to={`/shop?category=${CATEGORIES.BIKES}`}
+                    to={`/shop?category=${CATEGORIES.GIFT_CARDS}`}
                     className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors"
                     onClick={() =>
                       closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.BIKES}`
+                        `/shop?category=${CATEGORIES.GIFT_CARDS}`
                       )
                     }
                   >
-                    BIKES
+                    LAHJAKORTIT
                   </Link>
 
                   <Link
-                    to={`/shop?category=${CATEGORIES.PARTS}`}
+                    to={`/shop?category=${CATEGORIES.SUPPLEMENTS}`}
                     className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors"
                     onClick={() =>
                       closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.PARTS}`
+                        `/shop?category=${CATEGORIES.SUPPLEMENTS}`
                       )
                     }
                   >
-                    PARTS
-                  </Link>
-
-                  <Link
-                    to={`/shop?category=${CATEGORIES.REPAIRS}`}
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors"
-                    onClick={() =>
-                      closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.REPAIRS}`
-                      )
-                    }
-                  >
-                    REPAIRS
+                    LISÄRAVINTEET
                   </Link>
                 </nav>
               </div>
@@ -632,7 +596,7 @@ const Header = () => {
               {/* Social Media - NYT NÄKYY! */}
               <div className="border-t border-[#E73725] pt-6 pb-8">
                 <h4 className="text-lg font-racingSansOne font-md text-black text-center mb-6 uppercase tracking-wider">
-                  Follow Us
+                  Seuraa meitä
                 </h4>
                 <div className="flex gap-6 justify-center">
                   <a
