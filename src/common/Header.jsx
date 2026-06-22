@@ -178,11 +178,11 @@ const Header = () => {
 
               <li className="mr-5">
                 <Link className="hover:text-[#E73725]" to="/repairs">
-                  PALVELUT
+                  AJANVARAUS
                 </Link>
               </li>
 
-              <li className="mr-5 relative">
+              {/*<li className="mr-5 relative">
                 <button
                   className="hover:text-[#E73725] flex items-center"
                   onClick={toggleCategoryMenu}
@@ -231,7 +231,7 @@ const Header = () => {
                     </Link>
                   </div>
                 )}
-              </li>
+              </li>*/}
 
               <li className="mr-5">
                 <Link className="hover:text-[#E73725]" to="/shop">

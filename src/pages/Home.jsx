@@ -1,6 +1,6 @@
 import './Home.css';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import heroImage from '../assets/h1.png';
 import Contact from './Contact';
 {/*import About from './About';*/}
@@ -69,85 +69,8 @@ function App() {
 
   return (
     <div className="w-full flex flex-col items-center overflow-x-hidden">
-      <header
-        className={`${scrolling ? 'border-b border-[#D8C3A5]' : ''} fixed left-0 right-0 top-0 z-40 bg-[#bd8c7d]`}
-        id="home"
-      >
-        <div className="w-full px-6 py-6 bg-[#49494b]">
-          <div className="flex flex-col items-center text-center gap-4 px-4 w-full sm:flex-row sm:justify-between relative">
-            
-              <div>
-              <h1 className="font-euphorigenic text-4xl sm:text-4xl text-[#d1bfa7]">
-                {t('role')}
-              </h1>
-              </div>
-
-            <div>
-              <ul className="flex flex-row gap-2 font-euphorigenic font-normal text-sm sm:text-xl sm:flex-row sm:gap-10">
-                <li className="hidden sm:block">
-                  <a
-                    href="#palvelut"
-                    onClick={() => setArrowRotated(false)}
-                    className="text-[#d1bfa7] hover:text-[#FFFFFF]"
-                  >
-                    {t('palvelut')}
-                  </a>
-                </li>
-                <li>
-                   <Link
-                    to="/about"
-                    className="text-[#d1bfa7] hover:text-[#FFFFFF] font-euphorigenic"
-                  >
-                    {t('about')}
-                  </Link>
-                 </li>
-                <li>
-                <Link to="/booking" className="text-[#d1bfa7] hover:text-[#FFFFFF] font-euphorigenic">
-                    {t('booking')}
-                  </Link>
-                </li>
-
-
-                <li>
-                   <Link
-                    to="/shop"
-                    className="text-[#d1bfa7] hover:text-[#FFFFFF] font-euphorigenic"
-                  >
-                    {t('shop')}
-                  </Link>
-                </li>
-
-
-                {/*<li>
-                   <Link
-                    to="/gallery"
-                    className="text-[#d1bfa7] hover:text-[#FFFFFF] font-euphorigenic"
-                  >
-                    {t('gallery')}
-                  </Link>
-                </li>
-               
-                <li>
-                <Link to="/blog" className="text-[#d1bfa7] hover:text-[#FFFFFF] font-euphorigenic">
-                  {t('blog')}
-                </Link>
-              </li>*/}
-                <li>
-                  <a
-                    href="#contact"
-                    className="text-[#d1bfa7] hover:text-[#FFFFFF]"
-                  >
-                    {t('contact')}
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero section */}
-      <main className={`relative ${language === 'ru' ? 'mt-40 sm:mt-16' : 'mt-28 sm:mt-16'} w-full`}>
+      <main className="relative w-full">
      {/*  <main className="relative mt-28 sm:mt-16 w-full">
           <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full">*/}
           <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full px-4 gap-x-4">
@@ -155,10 +78,10 @@ function App() {
            <div className="flex-1 min-w-0 pt-0 sm:pt-6 px-4 pb-4 text-center sm:text-left">*/}
             <div className="w-full max-w-2xl sm:max-w-none sm:flex-1 px-4 pt-8 sm:pt-16 text-center sm:text-left">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-wintersolace text-sm sm:text-xl text-[#49494b]">
+              <h2 className="font-robotoVariable text-sm sm:text-xl text-gray-500">
                 {t('hey')}
               </h2>
-              <h2 className="font-euphorigenic font-normal text-4xl sm:text-7xl mt-1 text-[#8e8e90]">
+              <h2 className="font-racingSansOne font-normal text-4xl sm:text-7xl mt-1 text-[#E73725]">
                 {t('role')}
               </h2>
 
@@ -168,8 +91,8 @@ function App() {
                     const S = language.charAt(0).toUpperCase() + language.slice(1);
                     return (
                       <div key={item.id}
-                        className="font-wintersolace text-sm sm:text-base text-[#49494b]
-                                  border-l-2 border-[#d1bfa7] pl-3 py-1">
+                        className="font-robotoVariable text-sm sm:text-base text-gray-500
+                                  border-l-2 border-[#E73725] pl-3 py-1">
                         {item[`title${S}`] || item.titleFi}
                       </div>
                     );
@@ -177,7 +100,7 @@ function App() {
                 </div>
               )}
 
-              <p className="mt-4 font-wintersolace text-[#49494b] text-sm sm:text-lg leading-relaxed">
+              <p className="mt-4 font-robotoVariable text-gray-500 text-sm sm:text-lg leading-relaxed">
                 {t('heroDescription')}
               </p>
               {/* Hero 2 section */}
@@ -192,15 +115,15 @@ function App() {
                     }}
                   >
                     <button
-                      className="px-4 shadow-md shadow-[#8E8D8A] py-3 mt-6 group
-                      flex items-center border border-[#d1bfa7] rounded-md font-dmserif
-                      text-base text-[#3C403D] hover:bg-[#F0EEE6] hover:border-[#FFFFFF]"
+                      className="px-4 shadow-md shadow-[#E1E1E1] py-3 mt-6 group
+                      flex items-center border border-[#E1E1E1] rounded-md font-dmserif
+                      text-base text-[#010000] hover:bg-[#E1E1E1] hover:border-[#FFFFFF]"
                     >
                       {t('contactMe')}
                       <span
                         className={`inline-block transition-transform duration-300 ${arrowRotated ? 'rotate-90' : ''}`}
                       >
-                        <HiArrowNarrowRight className="text-xl ml-2 text-[#bd8c7d]" />
+                        <HiArrowNarrowRight className="text-xl ml-2 text-[#E73725]" />
                       </span>
                     </button>
                   </a>
@@ -249,16 +172,16 @@ function App() {
         >
           <div className="container px-4">
             <div className="mt-2 md:mt-18">
-              <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 font-euphorigenic text-[#49494b] text-base text-center pt-4 sm:py-8">
-                <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
+              <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 font-euphorigenic text-[#010000] text-base text-center pt-4 sm:py-8">
+                <div className="shadow-md shadow-[#E1E1E1] hover:scale-110 duration-500">
                     <img className="w-42 mx-auto" src={palvelut1} alt="Urheiluhieronta" loading="lazy" />
                   <p className="my-4"> {t('service1')}</p>
                 </div>
-                <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
+                <div className="shadow-md shadow-[#E1E1E1] hover:scale-110 duration-500">
                   <img className="w-42 mx-auto" src={palvelut2} alt="Syvähieronta" loading="lazy" />
                   <p className="my-4"> {t('service2')}</p>
                 </div>
-                <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
+                <div className="shadow-md shadow-[#E1E1E1] hover:scale-110 duration-500">
                   <img
                     className="w-41 mx-auto"
                     src={palvelut3}
@@ -267,7 +190,7 @@ function App() {
                   />
                   <p className="my-4"> {t('service3')}</p>
                 </div>
-                <div className="shadow-md shadow-[#8e8e90] hover:scale-110 duration-500">
+                <div className="shadow-md shadow-[#E1E1E1] hover:scale-110 duration-500">
                   <img className="w-42 mx-auto" src={palvelut4} alt="Venyttely ja liikkuvuus" loading="lazy" />
                   <p className="my-4"> {t('service4')}</p>
                 </div>
@@ -282,22 +205,25 @@ function App() {
 
             {/* Vasen: hinnasto */}
             <div>
-              <h2 className="font-euphorigenic text-[#49494b] text-3xl sm:text-3xl font-normal mb-8">
+              <h2 className="font-racingSansOne text-[#010000] text-3xl sm:text-3xl font-normal mb-8">
                 {t('technologiesTitle')}
               </h2>
-              <div className="font-wintersolace space-y-3">
-                {services?.map((s) => {
+              <div className="font-robotoVariable space-y-3">
+                {(services && services.length > 0 ? services : t('services'))?.map((s, i) => {
                   const S = language.charAt(0).toUpperCase() + language.slice(1);
+                  const hasLiveData = services && services.length > 0;
+                  const name = hasLiveData ? (s[`name${S}`] || s.nameFi) : s.name;
+                  const price = hasLiveData ? (s[`price${S}`] || s.priceFi) : s.price;
                   return (
                     <div
-                      key={s.id}
-                      className="flex justify-between items-baseline pb-2 border-b border-[#d1bfa7]/40"
+                      key={s.id || i}
+                      className="flex justify-between items-baseline pb-2 border-b border-[#E1E1E1]"
                     >
-                      <h2 className="text-[#49494b] text-sm sm:text-lg">
-                        {s[`name${S}`] || s.nameFi}
+                      <h2 className="text-[#010000] text-sm sm:text-lg">
+                        {name}
                       </h2>
-                      <p className="text-[#bd8c7d] text-sm sm:text-base ml-4 shrink-0">
-                        {s[`price${S}`] || s.priceFi}
+                      <p className="text-[#E73725] text-sm sm:text-base ml-4 shrink-0">
+                        {price}
                       </p>
                     </div>
                   );
@@ -310,8 +236,8 @@ function App() {
                 <img
                   src={palvelut3}
                   alt="Urheiluhierontaa Tampereella"
-                  className="w-full max-w-sm h-100 object-cover 
-                  rounded-md shadow-md shadow-[#8E8D8A]"
+                  className="w-full max-w-sm h-100 object-cover
+                  rounded-md shadow-md shadow-[#E1E1E1]"
                   loading="lazy"
                 />
               </div>
@@ -326,10 +252,10 @@ function App() {
 
       {/* Vasen: hinnasto *
       <div>
-        <h2 className="font-euphorigenic text-[#49494b] text-3xl sm:text-3xl font-normal mb-8">
+        <h2 className="font-racingSansOne text-[#49494b] text-3xl sm:text-3xl font-normal mb-8">
           {t('technologiesTitle')}
         </h2>
-        <div className="font-wintersolace space-y-3">
+        <div className="font-robotoVariable space-y-3">
           {services?.map((s) => (
             <div
               key={s.id}
@@ -378,7 +304,7 @@ function App() {
         </button>
       )}
 
-     {/* Social icons 
+     {/* Social icons */}
       <div className="hidden md:flex fixed flex-col top-[44%] left-0 gap-0 z-50">
         {[
           { icon: <FaWhatsapp size={34} />, label: 'Whatsapp', href: '', color: 'text-[#8e8e90]' },
@@ -393,23 +319,23 @@ function App() {
         transition-transform duration-300 hover:translate-x-2`}
           >
             
-            <span className="font-wintersolace text-sm whitespace-nowrap
+            <span className="font-robotoVariable text-sm whitespace-nowrap
           max-w-0 overflow-hidden opacity-0 pl-3
           group-hover:max-w-[120px] group-hover:opacity-100 group-hover:pr-2
           transition-all duration-500 ease-in-out">
               {label}
             </span>
 
-              {/* Ikoni — aina näkyvissä, pieni taustaväri helpottaa klikkaamista *
+              {/* Ikoni — aina näkyvissä, pieni taustaväri helpottaa klikkaamista */}
       <div className="p-1
         transition-colors duration-300">
         {icon}
       </div>
           </a>
         ))}
-      </div>*/}
+      </div>
 
-{/* Language flag icons */}
+{/* Language flag icons 
 <div className="hidden md:flex fixed flex-col top-[44%] left-0 gap-2 z-50 p-1">
   {[
     { code: 'fi', label: 'Suomi',    lang: 'fi' },
@@ -423,15 +349,15 @@ function App() {
       className={`group flex flex-row items-center cursor-pointer
       transition-transform duration-300 hover:translate-x-2`}
     >
-      <span className="font-wintersolace text-xs whitespace-nowrap
+      <span className="font-robotoVariable text-xs whitespace-nowrap
         max-w-0 overflow-hidden opacity-0 pl-2
         group-hover:max-w-[100px] group-hover:opacity-100 group-hover:pr-2
-        transition-all duration-500 ease-in-out text-[#49494b]">
+        transition-all duration-500 ease-in-out text-[#010000]">
         {label}
       </span>
       <div className={`w-9 h-9 rounded-full overflow-hidden shadow-md
         border-2 transition-all duration-300 flex-shrink-0
-        ${language === lang ? 'border-[#bd8c7d]' : 'border-[#d1bfa7]/50 hover:border-[#d1bfa7]'}`}>
+        ${language === lang ? 'border-[#E73725]' : 'border-[#E1E1E1] hover:border-[#E73725]'}`}>
         <img
           src={`https://flagcdn.com/w40/${code}.png`}
           alt={label}
@@ -440,7 +366,7 @@ function App() {
       </div>
     </div>
   ))}
-</div>
+</div>*/}
 
     </div>
   );

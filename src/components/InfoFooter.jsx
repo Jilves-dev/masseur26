@@ -46,8 +46,8 @@ export default function InfoFooter() {
             </li>
             <li className="flex items-center gap-3 text-white">
               <FaEnvelope className="text-[#F7F4F1] shrink-0" />
-              <a href="mailto:asianajo@advocatus.fi" className="hover:text-[#E97B52] transition-colors">
-                asianajo@advocatus.fi
+              <a href="mailto:kim&Jenna@urheiluhieroja.fi" className="hover:text-[#E97B52] transition-colors">
+                kim&Jenna@urheiluhieroja.fi
               </a>
             </li>
           </ul>
@@ -58,7 +58,7 @@ export default function InfoFooter() {
           <h3 className="font-dmserif text-xl text-white mb-5">{t('findUs')}</h3>
           <div className="rounded-md overflow-hidden shadow-lg border border-[#3a3a3a]">
             <iframe
-              title="asianajo@advocatus.fi Google Maps-sijainti"
+              title="kim&Jenna@urheiluhieroja.fi Google Maps-sijainti"
               src="https://maps.google.com/maps?q=Aleksanterinkatu+15,+00100+Helsinki&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="200"
@@ -74,7 +74,7 @@ export default function InfoFooter() {
 
       {/* Alakapea */}
       <div className="border-t border-[#3a3a3a] py-4 text-center font-wintersolace text-xs text-[#666]">
-        © {new Date().getFullYear()} asianajo@advocatus.fi &mdash; {t('footerCopyright')}
+        © {new Date().getFullYear()} kim&Jenna@urheiluhieroja.fi &mdash; {t('footerCopyright')}
       </div>
     </footer>
   );

@@ -9,7 +9,7 @@ export const translations = {
     aboutPage: 'Meistä',
     galleryPage: 'Galleria',
     booking: 'Ajanvaraus',
-    shop: 'Lahjakortit',
+    shop: 'Verkkokauppa',
     blog: 'Blogi',
 
     // Hero

@@ -12,6 +12,10 @@ import {
 } from 'react-icons/fa';
 import { BiMenu } from 'react-icons/bi';
 import { useMobileMenu } from '../context/MobileMenuContext';
+import heroImage from '../assets/p6.png';
+import place1 from '../assets/place4.jpg';
+import place2 from '../assets/place2.jpg';
+import place3 from '../assets/place3.jpg';
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 60 },
@@ -130,10 +134,10 @@ const Repairs = () => {
           ==================================== */}
       <section className="relative overflow-hidden">
         <div
-          className="h-72 md:h-96 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/repair3.jpg')" }}
+          className="h-72 md:h-100 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-[#010000]/60" />
+          <div className="absolute inset-0 bg-[#010000]/35" />
           <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
             <motion.h1
               variants={fadeUp(0.1)}
@@ -307,14 +311,14 @@ const Repairs = () => {
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-            {['/images/r1.jpg', '/images/r2.jpg', '/images/r3.jpg'].map(
+            {[place4, place2, place3].map(
               (src, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp(0.1 + i * 0.1)}
                   initial="hidden"
                   whileInView="show"
-                  className="aspect-square overflow-hidden rounded-xl shadow-lg group"
+                  className="aspect-[3/2] overflow-hidden rounded-xl shadow-lg group"
                 >
                   <img
                     src={src}

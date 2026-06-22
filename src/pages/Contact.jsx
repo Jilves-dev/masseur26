@@ -49,7 +49,7 @@ const Footer = ({ title }) => {
 const PageHeader = ({ title }) => (
   <div className="container mx-auto px-4">
     <div className="text-left pb-2">
-      <h2 className="font-euphorigenic text-3xl sm:text-3xl text-[#93a29d5] font-normal">
+      <h2 className="font-euphorigenic text-3xl sm:text-3xl text-[#010000] font-normal">
         {title}
       </h2>
     </div>
@@ -89,7 +89,7 @@ const Contact = () => {
       <section id="contact" className="max-w-4xl mx-auto">
         <div
           style={{ minHeight: '75vh' }}
-          className="bg-[#F5F2EE] flex flex-col justify-between"
+          className="bg-[#FFFFFF] flex flex-col justify-between"
         >
           <div
             name="contact"
@@ -103,17 +103,17 @@ const Contact = () => {
               autoComplete="off"
             >
               <PageHeader title={t('contactMe')} />
-              <p className="text-left py-4 pl-2 font-wintersolace text-sm sm:text-lg text-[#49494b]">
+              <p className="text-left py-4 pl-2 font-wintersolace text-sm sm:text-lg text-gray-500">
                 {t('contactText')}{' '}
                 <a
-                  className="wa inline border-b-2 border-[#bd8c7d] font-wintersolace text-sm sm:text-lg"
+                  className="wa inline border-b-2 border-[#E73725] font-wintersolace text-sm sm:text-lg"
                   href="https://wa.me/358405142954?text=How%20can%20I%20help%20you%3F"
                 >
                   {t('whatsapp')}
                 </a>
               </p>
               <input
-                className="bg-[#FFFFFF] p-2 border border-[#d1bfa7] rounded-md text-[#49494b] font-wintersolace text-sm sm:text-base"
+                className="bg-[#FFFFFF] p-2 border border-[#E1E1E1] rounded-md text-[#010000] font-wintersolace text-sm sm:text-base"
                 type="text"
                 placeholder={t('namePlaceholder')}
                 name="name"
@@ -121,7 +121,7 @@ const Contact = () => {
                 onChange={handleChange}
               />
               <input
-                className="my-4 p-2 bg-[#FFFFFF] border border-[#d1bfa7] rounded-md text-[#49494b] font-wintersolace text-sm sm:text-base"
+                className="my-4 p-2 bg-[#FFFFFF] border border-[#E1E1E1] rounded-md text-[#010000] font-wintersolace text-sm sm:text-base"
                 type="email"
                 placeholder={t('emailPlaceholder')}
                 name="email"
@@ -129,7 +129,7 @@ const Contact = () => {
                 onChange={handleChange}
               />
               <textarea
-                className="bg-[#FFFFFF] p-2 border border-[#d1bfa7] rounded-md text-[#49494b] font-wintersolace text-sm sm:text-base"
+                className="bg-[#FFFFFF] p-2 border border-[#E1E1E1] rounded-md text-[#010000] font-wintersolace text-sm sm:text-base"
                 name="message"
                 rows="10"
                 placeholder={t('messagePlaceholder')}
@@ -137,8 +137,8 @@ const Contact = () => {
                 onChange={handleChange}
               ></textarea>
               <button
-                className="group border-[#d1bfa7] border-1 shadow-[#8E8D8A] shadow px-6 py-3 my-8 rounded-md text-[#504930] 
-                           hover:bg-[#F0EEE6] !hover:border-[#E85A4F] mx-auto flex items-center font-dmserif text-base sm:text-lg"
+                className="group border-[#E1E1E1] border-1 shadow-[#E1E1E1] shadow px-6 py-3 my-8 rounded-md text-[#010000]
+                           hover:bg-[#E1E1E1] hover:border-[#E73725] mx-auto flex items-center font-dmserif text-base sm:text-lg"
               >
                 {t('collaborate')}
               </button>
@@ -149,18 +149,18 @@ const Contact = () => {
 
       <div className="flex justify-center md:hidden w-full">
               <div className="grid grid-cols-3 gap-6 w-fit mx-auto">
-                <div className="flex items-center justify-center text-[#bd8c7d]">
+                <div className="flex items-center justify-center text-[#E73725]">
                   <a href="https://wa.me/358405142954?text=How%20can%20I%20help%20you%3F">
                     <FaWhatsapp size={38} />
                   </a>
                 </div>
-                    <div className="flex items-center justify-center text-[#bd8c7d]">
-                  <a href="https://www.paytrail.com/">
+                    <div className="flex items-center justify-center text-[#E73725]">
+                  <a href="">
                     <FaFacebook size={38} />
                   </a>
                 </div>
-                <div className="flex items-center justify-center text-[#bd8c7d]">
-                  <a href="www.linkedin.com/in/jukka-i-6204533b0">
+                <div className="flex items-center justify-center text-[#E73725]">
+                  <a href="">
                     <FaInstagram size={38} />
                   </a>
                 </div>
