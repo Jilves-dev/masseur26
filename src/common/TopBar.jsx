@@ -15,7 +15,7 @@ const TopBar = () => {
         <div className="flex items-center justify-center py-2 px-2">
           <span className="text-white text-sm font-zaslia font-medium flex items-center gap-1">
             <FaSun className="text-yellow-400 text-base" />
-            SUMMER 2026 SALE
+            KESÄ 2026 ALE
             <FaSun className="text-yellow-400 text-base" />
           </span>
         </div>
@@ -23,7 +23,7 @@ const TopBar = () => {
         {/* Alarivi: Free shipping */}
         <div className="flex items-center justify-center py-2 px-2">
           <span className="text-white text-md font-librecaslon font-medium flex items-center gap-1">
-            Free shipping 🚚 for all orders of €150
+            Ilmainen postitus🚚kaikkiin yli €150 ostoksiin
           </span>
         </div>
       </div>

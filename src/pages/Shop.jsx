@@ -29,6 +29,7 @@ import {
   getProductsByCategory,
   CATEGORIES,
 } from '../services/productService';
+import { GIFT_CARDS } from '../data/Data';
 import {
   toggleLike,
   getUserLikes,
@@ -69,14 +70,20 @@ const Shop = () => {
           Object.values(CATEGORIES).includes(categoryParam)
         ) {
           setSelectedCategory(categoryParam);
-          const categoryProducts = await getProductsByCategory(categoryParam);
-          setProducts(categoryProducts);
-          setFilteredProducts(categoryProducts);
+          if (categoryParam === CATEGORIES.GIFT_CARDS) {
+            setProducts(GIFT_CARDS);
+            setFilteredProducts(GIFT_CARDS);
+          } else {
+            const categoryProducts = await getProductsByCategory(categoryParam);
+            setProducts(categoryProducts);
+            setFilteredProducts(categoryProducts);
+          }
         } else {
           setSelectedCategory('');
           const allProducts = await getAllProducts();
-          setProducts(allProducts);
-          setFilteredProducts(allProducts);
+          const combined = [...GIFT_CARDS, ...allProducts];
+          setProducts(combined);
+          setFilteredProducts(combined);
         }
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -138,13 +145,16 @@ const Shop = () => {
 
       navigate(category ? `?category=${category}` : '/shop');
 
-      if (category) {
+      if (category === CATEGORIES.GIFT_CARDS) {
+        setFilteredProducts(GIFT_CARDS);
+      } else if (category) {
         const categoryProducts = await getProductsByCategory(category);
         setFilteredProducts(categoryProducts);
       } else {
         const allProducts = await getAllProducts();
-        setProducts(allProducts);
-        setFilteredProducts(allProducts);
+        const combined = [...GIFT_CARDS, ...allProducts];
+        setProducts(combined);
+        setFilteredProducts(combined);
       }
     } catch (error) {
       console.error('Error filtering products:', error);
@@ -707,7 +717,7 @@ const Shop = () => {
           <form onSubmit={handleSearch} className="flex w-full md:w-auto">
             <input
               type="text"
-              className="bg-white border border-grey-300 font-racingSansOne rounded-l rounded-r-none px-4 py-2 w-full md:w-60"
+              className="bg-white border border-[#E1E1E1] font-racingSansOne rounded-l rounded-r-none px-4 py-2 w-full md:w-60"
               placeholder="Hae tuotteita..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -731,7 +741,7 @@ const Shop = () => {
               KATEGORIA-SIVUPALKKI - VAIN DESKTOP
               ==================================== */}
           <div className="hidden md:block md:w-1/4">
-            <div className="bg-[#FFFFFF] p-4 rounded-lg border border-gray-400 shadow-xl">
+            <div className="bg-[#FFFFFF] p-4 rounded-lg border border-[#E1E1E1] shadow-xl">
               <h3 className="font-racingSansOne text-lg sm:text-2xl font-medium mb-4">
                 Kategoriat
               </h3>
@@ -770,7 +780,7 @@ const Shop = () => {
 
             {filteredProducts.length === 0 ? (
               <div className="text-center py-8">
-                <p className="font-librecaslon font-medium text-xl mb-4">
+                <p className="font-robotoVariable font-medium text-xl mb-4">
                   Tuotteita ei löytynyt
                 </p>
                 <button
@@ -778,7 +788,7 @@ const Shop = () => {
                     setSearchTerm('');
                     setFilteredProducts(products);
                   }}
-                  className="font-librecaslon font-medium text-xl text-black bg-[#E73725] hover:bg-red-700 px-4 py-2 rounded mx-auto block"
+                  className="font-robotoVariable font-medium text-xl text-black bg-[#E73725] hover:bg-red-700 px-4 py-2 rounded mx-auto block"
                 >
                   Näytä kaikki tuotteet
                 </button>
@@ -843,7 +853,7 @@ const Shop = () => {
                       {/* Product Info - Responsiivinen padding ja tekstikoot *
                       <div className="p-2 md:p-3">
                         {/*<p className="text-xs text-gray-600 mb-1">{val.short_description}</p>*
-                        <h3 className="font-zaslia font-medium text-xl text-black md:text-xl mb-2 line-clamp-2 text-center">
+                        <h3 className="font-racingSansOne font-medium text-xl text-black md:text-xl mb-2 line-clamp-2 text-center">
                           {product.title}
                         </h3>
 
@@ -924,7 +934,7 @@ const Shop = () => {
                         </div>
 
                         <div className="text-center">
-                          <span className="font-librecaslon text-[#333333] font-medium text-lg md:text-base">
+                          <span className="font-robotoVariable text-[#333333] font-medium text-lg md:text-base">
                             €{product.price}
                           </span>
                         </div>
@@ -941,14 +951,21 @@ const Shop = () => {
 
                       {/* Kuva-alue — aspect-[3/4] pakottaa pystysuuntaisen kehyksen */}
                       <div className="relative aspect-[3/4] overflow-hidden bg-gray-50">
-                        <img
-                          src={product.img}
-                          alt={product.title}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
+                        {product.img ? (
+                          <img
+                            src={product.img}
+                            alt={product.title}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-[#010000] text-white">
+                            <span className="text-4xl text-[#E73725]">{product.icon}</span>
+                            <span className="font-racingSansOne text-2xl font-bold">€{product.price}</span>
+                          </div>
+                        )}
 
                         {product.tag && (
-                          <div className="absolute top-3 left-3 z-20 bg-[#E73725] font-zaslia text-white
+                          <div className="absolute top-3 left-3 z-20 bg-[#E73725] font-racingSansOne text-white
                                           text-xs font-semibold uppercase tracking-wide px-2 py-0.5 shadow">
                             {product.tag}
                           </div>
@@ -970,7 +987,7 @@ const Shop = () => {
 
                       {/* Info-paneeli */}
                       <div className="px-3 py-3 bg-white">
-                        <h3 className="font-zaslia text-[#010000] text-base leading-snug line-clamp-2 mb-1.5">
+                        <h3 className="font-racingSansOne text-[#010000] text-base leading-snug line-clamp-2 mb-1.5">
                           {product.title}
                         </h3>
 
@@ -997,7 +1014,7 @@ const Shop = () => {
                         </div>
 
                         <div className="flex items-center justify-between">
-                          <span className="font-librecaslon text-[#010000] font-bold text-xl">
+                          <span className="font-robotoVariable text-[#010000] font-bold text-xl">
                             €{product.price}
                           </span>
                           <div className="flex gap-1.5">
@@ -1012,7 +1029,7 @@ const Shop = () => {
                             <button
                               type="button"
                               onClick={() => handleOpen(product.id)}
-                              className="px-3 h-8 font-librecaslon text-xs font-semibold uppercase tracking-wide
+                              className="px-3 h-8 font-robotoVariable text-xs font-semibold uppercase tracking-wide
                                          border border-[#010000] text-[#010000] rounded
                                          hover:bg-[#010000] hover:text-white transition-colors duration-200"
                             >

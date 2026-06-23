@@ -1,4 +1,43 @@
+import { FaGift } from 'react-icons/fa';
 import { CATEGORIES } from '../services/productService';
+
+// Lahjakortit ovat kovakoodattuja (eivät Firestoressa) - kiinteät vaihtoehdot.
+// Lisäravinteet hallitaan admin-paneelin kautta (Firestore 'products'-kokoelma).
+export const GIFT_CARDS = [
+  {
+    id: 'gift-30',
+    title: 'Lahjakortti – 30 min hieronta',
+    price: 39,
+    category: CATEGORIES.GIFT_CARDS,
+    description: 'Lahjakortti 30 minuutin urheiluhierontaan. Sopiva pienempään hemmotteluun.',
+    icon: <FaGift />,
+  },
+  {
+    id: 'gift-60',
+    title: 'Lahjakortti – 60 min hieronta',
+    price: 65,
+    tag: 'SUOSITTU',
+    category: CATEGORIES.GIFT_CARDS,
+    description: 'Lahjakortti 60 minuutin urheiluhierontaan. Suosituin lahjavalinta.',
+    icon: <FaGift />,
+  },
+  {
+    id: 'gift-90',
+    title: 'Lahjakortti – 90 min hieronta',
+    price: 89,
+    category: CATEGORIES.GIFT_CARDS,
+    description: 'Lahjakortti 90 minuutin urheiluhierontaan koko kehon huoltoon.',
+    icon: <FaGift />,
+  },
+  {
+    id: 'gift-open',
+    title: 'Avoin lahjakortti',
+    price: 50,
+    category: CATEGORIES.GIFT_CARDS,
+    description: 'Avoimen arvon lahjakortti, jonka saaja voi käyttää haluamaansa hoitoon.',
+    icon: <FaGift />,
+  },
+];
 
 export const navbar = [
   {

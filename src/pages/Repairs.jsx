@@ -143,7 +143,7 @@ const Repairs = () => {
               variants={fadeUp(0.1)}
               initial="hidden"
               animate="show"
-              className="font-zaslia text-4xl md:text-6xl text-white font-bold mb-4"
+              className="font-racingSansOne text-4xl md:text-6xl text-white font-bold mb-4"
             >
               Urheiluhieroja
             </motion.h1>
@@ -151,7 +151,7 @@ const Repairs = () => {
               variants={fadeUp(0.25)}
               initial="hidden"
               animate="show"
-              className="font-librecaslon text-white text-lg md:text-xl mb-8 max-w-xl"
+              className="font-robotoVariable text-white text-lg md:text-xl mb-8 max-w-xl"
             >
               Kahden ammattilaisen urheiluhierontaa Tampereella — palautumiseen, vammojen ehkäisyyn ja suorituskyvyn tukemiseen.
             </motion.p>
@@ -168,14 +168,14 @@ const Repairs = () => {
               <button
                 onClick={() => navigate('/booking')}
                 className="flex items-center gap-3 bg-[#E73725] hover:bg-red-700 text-white
-                  font-librecaslon font-semibold text-lg md:text-xl
+                  font-robotoVariable font-semibold text-lg md:text-xl
                   px-8 py-4 rounded-lg shadow-2xl
                   transition-all duration-300 hover:scale-105 hover:shadow-red-400/40"
               >
                 <FaCalendarAlt className="text-xl" />
                 Varaa hierontaaika
               </button>
-              <p className="font-librecaslon text-white/70 text-sm mt-3">
+              <p className="font-robotoVariable text-white/70 text-sm mt-3">
                 Online-ajanvarauskalenteri tulossa pian — ota yhteyttä ja varaa aika nyt
               </p>
             </motion.div>
@@ -192,7 +192,7 @@ const Repairs = () => {
             variants={fadeUp(0.1)}
             initial="hidden"
             whileInView="show"
-            className="font-zaslia text-3xl md:text-4xl text-white text-center mb-12"
+            className="font-racingSansOne text-3xl md:text-4xl text-white text-center mb-12"
           >
             Näin se toimii
           </motion.h2>
@@ -209,11 +209,11 @@ const Repairs = () => {
                 <div className="w-20 h-20 rounded-full bg-[#E73725] flex items-center justify-center text-white mb-4 shadow-lg">
                   {step.icon}
                 </div>
-                <span className="font-librecaslon text-[#E73725] text-sm font-bold tracking-widest mb-1">
+                <span className="font-robotoVariable text-[#E73725] text-sm font-bold tracking-widest mb-1">
                   VAIHE {step.number}
                 </span>
-                <h3 className="font-zaslia text-white text-xl mb-2">{step.title}</h3>
-                <p className="font-librecaslon text-white/70 text-sm leading-relaxed">
+                <h3 className="font-racingSansOne text-white text-xl mb-2">{step.title}</h3>
+                <p className="font-robotoVariable text-white/70 text-sm leading-relaxed">
                   {step.desc}
                 </p>
               </motion.div>
@@ -231,7 +231,7 @@ const Repairs = () => {
             variants={fadeUp(0.1)}
             initial="hidden"
             whileInView="show"
-            className="font-zaslia text-3xl md:text-4xl text-[#010000] text-center mb-4"
+            className="font-racingSansOne text-3xl md:text-4xl text-[#010000] text-center mb-4"
           >
             Palvelut ja hinnat
           </motion.h2>
@@ -239,7 +239,7 @@ const Repairs = () => {
             variants={fadeUp(0.2)}
             initial="hidden"
             whileInView="show"
-            className="font-librecaslon text-gray-500 text-center mb-12 max-w-xl mx-auto"
+            className="font-robotoVariable text-gray-500 text-center mb-12 max-w-xl mx-auto"
           >
             Avoimet hinnat ilman piilokuluja. Useimmiten aikoja vapaana samalla viikolla.
           </motion.p>
@@ -267,16 +267,16 @@ const Repairs = () => {
                   {service.icon}
                 </div>
 
-                <h3 className={`font-zaslia text-xl mb-2 ${service.highlight ? 'text-white' : 'text-[#010000]'}`}>
+                <h3 className={`font-racingSansOne text-xl mb-2 ${service.highlight ? 'text-white' : 'text-[#010000]'}`}>
                   {service.title}
                 </h3>
 
-                <p className={`font-librecaslon text-sm leading-relaxed mb-4
+                <p className={`font-robotoVariable text-sm leading-relaxed mb-4
                   ${service.highlight ? 'text-white/85' : 'text-gray-500'}`}>
                   {service.desc}
                 </p>
 
-                <div className={`font-librecaslon text-2xl font-bold
+                <div className={`font-robotoVariable text-2xl font-bold
                   ${service.highlight ? 'text-white' : 'text-[#E73725]'}`}>
                   {service.price}
                 </div>
@@ -288,7 +288,7 @@ const Repairs = () => {
             variants={fadeUp(0.2)}
             initial="hidden"
             whileInView="show"
-            className="font-librecaslon text-gray-400 text-center text-sm mt-8"
+            className="font-robotoVariable text-gray-400 text-center text-sm mt-8"
           >
             Hinnat sisältävät hieronnan ja tilan käytön.
             Kysy tarjous ryhmä- tai yrityshieronnoista.
@@ -305,13 +305,13 @@ const Repairs = () => {
             variants={fadeUp(0.1)}
             initial="hidden"
             whileInView="show"
-            className="font-zaslia text-3xl md:text-4xl text-[#010000] text-center mb-12"
+            className="font-racingSansOne text-3xl md:text-4xl text-[#010000] text-center mb-12"
           >
             Hierontatilamme
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-            {[place4, place2, place3].map(
+            {[place1, place2, place3].map(
               (src, i) => (
                 <motion.div
                   key={i}
@@ -343,10 +343,10 @@ const Repairs = () => {
             whileInView="show"
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="font-zaslia text-3xl md:text-4xl text-white mb-4">
+            <h2 className="font-racingSansOne text-3xl md:text-4xl text-white mb-4">
               Valmis rentoutumaan ja palautumaan?
             </h2>
-            <p className="font-librecaslon text-white/85 text-lg mb-8">
+            <p className="font-robotoVariable text-white/85 text-lg mb-8">
               Varaa aika verkossa tai tule käymään hierontatilassamme Tampereella.
               Otamme vastaan myös kävijöitä pienempiin hoitoihin.
             </p>
@@ -355,7 +355,7 @@ const Repairs = () => {
               <button
                 onClick={() => navigate('/booking')}
                 className="flex items-center justify-center gap-2 bg-white text-[#E73725]
-                  font-librecaslon font-bold text-lg px-8 py-4 rounded-lg
+                  font-robotoVariable font-bold text-lg px-8 py-4 rounded-lg
                   hover:bg-[#010000] hover:text-white transition-all duration-300 shadow-lg"
               >
                 <FaCalendarAlt />
@@ -365,7 +365,7 @@ const Repairs = () => {
               <a
                 href="tel:+358501234567"
                 className="flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white
-                  font-librecaslon font-semibold text-lg px-8 py-4 rounded-lg
+                  font-robotoVariable font-semibold text-lg px-8 py-4 rounded-lg
                   hover:bg-white hover:text-[#E73725] transition-all duration-300"
               >
                 <FaPhone />
@@ -373,7 +373,7 @@ const Repairs = () => {
               </a>
             </div>
 
-            <p className="font-librecaslon text-white/70 text-sm mt-6">
+            <p className="font-robotoVariable text-white/70 text-sm mt-6">
               Ma–Pe: 10–19 &nbsp;·&nbsp; La: 10–17 &nbsp;·&nbsp; Su: 12–16
             </p>
           </motion.div>

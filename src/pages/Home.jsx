@@ -2,7 +2,7 @@ import './Home.css';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import heroImage from '../assets/h1.png';
-import Contact from './Contact';
+import ContactHome from '../components/ContactHome';
 {/*import About from './About';*/}
 import palvelut2 from '../assets/p2.png';
 import palvelut3 from '../assets/p3.png';
@@ -289,7 +289,7 @@ function App() {
 
 
 
-        <Contact />
+        <ContactHome />
         <InfoFooter />
       </main>
 
