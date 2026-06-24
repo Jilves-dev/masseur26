@@ -240,14 +240,14 @@ const Header = () => {
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#E73725]" to="/contact">
-                  YHTEYSTIEDOT
+                <Link className="hover:text-[#E73725]" to="/about">
+                  MEISTÄ
                 </Link>
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#E73725]" to="/about">
-                  MEISTÄ
+                <Link className="hover:text-[#E73725]" to="/contact">
+                  YHTEYSTIEDOT
                 </Link>
               </li>
             </ul>

@@ -39,7 +39,7 @@ const TopBar = () => {
               € EUR
             </Link>
             <Link className="mr-2 text-white uppercase pl-2 text-sm hover:bg-red-700 transition-colors">
-              Free shipping for all orders of €150
+              25% alennus kaikkiin yli €150 lahjakortti ostoksiin
             </Link>
           </div>
           <div className="flex items-center">
@@ -48,7 +48,7 @@ const TopBar = () => {
               className="mr-5 text-white uppercase pl-4 border-l-2 border-r-2 pr-4 text-sm hover:bg-red-700 transition-colors"
               to="contact"
             >
-              Contact Us
+              Yhteystiedot
             </Link>
             <Link className="mr-5 text-white uppercase border-r-2 pr-4 text-sm hover:bg-red-700 transition-colors">
               FAQs
