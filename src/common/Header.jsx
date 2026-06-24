@@ -157,27 +157,27 @@ const Header = () => {
         {/* ============
           DESKTOP HEADER
           ==============*/}
-        <div className="hidden md:block bg-[#FFFFFF]">
+        <div className="hidden md:block hero-bg">
           <div className="flex flex-wrap justify-between items-center pt-4 pb-0 w-10/12 mx-auto">
             <div className="ml-6">
               <Link
-                className="desktop-logo font-racingSansOne text-2xl flex items-center"
+                className="desktop-logo font-eordeoghlakat text-2xl flex items-center"
                 to="/"
               >
-                <span className="text-[#ff1e00]">URHEILU</span>
-                <span className="text-black">HIEROJA</span>
+                <span className="text-[#b07d54]">URHEILU</span>
+                <span className="text-[#2e3538]">HIEROJA</span>
               </Link>
             </div>
 
             <ul className="desktop-menu flex flex-wrap font-racingSansOne text-black text-lg font-medium">
               <li className="mr-5">
-                <Link className="hover:text-[#E73725]" to="/">
+                <Link className="hover:text-[#2e3538]" to="/">
                   ETUSIVU
                 </Link>
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#E73725]" to="/repairs">
+                <Link className="hover:text-[#2e3538]" to="/repairs">
                   AJANVARAUS
                 </Link>
               </li>
@@ -234,26 +234,26 @@ const Header = () => {
               </li>*/}
 
               <li className="mr-5">
-                <Link className="hover:text-[#E73725]" to="/shop">
+                <Link className="hover:text-[#2e3538]" to="/shop">
                   KAUPPA
                 </Link>
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#E73725]" to="/about">
+                <Link className="hover:text-[#2e3538]" to="/about">
                   MEISTÄ
                 </Link>
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#E73725]" to="/contact">
+                <Link className="hover:text-[#2e3538]" to="/contact">
                   YHTEYSTIEDOT
                 </Link>
               </li>
             </ul>
 
             <div className="flex flex-wrap text-2xl items-center">
-              <Link to="/shop" className="mr-4 hover:text-[#E73725]">
+              <Link to="/shop" className="mr-4 hover:text-[#00303F]">
                 <BiSearch />
               </Link>
 
@@ -261,14 +261,14 @@ const Header = () => {
                 <>
                   <Link
                     to={isAdmin() ? '/admin' : '/profile'}
-                    className="mr-2 hover:text-[#E73725]"
+                    className="mr-2 hover:text-[#00303F]"
                     title={isAdmin() ? 'Hallintapaneeli' : 'Käyttäjäprofiili'}
                   >
                     <BiUser />
                   </Link>
                   <button
                     onClick={handleLogout}
-                    className="mr-4 hover:text-[#E73725]"
+                    className="mr-4 hover:text-[#00303F]"
                     title="Kirjaudu ulos"
                   >
                     <BiLogOut />
@@ -277,7 +277,7 @@ const Header = () => {
               ) : (
                 <Link
                   to="/login"
-                  className="mr-4 hover:text-[#E73725]"
+                  className="mr-4 hover:text-[#00303F]"
                   title="Kirjaudu sisään"
                 >
                   <FaSignInAlt />
@@ -285,7 +285,7 @@ const Header = () => {
               )}
 
               <div className="relative">
-                <Link to="/cart" className="hover:text-[#E73725]">
+                <Link to="/cart" className="hover:text-[#00303F]">
                   <BiShoppingBag />
                 </Link>
                 {totalItems > 0 && (

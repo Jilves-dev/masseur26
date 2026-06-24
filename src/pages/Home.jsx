@@ -73,25 +73,30 @@ function App() {
       <main className="relative w-full">
      {/*  <main className="relative mt-28 sm:mt-16 w-full">
           <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full">*/}
+        <div className="hero-bg w-full">
           <section className="flex flex-col-reverse max-w-4xl m-auto sm:flex-row items-center w-full px-4 gap-x-4">
            {/*<div className="container m-auto pt-0 sm:pt-16 px-4 pb-4 sm:pb-4 text-center sm:text-left sm:pt-6">
            <div className="flex-1 min-w-0 pt-0 sm:pt-6 px-4 pb-4 text-center sm:text-left">*/}
             <div className="w-full max-w-2xl sm:max-w-none sm:flex-1 px-4 pt-8 sm:pt-16 text-center sm:text-left">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-librecaslon text-sm sm:text-xl text-gray-500">
-                {t('hey')}
+              <h2 className="font-librecaslon text-sm sm:text-xl text-[#2e3538]">
+                {t('hey')} urheiluhierojat
               </h2>
-              <h2 className="font-racingSansOne font-normal text-4xl sm:text-7xl mt-1 text-[#E73725]">
+              {/*<h2 className="font-schkorycza font-normal text-4xl sm:text-7xl mt-1 text-[#BAFF39]">
                 {t('role')}
+              </h2>*/}
+              <h2 className="font-eordeoghlakat font-normal text-4xl sm:text-7xl mt-1 text-[#b07d54]">
+                Jimi ja
+              </h2> <h2 className="font-eordeoghlakat font-normal text-4xl sm:text-7xl mt-1 text-[#2e3538]">
+                Eerika
               </h2>
-
                 {items && items.length > 0 && (
                 <div className="mt-4 space-y-2">
                   {items.map((item) => {
                     const S = language.charAt(0).toUpperCase() + language.slice(1);
                     return (
                       <div key={item.id}
-                        className="font-robotoVariable text-sm sm:text-base text-gray-500
+                        className="font-robotoVariable text-sm sm:text-base text-[#2e3538]
                                   border-l-2 border-[#E73725] pl-3 py-1">
                         {item[`title${S}`] || item.titleFi}
                       </div>
@@ -100,7 +105,7 @@ function App() {
                 </div>
               )}
 
-              <p className="mt-4 font-librecaslon text-gray-500 text-sm sm:text-lg leading-relaxed">
+              <p className="mt-4 font-librecaslon text-[#2e3538] text-sm sm:text-lg leading-relaxed">
                 {t('heroDescription')}
               </p>
               {/* Hero 2 section */}
@@ -115,15 +120,15 @@ function App() {
                     }}
                   >
                     <button
-                      className="px-4 shadow-md shadow-[#E1E1E1] py-3 mt-6 group
-                      flex items-center border border-[#E1E1E1] rounded-md font-librecaslon
-                      text-base text-[#010000] hover:bg-[#E1E1E1] hover:border-[#FFFFFF]"
+                      className="px-4 shadow-md shadow-[#e1e3e7] py-3 mt-6 group
+                      flex items-center border border-[#fcefc8] rounded-md font-librecaslon
+                      text-base text-[#010000] bg-[#b07d54] hover:bg-[#E1E1E1] hover:border-[#FFFFFF]"
                     >
                       {t('contactMe')}
                       <span
                         className={`inline-block transition-transform duration-300 ${arrowRotated ? 'rotate-90' : ''}`}
                       >
-                        <HiArrowNarrowRight className="text-xl ml-2 text-[#E73725]" />
+                        <HiArrowNarrowRight className="text-xl ml-2 text-[#fcefc8]" />
                       </span>
                     </button>
                   </a>
@@ -164,6 +169,7 @@ function App() {
               />
           </div>
         </section>
+        </div>
 
         {/* Services 1 section */}
         <section
@@ -304,7 +310,7 @@ function App() {
         </button>
       )}
 
-     {/* Social icons */}
+     {/* Social icons 
       <div className="hidden md:flex fixed flex-col top-[44%] left-0 gap-0 z-50">
         {[
           { icon: <FaWhatsapp size={34} />, label: 'Whatsapp', href: '', color: 'text-[#8e8e90]' },
@@ -326,14 +332,14 @@ function App() {
               {label}
             </span>
 
-              {/* Ikoni — aina näkyvissä, pieni taustaväri helpottaa klikkaamista */}
+              {/* Ikoni — aina näkyvissä, pieni taustaväri helpottaa klikkaamista *
       <div className="p-1
         transition-colors duration-300">
         {icon}
       </div>
           </a>
         ))}
-      </div>
+      </div>*/}
 
 {/* Language flag icons 
 <div className="hidden md:flex fixed flex-col top-[44%] left-0 gap-2 z-50 p-1">

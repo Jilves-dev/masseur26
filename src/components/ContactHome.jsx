@@ -89,7 +89,7 @@ const ContactHome = () => {
       <section id="contact" className="max-w-4xl mx-auto">
         <div
           style={{ minHeight: '75vh' }}
-          className="bg-[#FFFFFF] flex flex-col justify-between"
+          className="bg-[#e1e3e7] flex flex-col justify-between"
         >
           <div
             name="contact"

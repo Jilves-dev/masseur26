@@ -6,7 +6,7 @@ export default function InfoFooter() {
   const { t } = useTranslation();
 
   return (
-    <footer className="w-full bg-[#8e8e90] text-white">
+    <footer className="w-full bg-[#2e3538] text-white">
       <div className="max-w-4xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-12">
 
         {/* Aukioloajat */}

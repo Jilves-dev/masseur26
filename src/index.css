@@ -116,6 +116,64 @@
 
 
 
+@font-face {
+  font-family: 'SoccerLeague';
+  src: url('../src/fonts/SoccerLeague.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Schkorycza';
+  src: url('../src/fonts/Schkorycza.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Octin Sports Rg';
+  src: url('../src/fonts/Octin Sports Rg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Eordeoghlakat';
+  src: url('../src/fonts/Eordeoghlakat.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Emilio 20';
+  src: url('../src/fonts/emilio 20.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Drexs';
+  src: url('../src/fonts/Drexs.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DAGGERSQUARE';
+  src: url('../src/fonts/DAGGERSQUARE.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* 3. Tuo Tailwindin tyylit */
 @import "tailwindcss";
@@ -142,6 +200,15 @@
    --font-heavyheaprg: Heavy Heap RG, serif;
    --font-robotoVariable: Roboto-VariableFont_wdth,wght, sans-serif;
    --font-crimsontext: Crimson Text Regular, serif;
+    
+    --font-soccerleague: SoccerLeague, serif;
+    --font-schkorycza: Schkorycza, serif;
+
+    --font-octinsportsrg: Octin Sports Rg, serif;
+    --font-daggersquare: DAGGERSQUARE, serif;
+    --font-eordeoghlakat: Eordeoghlakat, serif;
+    --font-emilio20: Emilio 20, serif;
+    --font-drexs: Drexs, serif;
 }
 
 
@@ -1225,4 +1292,13 @@ body.mobile-menu-open {
 /* Mani.jsx-sivun lyhty-ikonin koko */
 .mani-lantern-icon {
   height: 2.8rem; /* Voit muuttaa tätä arvoa, esim. 10rem, 5rem jne. */
+}
+
+/* Yhtenäinen liukuvärjäys Header-navin ja Home-heron välillä.
+   background-attachment: fixed ankkuroi gradientin selainikkunaan,
+   jolloin se näyttää saumattomalta vaikka tausta jakautuu kahdelle elementille. */
+.hero-bg {
+  background-color: #e1e3e7;
+  background-image: radial-gradient(circle at top right, #ffffff 0%, rgba(225, 227, 231, 0) 60%);
+  background-attachment: fixed;
 }
