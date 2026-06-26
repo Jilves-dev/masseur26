@@ -5,7 +5,7 @@ import { FaSun } from 'react-icons/fa';
 
 const TopBar = () => {
   return (
-    <div className="bg-[#b07d54]">
+    <div className="bg-[#b9975b]">
       {/* bg-[#E73725]
       arabian red  #A30B2E   #087652  #88AA0B  #4C6100  #B8F3FF  #8AC6D0
                 bg colors:   #FFF8E7  #FAF6F0   #F5EFE6 #FFFAF0

@@ -17,7 +17,6 @@
   src: url("../src/fonts/Kedebideri-Regular.ttf");
 }
 
-
 @font-face {
   font-family: 'Oranienbaum';
   src: url('../src/fonts/Oranienbaum-Regular.ttf') format('truetype');
@@ -91,10 +90,6 @@
   font-display: swap;
 }
 
-
-
-
-
 @font-face {
   font-family: 'SoccerLeague';
   src: url('../src/fonts/SoccerLeague.ttf') format('opentype');
@@ -110,8 +105,6 @@
   font-style: normal;
   font-display: swap;
 }
-
-
 
 @font-face {
   font-family: 'Octin Sports Rg';
@@ -255,26 +248,21 @@
 }
 
 
-/* app värit: punainen  #E73725
-        vaalean vihreä  #0BA334
-        turkoosi sininen #0B7AA3
-        oliivin vihreä #010000
-        kirkkaan vihreä #0BA380
-        kirkkaan sininen #340BA3
-        harmaa #808080
+/* app värit:
+        #e31837 · aksentti (punainen, harvoin käytetty)
+        #333f48 · pääväri (teksti, reunat, tumma tausta)
+        #b9975b · pääväri (kulta, reunat, korostukset)
+        #010101 · tummin teksti (erittäin harvoin)
 
         tausta
-        #FFFFFF · pergamentti
-        #EFE5D2 · hiekka / aavikko
-        #FAF5EC · lämmin liina
-        #1F120C · espresso (tumma teema)
+        #eceef1 · vaalea pohjaväri
 */
 
 /* Shopping cart badge (DESKTOP) */
 .items_count {
   width: 20px;
   height: 20px;
-  background: #E73725;
+  background: #e31837;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -375,7 +363,7 @@
   text-transform: uppercase;
   border-width: 0px;
   border-radius: 0px;
-  background-color: #E73725;
+  background-color: #e31837;
   color: #fff;
   padding: 0.25rem 1.5rem;
   cursor: pointer;
@@ -395,7 +383,7 @@
 }
 
 .btn:hover {
-  background-color: #c92516;
+  background-color: #333f48;
   transform: translateY(-1px);
 }
 
@@ -448,21 +436,21 @@
 
 .slick-dots li.slick-active button:before {
   opacity: 1 !important;
-  color: #E73725 !important;
+  color: #e31837 !important;
 }
 
 /* Category cards */
 .mwa button {
   background-color: #ffffff;
-  color: #E73725;
+  color: #e31837;
   transition: all 0.5s ease-in-out;
   border: 2px solid transparent;
 }
 
 .mwa button:hover {
-  background-color: #E73725;
+  background-color: #e31837;
   color: white;
-  border-color: #E73725;
+  border-color: #e31837;
 }
 
 /* Feature products responsive */
@@ -746,7 +734,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 5rem;
-    background-color: #FFFFFF;
+    background-color: #eceef1;
   }*/
 
   .shop-mobile-header {
@@ -755,13 +743,14 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;   /* keskittää koko ryhmän */
   gap: 0.5rem;               /* <-- TÄSTÄ säädät osien väliä */
   padding: 0.5rem 1rem;      /* sama kuin etusivun headerissa */
-  background-color: #FFFFFF;
+  background-color: #eceef1;
+  font-family: var(--font-oswaldVariable);
   }
 
   /* Hamburger-painike */
   .shop-mobile-hamburger {
     font-size: 1.75rem;
-    color: #374151;
+    color: #333f48;
     transition: color 0.2s ease;
     padding: 0.25rem;
     display: flex;
@@ -776,11 +765,12 @@ h1, h2, h3, h4, h5, h6 {
   
   .shop-mobile-hamburger:hover,
   .shop-mobile-hamburger:active {
-    color: #E73725;
+    color: #e31837;
   }
 
   /* Kategoria-otsikko (Header-tyylillä) */
   .shop-mobile-category {
+    font-family: var(--font-racingSansOne);
     font-size: 2.0rem;
     font-weight: bold;
     line-height: 1;
@@ -811,7 +801,7 @@ h1, h2, h3, h4, h5, h6 {
   .shop-mobile-cart-button {
     position: relative;
     font-size: 1.5rem;
-    color: #374151;
+    color: #333f48;
     transition: color 0.2s ease;
     padding: 0.25rem;
     display: flex;
@@ -823,7 +813,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .shop-mobile-cart-button:hover,
   .shop-mobile-cart-button:active {
-    color: #E73725;
+    color: #e31837;
   }
 
   /* Ostoskorin badge */
@@ -831,7 +821,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 2px;
     right: 2px;
-    background-color: #E73725;
+    background-color: #e31837;
     color: white;
     border-radius: 50%;
     min-width: 18px;
@@ -852,7 +842,7 @@ h1, h2, h3, h4, h5, h6 {
       padding-bottom: 0.2rem;
       padding-left: 0.75rem;
       padding-right: 0.75rem;
-      background-color: #FFFFFF;
+      background-color: #eceef1;
     }
 
     .shop-mobile-category {
@@ -876,7 +866,7 @@ h1, h2, h3, h4, h5, h6 {
     .shop-mobile-header {
       gap: 0.125rem;
       padding: 0.5rem;
-      background-color: #FFFFFF;
+      background-color: #eceef1;
     }
 
     .shop-mobile-category {
@@ -935,7 +925,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background-color: #FFFFFF;
+    background-color: #eceef1;
   }
 
   /* ========================================
@@ -950,13 +940,14 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 0.5rem;
     padding: 0.50rem 1rem;
-    background-color: #FFFFFF;
+    background-color: #eceef1;
+    font-family: var(--font-oswaldVariable);
   }
 
   /* VASEN: Hamburger menu nappi */
   .mobile-hamburger-simple {
     font-size: 1.75rem;
-    color: #374151;
+    color: #333f48;
     transition: color 0.2s ease;
     padding: 0.25rem;
     margin-left: 0px;
@@ -972,11 +963,12 @@ h1, h2, h3, h4, h5, h6 {
   
   .mobile-hamburger-simple:hover,
   .mobile-hamburger-simple:active {
-    color: #c92516;
+    color: #e31837;
   }
 
   /* KESKI: Logo (keskitetty) */
   .mobile-logo-center {
+    font-family: var(--font-racingSansOne);
     padding-left: 8px;
     font-size: 1.5rem;
     font-weight: bold;
@@ -1010,7 +1002,7 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-cart-button {
     position: relative;
     font-size: 1.5rem;
-    color: #374151;
+    color: #333f48;
     transition: color 0.2s ease;
     padding: 0.25rem;
     display: flex;
@@ -1025,7 +1017,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .mobile-cart-button:hover,
   .mobile-cart-button:active {
-    color: #c92516;
+    color: #e31837;
   }
 
   /* Ostoskorin badge */
@@ -1033,7 +1025,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 2px;
     right: 2px;
-    background-color: #E73725;
+    background-color: #e31837;
     color: white;
     border-radius: 50%;
     min-width: 18px;
@@ -1056,7 +1048,7 @@ h1, h2, h3, h4, h5, h6 {
       padding-bottom: 0.2rem;
       padding-left: 0.75rem;
       padding-right: 0.75rem;
-      background-color: #FFFFFF;
+      background-color: #eceef1;
     }
 
     .mobile-logo-center {
@@ -1085,7 +1077,7 @@ h1, h2, h3, h4, h5, h6 {
     .mobile-header-simple {
       gap: 0.125rem;
       padding: 0.5rem;
-      background-color: #FFFFFF;
+      background-color: #eceef1;
     }
 
     .mobile-logo-center {
@@ -1178,9 +1170,10 @@ img {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background-color: #FFFFFF;
+  background-color: #eceef1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  font-family: var(--font-oswaldVariable);
 }
 
 .mobile-menu-closing {
@@ -1202,6 +1195,7 @@ img {
 
 /* Mobile menu categories larger text */
 .mobile-category-link {
+  font-family: var(--font-oswaldVariable);
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.2;
@@ -1210,6 +1204,7 @@ img {
 
 /* Mobile menu other links */
 .mobile-other-link {
+  font-family: var(--font-oswaldVariable);
   font-size: 1.125rem;
   font-weight: 400;
   padding: 0.75rem 0;
@@ -1253,13 +1248,14 @@ body.mobile-menu-open {
 .mobile-menu-header {
   display: flex;
   text-align: left !important;
-  margin-left: 1rem; 
+  margin-left: 1rem;
   padding: 1rem;
   border-bottom: 1px solid #e5e7eb;
-  background-color: #FFFFFF;
+  background-color: #eceef1;
   position: sticky;
   top: 0;
   z-index: 10;
+  font-family: var(--font-oswaldVariable);
 }
 
 /* Mobile menu content area */
@@ -1275,12 +1271,13 @@ body.mobile-menu-open {
 }
 
 .mobile-categories h3 {
+  font-family: var(--font-racingSansOne);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #374151;
+  color: #333f48;
 }
 
 /* Other links section mobile */
@@ -1295,6 +1292,7 @@ body.mobile-menu-open {
 }
 
 .mobile-social h4 {
+  font-family: var(--font-racingSansOne);
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -1318,7 +1316,7 @@ body.mobile-menu-open {
    background-attachment: fixed ankkuroi gradientin selainikkunaan,
    jolloin se näyttää saumattomalta vaikka tausta jakautuu kahdelle elementille. */
 .hero-bg {
-  background-color: #e1e3e7;
+  background-color: #eceef1;
   background-image: radial-gradient(circle at top right, #ffffff 0%, rgba(225, 227, 231, 0) 60%);
   background-attachment: fixed;
 }

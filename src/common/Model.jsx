@@ -84,7 +84,7 @@ export const Model = ({ isModalOpen, data, handleClose }) => {
                         w-10 h-10 md:w-12 md:h-12
                         bg-white rounded-full shadow-lg 
                         flex items-center justify-center
-                        text-gray-700 hover:bg-gray-100 hover:text-[#A30B2E]
+                        text-gray-700 hover:bg-gray-100 hover:text-[#e31837]
                         transition-colors"
                 aria-label="Close modal"
               >
@@ -101,7 +101,7 @@ export const Model = ({ isModalOpen, data, handleClose }) => {
                   </div>
 
                   <div className="tag absolute top-0 right-0 z-10">
-                    <p className="bg-[#7AA30B] m-2 rounded-full w-12 h-12 grid place-items-center text-white">
+                    <p className="bg-[#b9975b] m-2 rounded-full w-12 h-12 grid place-items-center text-white">
                       {data.tag}
                     </p>
                   </div>
@@ -122,7 +122,7 @@ export const Model = ({ isModalOpen, data, handleClose }) => {
                         </span>
                       ))}
                   </div>
-                  <p className="font-librecaslon text-[#A30B2E] text-2xl">
+                  <p className="font-librecaslon text-[#e31837] text-2xl">
                     {data.price}€
                   </p>
 

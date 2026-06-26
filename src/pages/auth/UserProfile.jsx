@@ -475,7 +475,7 @@ const UserProfile = () => {
 
   if (loading) {
     return (
-      <div className="font-librecaslon text-2xl text-center py-10">
+      <div className="font-oswaldVariable text-2xl text-center py-10">
         Ladataan...
       </div>
     );
@@ -489,21 +489,21 @@ const UserProfile = () => {
         <Header />
       </div>
 
-      <div className="container mx-auto px-4 py-8 bg-[#FFFFFF]">
-        <div className="bg-[#FFFFFF] rounded-xl border border-gray-300 shadow-xl p-6">
+      <div className="container mx-auto px-4 py-8 bg-[#eceef1]">
+        <div className="bg-[#eceef1] rounded-xl border border-gray-300 shadow-xl p-6">
           <div className="mb-6 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
             <div>
-              <h2 className="font-librecaslon text-xl font-bold">
+              <h2 className="font-racingSansOne text-xl font-bold">
                 Tervetuloa, {userProfile.displayName || currentUser.email}
               </h2>
-              <p className="font-librecaslon text-lg text-gray-600">
+              <p className="font-oswaldVariable text-lg text-gray-600">
                 Hallinnoi tiliäsi ja näe tilauksesi
               </p>
             </div>
             <div className="hidden md:block">
               <button
                 onClick={handleLogout}
-                className="font-librecaslon text-base bg-[#E73725] hover:bg-red-700 text-white px-4 py-2 rounded"
+                className="font-oswaldVariable text-base bg-[#e31837] hover:bg-[#333f48] text-white px-4 py-2 rounded"
               >
                 Kirjaudu ulos
               </button>
@@ -527,8 +527,8 @@ const UserProfile = () => {
             <button
               className={`py-2 px-4 mr-2 ${
                 activeTab === 'profile'
-                  ? 'font-librecaslon border-b-2 border-[#E73725] text-[#E73725] font-semibold'
-                  : 'font-librecaslon text-gray-600 hover:text-[#E73725]'
+                  ? 'font-oswaldVariable border-b-2 border-[#e31837] text-[#e31837] font-semibold'
+                  : 'font-oswaldVariable text-gray-600 hover:text-[#e31837]'
               }`}
               onClick={() => handleTabChange('profile')}
             >
@@ -537,8 +537,8 @@ const UserProfile = () => {
             <button
               className={`py-2 px-4 mr-2 ${
                 activeTab === 'orders'
-                  ? 'font-librecaslon border-b-2 border-[#E73725] text-[#E73725] font-semibold'
-                  : 'font-librecaslon text-gray-600 hover:text-[#E73725]'
+                  ? 'font-oswaldVariable border-b-2 border-[#e31837] text-[#e31837] font-semibold'
+                  : 'font-oswaldVariable text-gray-600 hover:text-[#e31837]'
               }`}
               onClick={() => handleTabChange('orders')}
             >
@@ -547,8 +547,8 @@ const UserProfile = () => {
             <button
               className={`py-2 px-4 ${
                 activeTab === 'password'
-                  ? 'font-librecaslon border-b-2 border-[#E73725] text-[#E73725] font-semibold'
-                  : 'font-librecaslon text-gray-600 hover:text-[#E73725]'
+                  ? 'font-oswaldVariable border-b-2 border-[#e31837] text-[#e31837] font-semibold'
+                  : 'font-oswaldVariable text-gray-600 hover:text-[#e31837]'
               }`}
               onClick={() => handleTabChange('password')}
             >
@@ -562,13 +562,13 @@ const UserProfile = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label
-                    className="font-librecaslon block text-gray-700 text-base font-bold mb-2"
+                    className="font-oswaldVariable block text-gray-700 text-base font-bold mb-2"
                     htmlFor="displayName"
                   >
                     Nimi
                   </label>
                   <input
-                    className="bg-white font-librecaslon shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="bg-white font-oswaldVariable shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="displayName"
                     name="displayName"
                     type="text"
@@ -580,13 +580,13 @@ const UserProfile = () => {
 
                 <div>
                   <label
-                    className="font-librecaslon block text-gray-700 text-base font-bold mb-2"
+                    className="font-oswaldVariable block text-gray-700 text-base font-bold mb-2"
                     htmlFor="email"
                   >
                     Sähköposti
                   </label>
                   <input
-                    className="bg-white font-librecaslon shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="bg-white font-oswaldVariable shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="email"
                     name="email"
                     type="email"
@@ -600,13 +600,13 @@ const UserProfile = () => {
 
               <div className="mb-4">
                 <label
-                  className="font-librecaslon block text-gray-700 text-base font-bold mb-2"
+                  className="font-oswaldVariable block text-gray-700 text-base font-bold mb-2"
                   htmlFor="phone"
                 >
                   Puhelinnumero
                 </label>
                 <input
-                  className="bg-white font-librecaslon shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="bg-white font-oswaldVariable shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="phone"
                   name="phone"
                   type="tel"
@@ -618,13 +618,13 @@ const UserProfile = () => {
 
               <div className="mb-4">
                 <label
-                  className="font-librecaslon block text-gray-700 text-base font-bold mb-2"
+                  className="font-oswaldVariable block text-gray-700 text-base font-bold mb-2"
                   htmlFor="address"
                 >
                   Osoite
                 </label>
                 <input
-                  className="bg-white font-librecaslon shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="bg-white font-oswaldVariable shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="address"
                   name="address"
                   type="text"
@@ -637,13 +637,13 @@ const UserProfile = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <div>
                   <label
-                    className="font-librecaslon block text-gray-700 text-base font-bold mb-2"
+                    className="font-oswaldVariable block text-gray-700 text-base font-bold mb-2"
                     htmlFor="city"
                   >
                     Kaupunki
                   </label>
                   <input
-                    className="bg-white font-librecaslon shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="bg-white font-oswaldVariable shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="city"
                     name="city"
                     type="text"
@@ -655,13 +655,13 @@ const UserProfile = () => {
 
                 <div>
                   <label
-                    className="font-librecaslon block text-gray-700 text-base font-bold mb-2"
+                    className="font-oswaldVariable block text-gray-700 text-base font-bold mb-2"
                     htmlFor="zipCode"
                   >
                     Postinumero
                   </label>
                   <input
-                    className="bg-white font-librecaslon shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="bg-white font-oswaldVariable shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="zipCode"
                     name="zipCode"
                     type="text"
@@ -673,13 +673,13 @@ const UserProfile = () => {
 
                 <div>
                   <label
-                    className="font-librecaslon block text-gray-700 text-base font-bold mb-2"
+                    className="font-oswaldVariable block text-gray-700 text-base font-bold mb-2"
                     htmlFor="country"
                   >
                     Maa
                   </label>
                   <input
-                    className="bg-white font-librecaslon shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="bg-white font-oswaldVariable shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="country"
                     name="country"
                     type="text"
@@ -693,7 +693,7 @@ const UserProfile = () => {
               <div className="flex justify-center md:justify-end mt-6">
                 <button
                   type="submit"
-                  className="font-librecaslon w-full md:w-auto bg-[#E73725] hover:bg-red-700 text-white text-base py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="font-oswaldVariable w-full md:w-auto bg-[#e31837] hover:bg-[#333f48] text-white text-base py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   disabled={saving}
                 >
                   {saving ? 'Tallennetaan...' : 'Tallenna muutokset'}
@@ -706,13 +706,13 @@ const UserProfile = () => {
           {activeTab === 'orders' && (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h3 className="font-librecaslon text-xl font-semibold">
+                <h3 className="font-racingSansOne text-xl font-semibold">
                   Tilaushistoria
                 </h3>
                 {orders.length > 0 && (
                   <button
                     onClick={() => navigate('/shop')}
-                    className="font-librecaslon bg-[#E73725] hover:bg-red-700 text-white px-4 py-2 rounded text-sm"
+                    className="font-oswaldVariable bg-[#e31837] hover:bg-[#333f48] text-white px-4 py-2 rounded text-sm"
                   >
                     Jatka ostoksia
                   </button>
@@ -721,7 +721,7 @@ const UserProfile = () => {
 
               {/* Tilastot */}
               {orders.length > 0 && (
-                <div className="font-librecaslon grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <div className="font-oswaldVariable grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                   <div className="bg-blue-50 rounded-lg p-4 text-center">
                     <div className="text-2xl font-bold text-blue-600">
                       {ordersSummary.totalOrders}
@@ -757,7 +757,7 @@ const UserProfile = () => {
               )}
 
               {orders.length === 0 ? (
-                <div className="font-librecaslon text-center py-12 bg-[#FFFFFF] rounded-2xl border border-gray-300 shadow-xl">
+                <div className="font-oswaldVariable text-center py-12 bg-[#eceef1] rounded-2xl border border-gray-300 shadow-xl">
                   <div className="mb-4">
                     <svg
                       className="mx-auto h-12 w-12 text-gray-400"
@@ -773,7 +773,7 @@ const UserProfile = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  <h3 className="font-racingSansOne text-lg font-medium text-gray-900 mb-2">
                     Ei vielä tilauksia
                   </h3>
                   <p className="text-gray-500 mb-4">
@@ -781,7 +781,7 @@ const UserProfile = () => {
                   </p>
                   <button
                     onClick={() => navigate('/shop')}
-                    className="bg-[#E73725] hover:bg-red-700 text-white px-6 py-2 rounded-md font-medium flex mx-auto items-center justify-center"
+                    className="bg-[#e31837] hover:bg-[#333f48] text-white px-6 py-2 rounded-md font-medium flex mx-auto items-center justify-center"
                   >
                     Selaa tuotteita
                   </button>
@@ -796,13 +796,13 @@ const UserProfile = () => {
                     return (
                       <div
                         key={order.id}
-                        className="font-librecaslon border border-gray-300 rounded-lg overflow-hidden bg-[#FFFFFF] shadow-xl hover:shadow-2xl transition-shadow"
+                        className="font-oswaldVariable border border-gray-300 rounded-lg overflow-hidden bg-[#eceef1] shadow-xl hover:shadow-2xl transition-shadow"
                       >
                         {/* Tilauksen header */}
                         <div className="px-6 py-4 border-b">
                           <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                             <div>
-                              <h4 className="font-semibold text-lg text-gray-900">
+                              <h4 className="font-racingSansOne font-semibold text-lg text-gray-900">
                                 Tilaus #{order.id.slice(0, 8)}
                               </h4>
                               <p className="text-base text-gray-600">
@@ -837,7 +837,7 @@ const UserProfile = () => {
                         <div className="px-6 py-4">
                           {/* Tuotteet */}
                           <div className="mb-4">
-                            <h5 className="text-base font-medium text-gray-900 mb-3">
+                            <h5 className="font-racingSansOne text-base font-medium text-gray-900 mb-3">
                               Tilatut tuotteet:
                             </h5>
                             <div className="space-y-2">
@@ -895,7 +895,7 @@ const UserProfile = () => {
                           {/* Toimitusosoite */}
                           {(order.shippingDetails || order.customerDetails) && (
                             <div className="mt-4 pt-4 border-t">
-                              <h6 className="text-lg font-medium text-gray-900 mb-2">
+                              <h6 className="font-racingSansOne text-lg font-medium text-gray-900 mb-2">
                                 Toimitusosoite:
                               </h6>
                               <div className="text-base text-gray-600">
@@ -936,13 +936,13 @@ const UserProfile = () => {
             <form onSubmit={handleChangePassword}>
               <div className="mb-4">
                 <label
-                  className="font-librecaslon block text-gray-700 text-sm font-bold mb-2"
+                  className="font-oswaldVariable block text-gray-700 text-sm font-bold mb-2"
                   htmlFor="currentPassword"
                 >
                   Nykyinen salasana
                 </label>
                 <input
-                  className="font-librecaslon bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="font-oswaldVariable bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="currentPassword"
                   name="currentPassword"
                   type="password"
@@ -955,13 +955,13 @@ const UserProfile = () => {
 
               <div className="mb-4">
                 <label
-                  className="font-librecaslon block text-gray-700 text-sm font-bold mb-2"
+                  className="font-oswaldVariable block text-gray-700 text-sm font-bold mb-2"
                   htmlFor="newPassword"
                 >
                   Uusi salasana
                 </label>
                 <input
-                  className="font-librecaslon bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="font-oswaldVariable bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="newPassword"
                   name="newPassword"
                   type="password"
@@ -977,13 +977,13 @@ const UserProfile = () => {
 
               <div className="mb-6">
                 <label
-                  className="font-librecaslon block text-gray-700 text-sm font-bold mb-2"
+                  className="font-oswaldVariable block text-gray-700 text-sm font-bold mb-2"
                   htmlFor="confirmPassword"
                 >
                   Vahvista uusi salasana
                 </label>
                 <input
-                  className="font-librecaslon bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="font-oswaldVariable bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="confirmPassword"
                   name="confirmPassword"
                   type="password"
@@ -997,7 +997,7 @@ const UserProfile = () => {
               <div className="flex justify-center md:justify-end mt-6">
                 <button
                   type="submit"
-                  className="font-librecaslon w-full md:w-auto bg-[#E73725] hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="font-oswaldVariable w-full md:w-auto bg-[#e31837] hover:bg-[#333f48] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   disabled={saving}
                 >
                   {saving ? 'Vaihdetaan...' : 'Vaihda salasana'}
@@ -1010,7 +1010,7 @@ const UserProfile = () => {
         <div className="md:hidden mt-8 mb-6 mx-8 flex flex-col justify-center items-center">
           <button
             onClick={handleLogout}
-            className="w-full font-librecaslon text-base bg-[#E73725] hover:bg-red-700 text-white px-4 py-2 rounded"
+            className="w-full font-oswaldVariable text-base bg-[#e31837] hover:bg-[#333f48] text-white px-4 py-2 rounded"
           >
             Kirjaudu ulos
           </button>

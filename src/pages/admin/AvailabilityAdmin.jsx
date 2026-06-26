@@ -52,16 +52,16 @@ function DayModal({ dateStr, existingDoc, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4"
       onClick={onClose}>
-      <div className="absolute inset-0 bg-[#010000]/40 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-[#333f48]/40 backdrop-blur-sm" />
       <div
-        className="relative w-full max-w-sm bg-[#FFFFFF] border border-gray-200
+        className="relative w-full max-w-sm bg-[#eceef1] border border-gray-200
           rounded-xl shadow-xl px-6 py-6 flex flex-col gap-4"
         onClick={e => e.stopPropagation()}
       >
         <div className="flex items-center justify-between">
-          <h3 className="font-zaslia text-2xl text-[#010000]">{dateStr}</h3>
+          <h3 className="font-racingSansOne text-2xl text-[#333f48]">{dateStr}</h3>
           <button onClick={onClose}
-            className="font-librecaslon text-gray-400 hover:text-[#E73725] text-xl">
+            className="font-oswaldVariable text-gray-400 hover:text-[#e31837] text-xl">
             ✕
           </button>
         </div>
@@ -76,14 +76,14 @@ function DayModal({ dateStr, existingDoc, onClose }) {
               transition-transform duration-200
               ${blocked ? 'translate-x-5' : 'translate-x-1'}`} />
           </div>
-          <span className="font-librecaslon text-sm text-[#010000]">
+          <span className="font-oswaldVariable text-sm text-[#333f48]">
             Estä koko päivä
           </span>
         </label>
 
         {!blocked && (
           <>
-            <p className="font-librecaslon text-xs text-gray-500 uppercase tracking-widest">
+            <p className="font-oswaldVariable text-xs text-gray-500 uppercase tracking-widest">
               Vapaat ajat
             </p>
             <div className="grid grid-cols-4 gap-2">
@@ -91,16 +91,16 @@ function DayModal({ dateStr, existingDoc, onClose }) {
                 <button
                   key={slot}
                   onClick={() => toggleSlot(slot)}
-                  className={`py-2 rounded-lg font-zaslia text-sm transition-all duration-150
+                  className={`py-2 rounded-lg font-racingSansOne text-sm transition-all duration-150
                     ${slots.includes(slot)
-                      ? 'bg-[#E73725] text-white'
-                      : 'border border-gray-200 text-[#010000] hover:border-[#E73725]/60'}`}
+                      ? 'bg-[#e31837] text-white'
+                      : 'border border-gray-200 text-[#333f48] hover:border-[#e31837]/60'}`}
                 >
                   {slot}
                 </button>
               ))}
             </div>
-            <p className="font-librecaslon text-xs text-gray-500">
+            <p className="font-oswaldVariable text-xs text-gray-500">
               {slots.length} aikaa valittu
             </p>
           </>
@@ -109,9 +109,9 @@ function DayModal({ dateStr, existingDoc, onClose }) {
         <button
           onClick={handleSave}
           disabled={saving}
-          className="w-full h-11 bg-[#010000] text-white font-zaslia
+          className="w-full h-11 bg-[#333f48] text-white font-racingSansOne
             text-base rounded-full shadow-xl
-            hover:bg-[#E73725] transition-colors duration-300
+            hover:bg-[#e31837] transition-colors duration-300
             disabled:opacity-50"
         >
           {saving ? 'Tallennetaan...' : 'Tallenna'}
@@ -173,39 +173,39 @@ export default function AvailabilityAdmin() {
         />
       )}
 
-      <div className="min-h-screen bg-[#FFFFFF] flex flex-col items-center px-4 py-12">
-        <div className="w-full max-w-md bg-[#FFFFFF] border border-gray-200
+      <div className="min-h-screen bg-[#eceef1] flex flex-col items-center px-4 py-12">
+        <div className="w-full max-w-md bg-[#eceef1] border border-gray-200
           rounded-xl shadow-xl px-6 py-8 flex flex-col gap-4">
 
-          <p className="font-librecaslon text-sm text-gray-500">Ylläpito</p>
-          <h1 className="font-zaslia text-4xl text-[#010000]">Kalenteri</h1>
-          <p className="font-librecaslon text-sm text-[#010000] leading-relaxed">
+          <p className="font-oswaldVariable text-sm text-gray-500">Ylläpito</p>
+          <h1 className="font-racingSansOne text-4xl text-[#333f48]">Kalenteri</h1>
+          <p className="font-oswaldVariable text-sm text-[#333f48] leading-relaxed">
             Klikkaa päivää lisätäksesi tai muokataksesi vapaita aikoja.
           </p>
 
           <div className="flex gap-4 flex-wrap">
             {[
-              { color: 'bg-[#E73725]/20 border border-[#E73725]/50', label: 'Vapaita aikoja' },
+              { color: 'bg-[#e31837]/20 border border-[#e31837]/50', label: 'Vapaita aikoja' },
               { color: 'bg-red-100 border border-red-300', label: 'Estetty' },
               { color: 'bg-gray-50 border border-gray-200', label: 'Ei määritetty' },
             ].map(({ color, label }) => (
               <div key={label} className="flex items-center gap-2">
                 <div className={`w-4 h-4 rounded ${color}`} />
-                <span className="font-librecaslon text-xs text-gray-500">{label}</span>
+                <span className="font-oswaldVariable text-xs text-gray-500">{label}</span>
               </div>
             ))}
           </div>
 
           <div className="flex items-center justify-between mt-2">
             <button onClick={prevMonth}
-              className="font-librecaslon text-gray-400 hover:text-[#E73725] text-2xl px-2">
+              className="font-oswaldVariable text-gray-400 hover:text-[#e31837] text-2xl px-2">
               ‹
             </button>
-            <span className="font-zaslia text-[#010000] text-lg">
+            <span className="font-racingSansOne text-[#333f48] text-lg">
               {MONTH_NAMES[viewMonth]} {viewYear}
             </span>
             <button onClick={nextMonth}
-              className="font-librecaslon text-gray-400 hover:text-[#E73725] text-2xl px-2">
+              className="font-oswaldVariable text-gray-400 hover:text-[#e31837] text-2xl px-2">
               ›
             </button>
           </div>
@@ -213,7 +213,7 @@ export default function AvailabilityAdmin() {
           <div className="grid grid-cols-7 gap-1">
             {DAY_NAMES.map(d => (
               <div key={d}
-                className="font-librecaslon text-xs text-gray-500 text-center py-1">
+                className="font-oswaldVariable text-xs text-gray-500 text-center py-1">
                 {d}
               </div>
             ))}
@@ -228,7 +228,7 @@ export default function AvailabilityAdmin() {
               const dateStr = toDateString(viewYear, viewMonth, day);
 
               const colors = {
-                available: 'bg-[#E73725]/20 border border-[#E73725]/50 text-[#010000] hover:bg-[#E73725]/35',
+                available: 'bg-[#e31837]/20 border border-[#e31837]/50 text-[#333f48] hover:bg-[#e31837]/35',
                 blocked:   'bg-red-100 border border-red-300 text-red-500 hover:bg-red-200',
                 empty:     'bg-gray-50 border border-gray-200 text-gray-400 hover:bg-gray-100',
               };
@@ -238,7 +238,7 @@ export default function AvailabilityAdmin() {
                   key={day}
                   onClick={() => !past && setSelectedDate(dateStr)}
                   disabled={past}
-                  className={`aspect-square rounded-lg font-librecaslon text-sm
+                  className={`aspect-square rounded-lg font-oswaldVariable text-sm
                     flex flex-col items-center justify-center transition-all duration-150
                     ${past ? 'opacity-25 cursor-not-allowed bg-transparent border border-gray-100 text-gray-400'
                            : colors[state]}
@@ -246,7 +246,7 @@ export default function AvailabilityAdmin() {
                 >
                   <span>{day}</span>
                   {!past && state === 'available' && (
-                    <span className="text-[8px] text-[#E73725] leading-none">
+                    <span className="text-[8px] text-[#e31837] leading-none">
                       {availMap[dateStr]?.slots?.length}
                     </span>
                   )}

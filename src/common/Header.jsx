@@ -113,7 +113,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`${isSticky ? 'sticky top-0 z-50 bg-[#FFFFFF] shadow-xl' : ''} ${(isShopPage || isContactOrAboutPage) ? 'hidden md:block' : ''}`}
+        className={`${isSticky ? 'sticky top-0 z-50 bg-[#eceef1] shadow-xl' : ''} ${(isShopPage || isContactOrAboutPage) ? 'hidden md:block' : ''}`}
       >
         {/* ====================================
           MOBILE HEADER - YKSINKERTAISTETTU
@@ -122,7 +122,7 @@ const Header = () => {
         <div
           className={`md:hidden ${isShopPage || isContactOrAboutPage ? 'hidden' : 'block'}`}
         >
-          <div className="mobile-header-simple bg-[#FFFFFF]">
+          <div className="mobile-header-simple bg-[#eceef1]">
             {/* VASEN: Hamburger */}
             <button
               onClick={toggleMobileMenu}
@@ -134,8 +134,8 @@ const Header = () => {
 
             {/* KESKI: Logo */}
             <Link className="mobile-logo-center font-racingSansOne" to="/">
-              <span className="font-medium text-3xl text-[#E73725]">URHEILU</span>
-              <span className="font-medium text-3xl text-black">HIEROJA</span>
+              <span className="font-medium text-3xl text-[#e31837]">URHEILU</span>
+              <span className="font-medium text-3xl text-[#333f48]">HIEROJAT</span>
             </Link>
 
             {/* OIKEA: Ostoskori */}
@@ -164,27 +164,27 @@ const Header = () => {
                 className="desktop-logo font-racingSansOne text-2xl flex items-center"
                 to="/"
               >
-                <span className="text-[#b07d54]">URHEILU</span>
-                <span className="text-[#2e3538]">HIEROJA</span>
+                <span className="text-[#b9975b]"> URHEILU</span>
+                <span className="text-[#333f48]">HIEROJAT </span>
               </Link>
             </div>
 
-            <ul className="desktop-menu flex flex-wrap font-racingSansOne text-black text-lg font-medium">
+            <ul className="desktop-menu flex flex-wrap font-racingSansOne text-[#333f48] text-lg font-medium">
               <li className="mr-5">
-                <Link className="hover:text-[#2e3538]" to="/">
+                <Link className="hover:text-[#333f48]" to="/">
                   ETUSIVU
                 </Link>
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#2e3538]" to="/repairs">
+                <Link className="hover:text-[#333f48]" to="/repairs">
                   AJANVARAUS
                 </Link>
               </li>
 
               {/*<li className="mr-5 relative">
                 <button
-                  className="hover:text-[#E73725] flex items-center"
+                  className="hover:text-[#e31837] flex items-center"
                   onClick={toggleCategoryMenu}
                 >
                   KATEGORIAT
@@ -205,10 +205,10 @@ const Header = () => {
                 </button>
 
                 {showCategoryMenu && (
-                  <div className="absolute top-full left-0 mt-1 bg-[#FFFFFF] shadow-lg rounded-md py-2 w-48 z-50">
+                  <div className="absolute top-full left-0 mt-1 bg-[#eceef1] shadow-lg rounded-md py-2 w-48 z-50">
                     <Link
                       to="/shop"
-                      className="font-racingSansOne text-base font-medium block px-4 py-2 hover:text-[#E73725]"
+                      className="font-racingSansOne text-base font-medium block px-4 py-2 hover:text-[#e31837]"
                       onClick={() => setShowCategoryMenu(false)}
                     >
                       KAIKKI TUOTTEET
@@ -216,7 +216,7 @@ const Header = () => {
 
                     <Link
                       to={`/shop?category=${CATEGORIES.GIFT_CARDS}`}
-                      className="font-racingSansOne text-lg font-medium  block px-4 py-2 hover:text-[#E73725]"
+                      className="font-racingSansOne text-lg font-medium  block px-4 py-2 hover:text-[#e31837]"
                       onClick={() => setShowCategoryMenu(false)}
                     >
                       LAHJAKORTIT
@@ -224,7 +224,7 @@ const Header = () => {
 
                     <Link
                       to={`/shop?category=${CATEGORIES.SUPPLEMENTS}`}
-                      className="font-racingSansOne text-lg font-medium  block px-4 py-2 hover:text-[#E73725]"
+                      className="font-racingSansOne text-lg font-medium  block px-4 py-2 hover:text-[#e31837]"
                       onClick={() => setShowCategoryMenu(false)}
                     >
                       LISÄRAVINTEET
@@ -234,26 +234,26 @@ const Header = () => {
               </li>*/}
 
               <li className="mr-5">
-                <Link className="hover:text-[#2e3538]" to="/shop">
+                <Link className="hover:text-[#333f48]" to="/shop">
                   KAUPPA
                 </Link>
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#2e3538]" to="/about">
+                <Link className="hover:text-[#333f48]" to="/about">
                   MEISTÄ
                 </Link>
               </li>
 
               <li className="mr-5">
-                <Link className="hover:text-[#2e3538]" to="/contact">
+                <Link className="hover:text-[#333f48]" to="/contact">
                   YHTEYSTIEDOT
                 </Link>
               </li>
             </ul>
 
-            <div className="flex flex-wrap text-2xl items-center text-[#2e3538]">
-              <Link to="/shop" className="mr-4 hover:text-[#00303F]">
+            <div className="flex flex-wrap text-2xl items-center text-[#333f48]">
+              <Link to="/shop" className="mr-4 hover:text-[#333f48]">
                 <BiSearch />
               </Link>
 
@@ -261,14 +261,14 @@ const Header = () => {
                 <>
                   <Link
                     to={isAdmin() ? '/admin' : '/profile'}
-                    className="mr-2 hover:text-[#00303F]"
+                    className="mr-2 hover:text-[#333f48]"
                     title={isAdmin() ? 'Hallintapaneeli' : 'Käyttäjäprofiili'}
                   >
                     <BiUser />
                   </Link>
                   <button
                     onClick={handleLogout}
-                    className="mr-4 hover:text-[#00303F]"
+                    className="mr-4 hover:text-[#333f48]"
                     title="Kirjaudu ulos"
                   >
                     <BiLogOut />
@@ -277,7 +277,7 @@ const Header = () => {
               ) : (
                 <Link
                   to="/login"
-                  className="mr-4 hover:text-[#00303F]"
+                  className="mr-4 hover:text-[#333f48]"
                   title="Kirjaudu sisään"
                 >
                   <FaSignInAlt />
@@ -285,7 +285,7 @@ const Header = () => {
               )}
 
               <div className="relative">
-                <Link to="/cart" className="hover:text-[#00303F]">
+                <Link to="/cart" className="hover:text-[#333f48]">
                   <BiShoppingBag />
                 </Link>
                 {totalItems > 0 && (
@@ -304,16 +304,16 @@ const Header = () => {
         ==================================== */}
       {isMobileMenuOpen && (
         <div
-          className={`fixed inset-0 z-50 bg-[#FFFFFF] flex flex-col ${isClosing ? 'mobile-menu-closing' : 'mobile-menu-overlay'}`}
+          className={`fixed inset-0 z-50 bg-[#eceef1] flex flex-col ${isClosing ? 'mobile-menu-closing' : 'mobile-menu-overlay'}`}
         >
           {/* ====================================
             MENU HEADER - FIXED YLHÄÄLLÄ
             ==================================== */}
-          <div className="flex-shrink-0 flex p-4 bg-[#FFFFFF]">
+          <div className="flex-shrink-0 flex p-4 bg-[#eceef1]">
             {/* Takaisin-nappi */}
             <button
               onClick={() => closeMenuAndNavigate('/')}
-              className="text-lg text-black hover:text-[#E73725] p-2 -ml-2"
+              className="text-lg text-[#333f48] hover:text-[#e31837] p-2 -ml-2"
               aria-label="Close menu"
             >
               <IoMdArrowRoundBack />
@@ -325,21 +325,21 @@ const Header = () => {
               to="/"
               onClick={() => closeMenuAndNavigate('/')}
             >
-              <span className="text-[#E73725] text-3xl">URHEILU</span>
-              <span className="text-black text-3xl">HIEROJA</span>
+              <span className="text-[#e31837] text-3xl">URHEILU</span>
+              <span className="text-[#333f48] text-3xl">HIEROJA</span>
             </Link>
           </div>
 
           {/* ====================================
             IKONIT - FIXED HEADERIN ALLA
             ==================================== */}
-          <div className="flex-1 overflow-y-auto bg-[#FFFFFF]">
-            <div className="flex-shrink-0 flex items-center justify-center p-4 bg-[#FFFFFF]">
+          <div className="flex-1 overflow-y-auto bg-[#eceef1]">
+            <div className="flex-shrink-0 flex items-center justify-center p-4 bg-[#eceef1]">
               <div className="flex items-center justify-center w-full max-w-xs gap-2">
                 {/* Haku */}
                 <Link
                   to="/shop"
-                  className="text-xl text-black hover:text-[#E73725]"
+                  className="text-xl text-[#333f48] hover:text-[#e31837]"
                   onClick={() => closeMenuAndNavigate('/shop')}
                   aria-label="Search"
                 >
@@ -350,7 +350,7 @@ const Header = () => {
                 {currentUser ? (
                   <Link
                     to={isAdmin() ? '/admin' : '/profile'}
-                    className="text-xl text-black hover:text-[#E73725]"
+                    className="text-xl text-[#333f48] hover:text-[#e31837]"
                     onClick={() =>
                       closeMenuAndNavigate(isAdmin() ? '/admin' : '/profile')
                     }
@@ -361,7 +361,7 @@ const Header = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-xl text-black hover:text-[#E73725]"
+                    className="text-xl text-[#333f48] hover:text-[#e31837]"
                     onClick={() => closeMenuAndNavigate('/login')}
                     aria-label="Login"
                   >
@@ -376,12 +376,12 @@ const Header = () => {
                       toggleSidebar();
                       toggleMobileMenu();
                     }}
-                    className="text-xl text-black hover:text-[#E73725]"
+                    className="text-xl text-[#333f48] hover:text-[#e31837]"
                     aria-label="Shopping cart"
                   >
                     <BiShoppingBag />
                     {totalItems > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      <span className="absolute -top-2 -right-2 bg-[#e31837] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
                         {totalItems}
                       </span>
                     )}
@@ -397,7 +397,7 @@ const Header = () => {
                         handleLogout();
                         toggleMobileMenu();
                       }}
-                      className="text-xl text-black hover:text-[#E73725]"
+                      className="text-xl text-[#333f48] hover:text-[#e31837]"
                       aria-label="Logout"
                     >
                       <BiLogOut />
@@ -409,7 +409,7 @@ const Header = () => {
 
             {/* VIIVA - erillinen elementti paddingilla */}
             <div className="px-4">
-              <div className="border-b border-[#E73725]"></div>
+              <div className="border-b border-[#e31837]"></div>
             </div>
 
             {/* ====================================
@@ -419,14 +419,14 @@ const Header = () => {
             <div className="p-6 pb-24">
               {/* ✅ UUSI: Admin Dashboard -linkit (näkyy vain admineille) */}
               {isAdmin() && (
-                <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
-                  <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+                <div className="mb-8 font-racingSansOne border-b border-[#e31837] pb-6">
+                  <h3 className="font-oswaldVariable text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                     Hallintapaneeli
                   </h3>
                   <nav className="space-y-3">
                     <Link
                       to="/admin"
-                      className="block text-xl text-black font-md hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin')}
                     >
                       Hallintapaneeli
@@ -434,7 +434,7 @@ const Header = () => {
 
                     <Link
                       to="/admin/orders"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/orders')}
                     >
                       Tilaustenhallinta
@@ -442,7 +442,7 @@ const Header = () => {
 
                     <Link
                       to="/admin/products"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/products')}
                     >
                       Tuotehallinta
@@ -450,7 +450,7 @@ const Header = () => {
 
                     <Link
                       to="/admin/users"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/users')}
                     >
                       Käyttäjähallinta
@@ -458,7 +458,7 @@ const Header = () => {
 
                     <Link
                       to="/admin/bookings"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/bookings')}
                     >
                       Varaukset
@@ -466,7 +466,7 @@ const Header = () => {
 
                     <Link
                       to="/admin/availability"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/availability')}
                     >
                       Kalenteri
@@ -477,14 +477,14 @@ const Header = () => {
 
               {/* ✅ UUSI: USER DASHBOARD - Näkyy vain kirjautuneille EI-ADMIN käyttäjille */}
               {currentUser && !isAdmin() && (
-                <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
-                  <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+                <div className="mb-8 font-racingSansOne border-b border-[#e31837] pb-6">
+                  <h3 className="font-oswaldVariable text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                     Omat tiedot
                   </h3>
                   <nav className="space-y-3">
                     <Link
                       to="/profile"
-                      className="block text-xl text-black font-md hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/profile')}
                     >
                       Profiili
@@ -492,7 +492,7 @@ const Header = () => {
 
                     <Link
                       to="/profile?tab=orders"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() =>
                         closeMenuAndNavigate('/profile?tab=orders')
                       }
@@ -502,7 +502,7 @@ const Header = () => {
 
                     <Link
                       to="/profile?tab=password"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2 transition-colors"
                       onClick={() =>
                         closeMenuAndNavigate('/profile?tab=password')
                       }
@@ -514,14 +514,14 @@ const Header = () => {
               )}
 
               {/* Muut linkit */}
-              <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+              <div className="mb-8 font-racingSansOne border-b border-[#e31837] pb-6">
+                <h3 className="font-oswaldVariable text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                   Sivut
                 </h3>
                 <nav className="space-y-3">
                   <Link
                     to="/"
-                    className="block text-xl text-black font-md hover:text-[#E73725] py-2"
+                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2"
                     onClick={() => closeMenuAndNavigate('/')}
                   >
                     ETUSIVU
@@ -529,7 +529,7 @@ const Header = () => {
 
                   <Link
                     to="/repairs"
-                    className="block text-xl text-black font-md hover:text-[#E73725] py-2"
+                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2"
                     onClick={() => closeMenuAndNavigate('/repairs')}
                   >
                     PALVELUT
@@ -537,7 +537,7 @@ const Header = () => {
 
                   <Link
                     to="/contact"
-                    className="block text-xl text-black font-md hover:text-[#E73725] py-2"
+                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2"
                     onClick={() => closeMenuAndNavigate('/contact')}
                   >
                     YHTEYSTIEDOT
@@ -545,7 +545,7 @@ const Header = () => {
 
                   <Link
                     to="/about"
-                    className="block text-xl text-black font-md hover:text-[#E73725] py-2"
+                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2"
                     onClick={() => closeMenuAndNavigate('/about')}
                   >
                     MEISTÄ
@@ -555,13 +555,13 @@ const Header = () => {
 
               {/* Kategoriat - Isolla tekstillä */}
               <div className="mb-8 font-racingSansOne">
-                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+                <h3 className="font-oswaldVariable text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                   Kauppa
                 </h3>
                 <nav className="space-y-3">
                   <Link
                     to="/shop"
-                    className="block text-xl text-black font-md hover:text-[#E73725] py-3 transition-colors"
+                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-3 transition-colors"
                     onClick={() => closeMenuAndNavigate('/shop')}
                   >
                     KAIKKI TUOTTEET
@@ -569,7 +569,7 @@ const Header = () => {
 
                   <Link
                     to={`/shop?category=${CATEGORIES.GIFT_CARDS}`}
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors"
+                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-3 transition-colors"
                     onClick={() =>
                       closeMenuAndNavigate(
                         `/shop?category=${CATEGORIES.GIFT_CARDS}`
@@ -581,7 +581,7 @@ const Header = () => {
 
                   <Link
                     to={`/shop?category=${CATEGORIES.SUPPLEMENTS}`}
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors"
+                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-3 transition-colors"
                     onClick={() =>
                       closeMenuAndNavigate(
                         `/shop?category=${CATEGORIES.SUPPLEMENTS}`
@@ -594,8 +594,8 @@ const Header = () => {
               </div>
 
               {/* Social Media - NYT NÄKYY! */}
-              <div className="border-t border-[#E73725] pt-6 pb-8">
-                <h4 className="text-lg font-racingSansOne font-md text-black text-center mb-6 uppercase tracking-wider">
+              <div className="border-t border-[#e31837] pt-6 pb-8">
+                <h4 className="text-lg font-racingSansOne text-[#333f48] text-center mb-6 uppercase tracking-wider">
                   Seuraa meitä
                 </h4>
                 <div className="flex gap-6 justify-center">

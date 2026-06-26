@@ -200,19 +200,19 @@ const OrderDetail = () => {
         totalAmount,
       });
 
-      // Luo HTML-sähköposti  {/*Tilauksesi📦<strong style="color: #E73725;">#${orderId.slice(0, 8)}</strong>📦 tila on nyt:*/}
+      // Luo HTML-sähköposti  {/*Tilauksesi📦<strong style="color: #e31837;">#${orderId.slice(0, 8)}</strong>📦 tila on nyt:*/}
       //{/*<p style="margin: 5px 0 0 0; opacity: 0.9;">Tilauksesi tila on päivittynyt🪄</p>*/}
       const html = `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-              <div style="background-color: #E73725; color: white; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
-                <h1 style="margin: 0; font-size: 24px;">Freewheel Bikes🚴</h1>
+              <div style="background-color: #e31837; color: white; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
+                <h1 style="margin: 0; font-size: 24px;">Urheiluhieroja💆</h1>
               </div>
               
               <div style="background-color: #f9fafb; padding: 30px; border-radius: 0 0 10px 10px;">
-                <h2 style="color: #E73725; margin-top: 0;">Hei ${customerName}!😎</h2>
+                <h2 style="color: #e31837; margin-top: 0;">Hei ${customerName}!😎</h2>
                 
                 <p style="font-size: 16px; line-height: 1.6;">
-                  📦<strong style="color: #E73725;">${orderTitle}📦(Tilaus id#${orderId.slice(0, 8)})
+                  📦<strong style="color: #e31837;">${orderTitle}📦(Tilaus id#${orderId.slice(0, 8)})
                   tila on nyt:</strong>
                   <strong style="color: #059669;">${statusText}</strong>
                 </p>
@@ -231,7 +231,7 @@ const OrderDetail = () => {
                       )
                       .join('')}
                   </ul>
-                  <div style="border-top: 2px solid #E73725; padding-top: 15px; margin-top: 15px;">
+                  <div style="border-top: 2px solid #e31837; padding-top: 15px; margin-top: 15px;">
                     <p style="font-size: 18px; font-weight: bold; margin: 0; color: #059669;">
                       Yhteensä: €${totalAmount.toFixed(2)}
                     </p>
@@ -257,7 +257,7 @@ const OrderDetail = () => {
                 <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
                   <p style="margin: 0; color: #374151;">
                     Ystävällisin terveisin,<br>
-                    <strong style="color: #E73725;">Freewheel Bikes Team</strong>
+                    <strong style="color: #e31837;">Urheiluhieroja</strong>
                   </p>
                 </div>
               </div>
@@ -285,7 +285,7 @@ const OrderDetail = () => {
             Jos sinulla on kysyttävää tilauksestasi, vastaa tähän viestiin tai ota yhteyttä asiakaspalveluumme.
             
             Ystävällisin terveisin,
-            Freewheel Bikes Team
+            Urheiluhieroja
           `;
 
       // LUO SÄHKÖPOSTIDOKUMENTTI FIRESTORE MAIL-KOKOELMAAN
@@ -410,9 +410,9 @@ const OrderDetail = () => {
         <Header />
       </div>
 
-      <div className="container mx-auto px-4 py-8 bg-[#FFFFFF] font-librecaslon min-h-screen">
+      <div className="container mx-auto px-4 py-8 bg-[#eceef1] font-oswaldVariable min-h-screen">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <h1 className="text-2xl md:text-3xl font-bold">
+          <h1 className="font-racingSansOne text-2xl md:text-3xl font-bold">
             Tilaus #{order.id.slice(0, 8)}
           </h1>
           <div className="flex flex-wrap gap-2 w-full md:w-auto">
@@ -424,7 +424,7 @@ const OrderDetail = () => {
             </Link>
             <Link
               to="/admin"
-              className="flex-1 md:flex-none text-center bg-[#E73725] hover:bg-gray-600 text-white px-4 py-2 rounded"
+              className="flex-1 md:flex-none text-center bg-[#e31837] hover:bg-gray-600 text-white px-4 py-2 rounded"
             >
               Hallintapaneeli
             </Link>
@@ -441,10 +441,10 @@ const OrderDetail = () => {
           {/* Vasemma sarake - Tilauksen tiedot */}
           <div className="lg:col-span-2 space-y-6">
             {/* Tilauksen perustiedot */}
-            <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
+            <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h2 className="text-xl font-semibold">Tilauksen tiedot</h2>
+                  <h2 className="font-racingSansOne text-xl font-semibold">Tilauksen tiedot</h2>
                   <p className="text-gray-600">Tilaus #{order.id}</p>
                   <p className="text-sm text-gray-500">
                     Luotu:{' '}
@@ -477,8 +477,8 @@ const OrderDetail = () => {
             </div>
 
             {/* Tuotteet */}
-            <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Tilatut tuotteet</h3>
+            <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Tilatut tuotteet</h3>
 
               <div className="space-y-3">
                 {order.orderItems.map((item, index) => (
@@ -487,7 +487,7 @@ const OrderDetail = () => {
                     className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-3 bg-gray-50 rounded gap-2"
                   >
                     <div>
-                      <h4 className="font-medium">
+                      <h4 className="font-racingSansOne font-medium">
                         {item.title || 'Nimetön tuote'}
                       </h4>
                       <p className="text-sm text-gray-600">
@@ -547,8 +547,8 @@ const OrderDetail = () => {
           {/* Oikea sarake - Asiakastiedot ja toiminnot */}
           <div className="space-y-6">
             {/* Asiakastiedot */}
-            <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Asiakastiedot</h3>
+            <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Asiakastiedot</h3>
 
               <div className="space-y-3 text-base">
                 <div>
@@ -572,8 +572,8 @@ const OrderDetail = () => {
             </div>
 
             {/* Toimitusosoite */}
-            <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Toimitusosoite</h3>
+            <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Toimitusosoite</h3>
 
               <div className="text-base">
                 <p>
@@ -595,8 +595,8 @@ const OrderDetail = () => {
             </div>
 
             {/* Toiminnot */}
-            <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Toiminnot</h3>
+            <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Toiminnot</h3>
 
               <div className="space-y-4">
                 <div>
@@ -622,7 +622,7 @@ const OrderDetail = () => {
                   <button
                     onClick={deleteOrder}
                     disabled={updating}
-                    className="w-full bg-[#E73725] hover:bg-red-700 disabled:bg-red-400 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                    className="w-full bg-[#e31837] hover:bg-[#333f48] disabled:bg-red-400 text-white font-medium py-2 px-4 rounded-md transition-colors"
                   >
                     {updating ? 'Poistetaan...' : 'Poista tilaus'}
                   </button>
@@ -655,7 +655,7 @@ const OrderDetail = () => {
       <div className="md:hidden mt-4 mb-12 flex flex-col justify-center items-center">
         <Link
           to="/admin/orders"
-          className="bg-[#E73725] hover:bg-red-700 font-librecaslon text-white text-base px-4 pt-2 pb-2 rounded"
+          className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white text-base px-4 pt-2 pb-2 rounded"
         >
           Takaisin tilauksiin
         </Link>

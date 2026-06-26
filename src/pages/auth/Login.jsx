@@ -67,11 +67,11 @@ const Login = () => {
   }
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-[#eceef1]">
       <PageHeading home={'HOME'} pagename={'SIGN IN'} />
       <div className="w-full max-w-md mx-auto mt-0 mb-18">
-        <div className="rounded-lg border border-[#FFF8E7] shadow-lg p-8">
-          {/*<h2 className="font-qiswah text-2xl font-bold text-center mb-6">Sign In</h2>*/}
+        <div className="rounded-lg border border-[#b9975b]/30 shadow-lg p-8">
+          {/*<h2 className="font-oswaldVariable text-2xl font-bold text-center mb-6">Sign In</h2>*/}
 
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
@@ -81,13 +81,13 @@ const Login = () => {
 
           {currentUser ? (
             <div>
-              <p className="mb-4 font-qiswah">
+              <p className="mb-4 font-oswaldVariable">
                 You are logged in as {currentUser.email}.
               </p>
               <div className="flex justify-between">
                 <button
                   onClick={handleForceLogout}
-                  className="bg-red-600 hover:bg-red-700 font-qiswah text-white font-bold py-2 px-4 rounded"
+                  className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white font-bold py-2 px-4 rounded"
                 >
                   Log out
                 </button>
@@ -99,7 +99,7 @@ const Login = () => {
                         : '/profile'
                     )
                   }
-                  className="bg-blue-600 hover:bg-blue-700 font-qiswah text-white font-bold py-2 px-4 rounded"
+                  className="bg-blue-600 hover:bg-blue-700 font-oswaldVariable text-white font-bold py-2 px-4 rounded"
                 >
                   Go to profile
                 </button>
@@ -109,7 +109,7 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 font-qiswah text-sm font-bold mb-2"
+                  className="block text-gray-700 font-oswaldVariable text-sm font-bold mb-2"
                   htmlFor="email"
                 >
                   Email
@@ -127,7 +127,7 @@ const Login = () => {
 
               <div className="mb-6">
                 <label
-                  className="block text-gray-700 font-qiswah text-sm font-bold mb-2"
+                  className="block text-gray-700 font-oswaldVariable text-sm font-bold mb-2"
                   htmlFor="password"
                 >
                   Password
@@ -189,26 +189,26 @@ const Login = () => {
 
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-[#A30B2E] hover:bg-red-700 font-qiswah text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                   disabled={loading}
                 >
                   {loading ? 'Sign in...' : 'Sign in'}
                 </button>
                 <Link
-                  className="inline-block align-baseline font-qiswah font-bold text-sm text-[#A30B2E] hover:text-red-800"
+                  className="inline-block align-baseline font-oswaldVariable font-bold text-sm text-[#e31837] hover:text-[#333f48]"
                   to="/reset-password"
                 >
                   Forget Password?
                 </Link>
               </div>
 
-              <div className="mt-4 font-qiswah text-center">
+              <div className="mt-4 font-oswaldVariable text-center">
                 <p>
                   Don't have an account?{' '}
                   <Link
                     to="/signup"
-                    className="text-[#A30B2E] font-qiswah hover:text-red-800"
+                    className="text-[#e31837] font-oswaldVariable hover:text-[#333f48]"
                   >
                     Register
                   </Link>

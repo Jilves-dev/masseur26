@@ -270,19 +270,19 @@ const OrderManager = () => {
         totalAmount,
       });
 
-      // Luo HTML-sähköposti  {/*Tilauksesi📦<strong style="color: #dc2626;">#${orderId.slice(0, 8)}</strong>📦 tila on nyt:*/}
+      // Luo HTML-sähköposti  {/*Tilauksesi📦<strong style="color: #e31837;">#${orderId.slice(0, 8)}</strong>📦 tila on nyt:*/}
       //{/*<p style="margin: 5px 0 0 0; opacity: 0.9;">Tilauksesi tila on päivittynyt🪄</p>*/}
       const html = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background-color: #dc2626; color: white; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
-            <h1 style="margin: 0; font-size: 24px;">🌃Jeeve's Flying Carpets🌙</h1>
+          <div style="background-color: #e31837; color: white; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
+            <h1 style="margin: 0; font-size: 24px;">Urheiluhieroja💆</h1>
           </div>
           
           <div style="background-color: #f9fafb; padding: 30px; border-radius: 0 0 10px 10px;">
-            <h2 style="color: #dc2626; margin-top: 0;">Hei ${customerName}!😎</h2>
+            <h2 style="color: #e31837; margin-top: 0;">Hei ${customerName}!😎</h2>
             
             <p style="font-size: 16px; line-height: 1.6;">
-              📦<strong style="color: #dc2626;">${orderTitle}📦(Tilaus id#${orderId.slice(0, 8)})tila on nyt:</strong>
+              📦<strong style="color: #e31837;">${orderTitle}📦(Tilaus id#${orderId.slice(0, 8)})tila on nyt:</strong>
               <strong style="color: #059669;">${statusText}</strong>
             </p>
             
@@ -300,7 +300,7 @@ const OrderManager = () => {
                   )
                   .join('')}
               </ul>
-              <div style="border-top: 2px solid #dc2626; padding-top: 15px; margin-top: 15px;">
+              <div style="border-top: 2px solid #e31837; padding-top: 15px; margin-top: 15px;">
                 <p style="font-size: 18px; font-weight: bold; margin: 0; color: #059669;">
                   Yhteensä: €${totalAmount.toFixed(2)}
                 </p>
@@ -326,7 +326,7 @@ const OrderManager = () => {
             <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
               <p style="margin: 0; color: #374151;">
                 Ystävällisin terveisin,<br>
-                <strong style="color: #dc2626;">🌃Jeeve's Fashion25 Team🌙</strong>
+                <strong style="color: #e31837;">Urheiluhieroja</strong>
               </p>
             </div>
           </div>
@@ -354,7 +354,7 @@ const OrderManager = () => {
         Jos sinulla on kysyttävää tilauksestasi, vastaa tähän viestiin tai ota yhteyttä asiakaspalveluumme.
         
         Ystävällisin terveisin,
-        Jeeve's Flying Carpet Team🌙
+        Urheiluhieroja
       `;
 
       // LUO SÄHKÖPOSTIDOKUMENTTI FIRESTORE MAIL-KOKOELMAAN
@@ -466,11 +466,11 @@ const OrderManager = () => {
         <Header />
       </div>
 
-      <div className="container mx-auto px-4 py-8 bg-[#FFFFFF] font-librecaslon">
+      <div className="container mx-auto px-4 py-8 bg-[#eceef1] font-oswaldVariable">
         {/* Tilastot */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-gray-700">
+          <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">
               Tilauksia yhteensä
             </h3>
             <p className="text-3xl font-bold text-blue-600">
@@ -478,8 +478,8 @@ const OrderManager = () => {
             </p>
           </div>
 
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-gray-700">
+          <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">
               Kokonaismyynti
             </h3>
             <p className="text-3xl font-bold text-green-600">
@@ -487,15 +487,15 @@ const OrderManager = () => {
             </p>
           </div>
 
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-gray-700">Odottavat</h3>
+          <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">Odottavat</h3>
             <p className="text-3xl font-bold text-yellow-600">
               {summary.pendingOrders}
             </p>
           </div>
 
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-gray-700">Valmiit</h3>
+          <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">Valmiit</h3>
             <p className="text-3xl font-bold text-green-600">
               {summary.completedOrders}
             </p>
@@ -503,9 +503,9 @@ const OrderManager = () => {
         </div>
 
         {/* Tilaukset */}
-        <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl">
+        <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl">
           <div className="px-6 py-4 border-b">
-            <h2 className="text-xl font-semibold">
+            <h2 className="font-racingSansOne text-xl font-semibold">
               Kaikki tilaukset ({orders.length})
             </h2>
           </div>
@@ -517,7 +517,7 @@ const OrderManager = () => {
           ) : (
             <div className="overflow-x-auto">
               <table className="min-w-full">
-                <thead className="bg-[#FFFFFF]">
+                <thead className="bg-[#eceef1]">
                   <tr>
                     <th className="px-6 py-3 text-left text-base font-medium text-gray-500 uppercase">
                       Tilaus
@@ -613,13 +613,13 @@ const OrderManager = () => {
                         <div className="flex space-x-2">
                           <Link
                             to={`/admin/orders/${order.id}`}
-                            className="font-librecaslon text-blue-600 hover:text-blue-800 text-base"
+                            className="font-oswaldVariable text-blue-600 hover:text-blue-800 text-base"
                           >
                             Näytä
                           </Link>
                           <button
                             onClick={() => deleteOrder(order.id)}
-                            className="font-librecaslon text-red-600 hover:text-red-800 text-base"
+                            className="font-oswaldVariable text-red-600 hover:text-red-800 text-base"
                           >
                             Poista
                           </button>
@@ -636,7 +636,7 @@ const OrderManager = () => {
       <div className="md:hidden mt-4 mb-12 flex flex-col justify-center items-center">
         <Link
           to="/admin"
-          className="bg-[#E73725] hover:bg-red-700 font-librecaslon text-white text-base px-4 pt-2 pb-2 rounded"
+          className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white text-base px-4 pt-2 pb-2 rounded"
         >
           Takaisin hallintapaneeliin
         </Link>

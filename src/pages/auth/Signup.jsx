@@ -61,14 +61,14 @@ const Signup = () => {
   }
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-[#eceef1]">
       <PageHeading home={'Koti'} pagename={'Register'} />
       <div className="w-full max-w-md mx-4 sm:mx-auto mt-0 mb-18">
-        <div className="rounded-lg border border-[#FFF8E7] shadow-lg p-8">
-          {/*<h2 className="text-2xl font-qiswah font-bold text-center mb-6">Create an account</h2>*/}
+        <div className="rounded-lg border border-[#b9975b]/30 shadow-lg p-8">
+          {/*<h2 className="text-2xl font-oswaldVariable font-bold text-center mb-6">Create an account</h2>*/}
 
           {error && (
-            <div className="bg-red-100 border border-red-400 font-qiswah text-red-700 px-4 py-3 rounded mb-4">
+            <div className="bg-red-100 border border-red-400 font-oswaldVariable text-red-700 px-4 py-3 rounded mb-4">
               {error}
             </div>
           )}
@@ -76,13 +76,13 @@ const Signup = () => {
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
-                className="block font-qiswah text-gray-700 text-sm font-bold mb-2"
+                className="block font-oswaldVariable text-gray-700 text-sm font-bold mb-2"
                 htmlFor="name"
               >
                 Name
               </label>
               <input
-                className="bg-white shadow appearance-none border rounded w-full py-2 px-3 font-qiswah text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="bg-white shadow appearance-none border rounded w-full py-2 px-3 font-oswaldVariable text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 type="text"
                 placeholder="Matti Meikäläinen"
@@ -94,13 +94,13 @@ const Signup = () => {
 
             <div className="mb-4">
               <label
-                className="block font-qiswah text-gray-700 text-sm font-bold mb-2"
+                className="block font-oswaldVariable text-gray-700 text-sm font-bold mb-2"
                 htmlFor="email"
               >
                 email
               </label>
               <input
-                className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline font-qiswah"
+                className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline font-oswaldVariable"
                 id="email"
                 type="email"
                 placeholder="email@example.com"
@@ -112,14 +112,14 @@ const Signup = () => {
 
             <div className="mb-4">
               <label
-                className="block font-qiswah text-gray-700 text-sm font-bold mb-2"
+                className="block font-oswaldVariable text-gray-700 text-sm font-bold mb-2"
                 htmlFor="password"
               >
                 Password
               </label>
               <div className="relative">
                 <input
-                  className="bg-white shadow appearance-none border rounded w-full py-2 px-3 font-qiswah text-gray-700 leading-tight focus:outline-none focus:shadow-outline pr-10"
+                  className="bg-white shadow appearance-none border rounded w-full py-2 px-3 font-oswaldVariable text-gray-700 leading-tight focus:outline-none focus:shadow-outline pr-10"
                   id="password"
                   type={showPassword ? 'text' : 'password'}
                   placeholder="********"
@@ -170,21 +170,21 @@ const Signup = () => {
                   )}
                 </button>
               </div>
-              <p className="text-xs font-qiswah text-gray-500 mt-1">
+              <p className="text-xs font-oswaldVariable text-gray-500 mt-1">
                 at least 6 characters
               </p>
             </div>
 
             <div className="mb-6">
               <label
-                className="block font-qiswah text-gray-700 text-sm font-bold mb-2"
+                className="block font-oswaldVariable text-gray-700 text-sm font-bold mb-2"
                 htmlFor="confirmPassword"
               >
                 ConfirmPassword
               </label>
               <div className="relative">
                 <input
-                  className="bg-white shadow appearance-none border rounded w-full py-2 px-3 font-qiswah text-gray-700 leading-tight focus:outline-none focus:shadow-outline pr-10"
+                  className="bg-white shadow appearance-none border rounded w-full py-2 px-3 font-oswaldVariable text-gray-700 leading-tight focus:outline-none focus:shadow-outline pr-10"
                   id="confirmPassword"
                   type={showConfirmPassword ? 'text' : 'password'}
                   placeholder="********"
@@ -239,7 +239,7 @@ const Signup = () => {
 
             <div className="flex items-center justify-between">
               <button
-                className="bg-[#A30B2E] hover:bg-red-700 text-white font-qiswah font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-[#e31837] hover:bg-[#333f48] text-white font-oswaldVariable font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
                 disabled={loading}
               >
@@ -247,12 +247,12 @@ const Signup = () => {
               </button>
             </div>
 
-            <div className="mt-4 font-qiswah  text-center">
+            <div className="mt-4 font-oswaldVariable  text-center">
               <p>
                 Have an account?{' '}
                 <Link
                   to="/login"
-                  className="text-[#A30B2E] font-qiswah hover:text-red-800"
+                  className="text-[#e31837] font-oswaldVariable hover:text-[#333f48]"
                 >
                   Log In
                 </Link>

@@ -49,7 +49,7 @@ function AppContent() {
     location.pathname.startsWith('/admin') || location.pathname === '/profile';
 
   return (
-    <div className="bg-[#e1e3e7]">
+    <div className="bg-[#eceef1]">
       <TopBar />
 
       {/* ✅ Näytä Header vain jos EI ole admin-sivulla */}

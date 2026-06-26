@@ -141,7 +141,7 @@ const OrderConfirmation = () => {
   };
 
   return (
-    <section className="bg-[#FFFFFF] pt-12 pb-16 min-h-screen font-librecaslon">
+    <section className="bg-[#eceef1] pt-12 pb-16 min-h-screen font-oswaldVariable">
       <div className="container max-w-2xl mx-auto px-4">
         {loading ? (
           <div className="flex justify-center items-center h-60">
@@ -149,7 +149,7 @@ const OrderConfirmation = () => {
           </div>
         ) : error ? (
           <div className="text-center py-12">
-            <h2 className="text-3xl font-bold text-red-600 mb-4">Virhe</h2>
+            <h2 className="font-racingSansOne text-3xl font-bold text-red-600 mb-4">Virhe</h2>
             <p className="text-gray-700 mb-6">{error}</p>
             <Link
               to="/"
@@ -177,7 +177,7 @@ const OrderConfirmation = () => {
                   />
                 </svg>
               </div>
-              <h1 className="text-4xl font-bold mb-2">Kiitos tilauksestasi!</h1>
+              <h1 className="font-racingSansOne text-4xl font-bold mb-2">Kiitos tilauksestasi!</h1>
               <p className="text-lg text-gray-600">Tilausnumero: #{orderId}</p>
               <p className="text-lg text-gray-600 mt-2">
                 Tilausaika: {formatDate(order.createdAt)}
@@ -185,7 +185,7 @@ const OrderConfirmation = () => {
             </div>
 
             <div className="border-t border-gray-200 pt-6 mb-6">
-              <h2 className="text-2xl font-bold mb-4">Tilauksen tiedot</h2>
+              <h2 className="font-racingSansOne text-2xl font-bold mb-4">Tilauksen tiedot</h2>
 
               <div className="space-y-4 mb-6">
                 {(order.orderItems || []).map((item, index) => {
@@ -279,7 +279,7 @@ const OrderConfirmation = () => {
             </div>
 
             <div className="border-t border-gray-200 pt-6 mb-6">
-              <h2 className="text-2xl font-bold mb-4">Toimitustiedot</h2>
+              <h2 className="font-racingSansOne text-2xl font-bold mb-4">Toimitustiedot</h2>
               {order.shippingDetails || order.customerDetails ? (
                 <>
                   <p className="mb-1 text-lg">
@@ -315,7 +315,7 @@ const OrderConfirmation = () => {
             </div>
 
             <div className="border-t border-gray-200 pt-6 mb-6">
-              <h2 className="text-2xl font-bold mb-4">Maksutapa</h2>
+              <h2 className="font-racingSansOne text-2xl font-bold mb-4">Maksutapa</h2>
               <p className="text-lg">
                 {order.paymentMethod === 'credit-card'
                   ? 'Luottokortti'
@@ -330,14 +330,14 @@ const OrderConfirmation = () => {
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-8">
               <Link
                 to="/shop"
-                className="bg-[#E73725] text-lg text-white px-6 py-3 rounded-md hover:bg-red-700 inline-block transition-colors"
+                className="bg-[#e31837] text-lg text-white px-6 py-3 rounded-md hover:bg-[#333f48] inline-block transition-colors"
               >
                 Jatka ostoksia
               </Link>
 
               <Link
                 to="/profile"
-                className="border border-[#E73725] text-[#E73725] text-lg px-6 py-3 rounded-md hover:bg-red-50 inline-block transition-colors"
+                className="border border-[#e31837] text-[#e31837] text-lg px-6 py-3 rounded-md hover:bg-[#e31837] hover:text-[#eceef1] inline-block transition-colors"
               >
                 Tilaushistoria
               </Link>
@@ -345,7 +345,7 @@ const OrderConfirmation = () => {
           </>
         ) : (
           <div className="text-center py-12">
-            <h2 className="text-lg font-bold text-red-600 mb-4">
+            <h2 className="font-racingSansOne text-lg font-bold text-red-600 mb-4">
               Tilausta ei löydy
             </h2>
             <Link

@@ -79,16 +79,16 @@ function App() {
            <div className="flex-1 min-w-0 pt-0 sm:pt-6 px-4 pb-4 text-center sm:text-left">*/}
             <div className="w-full max-w-2xl sm:max-w-none sm:flex-1 px-4 pt-8 sm:pt-16 text-center sm:text-left">
             <div className="mb-4 sm:mb-0">
-              <h2 className="font-oswaldVariable text-sm sm:text-xl text-[#2e3538]">
+              <h2 className="font-oswaldVariable text-sm sm:text-xl text-[#010101]">
                 {t('hey')} urheiluhierojat
               </h2>
               {/*<h2 className="font-schkorycza font-normal text-4xl sm:text-7xl mt-1 text-[#BAFF39]">
                 {t('role')}
               </h2>*/}
-              <h2 className="font-eordeoghlakat font-normal text-4xl sm:text-7xl mt-1">
-                <span className="text-[#b07d54]">Werner</span>{' '}
-                <span className="text-[#fcefc8]">ja</span>{' '}
-                <span className="text-[#2e3538]">Jasmine</span>
+              <h2 className="font-normal mt-1">
+                <span className="font-eordeoghlakat text-[#b9975b] text-4xl sm:text-7xl">Werner</span>{' '}
+                <span className="font-oswaldVariable text-[#333f48] text-xl sm:text-xl"> ja </span>{' '}
+                <span className="font-eordeoghlakat text-[#333f48] text-4xl sm:text-7xl">Jasmine</span>
               </h2>
                 {items && items.length > 0 && (
                 <div className="mt-4 space-y-2">
@@ -96,8 +96,8 @@ function App() {
                     const S = language.charAt(0).toUpperCase() + language.slice(1);
                     return (
                       <div key={item.id}
-                        className="font-oswaldVariable text-sm sm:text-base text-[#2e3538]
-                                  border-l-2 border-[#E73725] pl-3 py-1">
+                        className="font-oswaldVariable text-sm sm:text-base text-[#010101]
+                                  border-l-2 border-[#e31837] pl-3 py-1">
                         {item[`title${S}`] || item.titleFi}
                       </div>
                     );
@@ -105,7 +105,7 @@ function App() {
                 </div>
               )}
 
-              <p className="mt-4 font-oswaldVariable text-[#2e3538] text-sm sm:text-lg leading-relaxed">
+              <p className="mt-4 font-oswaldVariable text-[#010101] text-sm sm:text-lg leading-relaxed">
                 {t('heroDescription')}
               </p>
               {/* Hero 2 section */}
@@ -120,15 +120,15 @@ function App() {
                     }}
                   >
                     <button
-                      className="px-4 shadow-md shadow-[#e1e3e7] py-3 mt-6 group
-                      flex items-center border border-[#b07d54] rounded-md font-oswaldVariable
-                      text-base text-[#2e3538] bg-[#e1e3e7] hover:bg-[#E1E1E1] hover:border-[#FFFFFF]"
+                      className="px-4 shadow-md shadow-[#333f48] py-3 mt-6 group
+                      flex items-center border border-[#b9975b] rounded-md font-oswaldVariable
+                      text-base text-[#333f48] bg-[#eceef1] hover:bg-[#333f48] hover:text-[#eceef1] hover:border-[#333f48]"
                     >
                       {t('contactMe')}
                       <span
                         className={`inline-block transition-transform duration-300 ${arrowRotated ? 'rotate-90' : ''}`}
                       >
-                        <HiArrowNarrowRight className="text-xl ml-2 text-[#fcefc8v]" />
+                        <HiArrowNarrowRight className="text-xl ml-2 text-[#e31837]" />
                       </span>
                     </button>
                   </a>
@@ -211,7 +211,7 @@ function App() {
 
             {/* Vasen: hinnasto */}
             <div>
-              <h2 className="font-racingSansOne text-[#2e3538] text-3xl sm:text-3xl font-normal mb-8">
+              <h2 className="font-racingSansOne text-[#333f48] text-3xl sm:text-3xl font-normal mb-8">
                 {t('technologiesTitle')}
               </h2>
               <div className="font-oswaldVariable space-y-3">
@@ -223,12 +223,12 @@ function App() {
                   return (
                     <div
                       key={s.id || i}
-                      className="flex justify-between items-baseline pb-2 border-b border-[#E1E1E1]"
+                      className="flex justify-between items-baseline pb-2 border-b border-[#b9975b]"
                     >
-                      <h2 className="text-[#2e3538] text-sm sm:text-lg">
+                      <h2 className="text-[#333f48] text-sm sm:text-lg">
                         {name}
                       </h2>
-                      <p className="text-[#b07d54] text-sm sm:text-base ml-4 shrink-0">
+                      <p className="text-[#b9975b] text-sm sm:text-base ml-4 shrink-0">
                         {price}
                       </p>
                     </div>
@@ -265,12 +265,12 @@ function App() {
           {services?.map((s) => (
             <div
               key={s.id}
-              className="flex justify-between items-baseline pb-2 border-b border-[#d1bfa7]/40"
+              className="flex justify-between items-baseline pb-2 border-b border-[#b9975b]"
             >
-              <h2 className="text-[#49494b] text-sm sm:text-lg">
+              <h2 className="text-[#333f48] text-sm sm:text-lg">
                 {language === 'sv' ? s.nameSv : s.nameFi}
               </h2>
-              <p className="text-[#bd8c7d] text-sm sm:text-base ml-4 shrink-0">
+              <p className="text-[#b9975b] text-sm sm:text-base ml-4 shrink-0">
                 {language === 'sv' ? s.priceSv : s.priceFi}
               </p>
             </div>

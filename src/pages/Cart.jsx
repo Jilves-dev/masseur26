@@ -77,20 +77,20 @@ const Cart = () => {
 
   if (cartProducts.length === 0) {
     return (
-      <div className="bg-[#FFFFFF] w-full min-h-screen">
+      <div className="bg-[#eceef1] w-full min-h-screen">
         <PageHeading home={'HOME'} pagename={'CART'} />
         <div className="w-full px-4 py-16">
           <div className="max-w-md mx-auto text-center">
             <GiShoppingCart className="mx-auto text-5xl md:text-6xl text-gray-600 mb-4" />
-            <h2 className="font-librecaslon text-xl md:text-2xl font-bold mb-4">
+            <h2 className="font-racingSansOne text-xl md:text-2xl font-bold mb-4">
               Your shopping cart is empty
             </h2>
-            <p className="font-librecaslon text-gray-600 mb-6 md:mb-8 text-sm md:text-base">
+            <p className="font-oswaldVariable text-gray-600 mb-6 md:mb-8 text-sm md:text-base">
               It looks like you haven't added anything to your cart yet.
             </p>
             <Link
               to="/shop"
-              className="bg-[#E73725] hover:bg-red-700 font-librecaslon text-white font-bold py-3 px-6 rounded-lg inline-flex items-center text-sm md:text-base"
+              className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white font-bold py-3 px-6 rounded-lg inline-flex items-center text-sm md:text-base"
             >
               <GiShoppingCart className="mr-2" />
               Start shopping
@@ -102,24 +102,24 @@ const Cart = () => {
   }
 
   return (
-    <div className="bg-[#FFFFFF] w-full min-h-screen overflow-x-hidden">
+    <div className="bg-[#eceef1] w-full min-h-screen overflow-x-hidden">
       <PageHeading home={'HOME'} pagename={'CART'} />
 
-      <div className="font-librecaslon bg-[#FFFFFF] w-full px-4 pb-8 md:py-8 md:px-0">
+      <div className="font-oswaldVariable bg-[#eceef1] w-full px-4 pb-8 md:py-8 md:px-0">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-4 md:gap-8">
             {/* Tuotelistaus */}
             <div className="w-full lg:w-2/3">
-              <div className="bg-[#FFFFFF] rounded-lg border border-gray-200 shadow-xl overflow-hidden">
+              <div className="bg-[#eceef1] rounded-lg border border-gray-200 shadow-xl overflow-hidden">
                 {/* Otsikko ja toiminnot */}
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-4 md:p-6 border-b space-y-2 sm:space-y-0">
-                  <h2 className="text-lg md:text-3xl font-medium">
+                  <h2 className="font-racingSansOne text-lg md:text-3xl font-medium">
                     Your shopping cart ({totalItems}{' '}
                     {totalItems === 1 ? 'product' : 'products'})
                   </h2>
                   <button
                     onClick={handleClearCart}
-                    className="text-[#E73725] hover:text-red-800 text-sm md:text-base font-medium self-start sm:self-auto"
+                    className="text-[#e31837] hover:text-[#333f48] text-sm md:text-base font-medium self-start sm:self-auto"
                   >
                     Empty cart
                   </button>
@@ -145,7 +145,7 @@ const Cart = () => {
                         <div className="flex-1 min-w-0">
                           <div className="flex justify-between items-start gap-2 mb-3">
                             <div className="flex-1 min-w-0">
-                              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-1 break-words">
+                              <h3 className="font-racingSansOne text-base sm:text-lg font-medium text-gray-900 mb-1 break-words">
                                 {item.title}
                               </h3>
                               <p className="text-gray-600 text-xs sm:text-sm mb-2">
@@ -170,7 +170,7 @@ const Cart = () => {
                             {/* Poistopainike */}
                             <button
                               onClick={() => removeItemFromCart(item.id)}
-                              className="text-gray-400 hover:text-[#E73725] p-1 flex-shrink-0"
+                              className="text-gray-400 hover:text-[#e31837] p-1 flex-shrink-0"
                               title="Poista tuote"
                             >
                               <FaTimes className="text-base sm:text-lg" />
@@ -208,13 +208,13 @@ const Cart = () => {
                             </div>
 
                             <div className="text-left sm:text-right">
-                              <div className="text-lg sm:text-xl font-bold text-[#E73725]">
+                              <div className="text-lg sm:text-xl font-bold text-[#e31837]">
                                 {(
                                   parseFloat(item.price) * item.quantity
                                 ).toFixed(2)}
                                 €
                               </div>
-                              <div className="text-sm text-[#E73725]">
+                              <div className="text-sm text-[#e31837]">
                                 {item.price}€ / pcs
                               </div>
                             </div>
@@ -224,11 +224,11 @@ const Cart = () => {
 
                       {/* Lisätoiminnot - piilotettu pienillä näytöillä */}
                       <div className="hidden md:flex gap-4 mt-4 pt-4 border-t border-gray-200">
-                        <button className="flex items-center text-gray-600 hover:text-red-600 text-sm transition-colors">
+                        <button className="flex items-center text-gray-600 hover:text-[#e31837] text-sm transition-colors">
                           <BiHeart className="mr-1" />
                           Add to wishlist
                         </button>
-                        <button className="flex items-center text-gray-600 hover:text-red-600 text-sm transition-colors">
+                        <button className="flex items-center text-gray-600 hover:text-[#e31837] text-sm transition-colors">
                           <BiGitCompare className="mr-1" />
                           Add to compare
                         </button>
@@ -242,7 +242,7 @@ const Cart = () => {
               <div className="mt-4 md:mt-6">
                 <Link
                   to="/shop"
-                  className="inline-flex items-center text-[#E73725] hover:text-red-800 font-medium text-lg md:text-lg transition-colors"
+                  className="inline-flex items-center text-[#e31837] hover:text-[#333f48] font-medium text-lg md:text-lg transition-colors"
                 >
                   ← Shop
                 </Link>
@@ -251,8 +251,8 @@ const Cart = () => {
 
             {/* Tilausyhteenveto */}
             <div className="w-full lg:w-1/3">
-              <div className="bg-[#FFFFFF] rounded-lg border border-gray-200 shadow-xl p-4 md:p-6 lg:sticky lg:top-4">
-                <h3 className="text-lg md:text-xl font-medium mb-4 md:mb-6">
+              <div className="bg-[#eceef1] rounded-lg border border-gray-200 shadow-xl p-4 md:p-6 lg:sticky lg:top-4">
+                <h3 className="font-racingSansOne text-lg md:text-xl font-medium mb-4 md:mb-6">
                   Order summary
                 </h3>
 
@@ -287,7 +287,7 @@ const Cart = () => {
 
                   <div className="flex justify-between text-base md:text-lg font-medium">
                     <span>In total</span>
-                    <span className="text-[#E73725]">
+                    <span className="text-[#e31837]">
                       {finalTotal.toFixed(2)}€
                     </span>
                   </div>
@@ -302,7 +302,7 @@ const Cart = () => {
                     <input
                       type="text"
                       placeholder="Syötä koodi"
-                      className="flex-1 px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      className="flex-1 px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[#e31837] focus:border-transparent"
                     />
                     <button className="px-3 md:px-4 py-2 bg-gray-200 text-gray-700 hover:bg-gray-300 text-base transition-colors">
                       Use it
@@ -313,7 +313,7 @@ const Cart = () => {
                 {/* Checkout-painike */}
                 <button
                   onClick={handleCheckout}
-                  className="w-full bg-[#E73725] hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg mb-4 transition-colors text-base md:text-base"
+                  className="w-full bg-[#e31837] hover:bg-[#333f48] text-white font-bold py-3 px-4 rounded-lg mb-4 transition-colors text-base md:text-base"
                 >
                   Go to checkout
                 </button>
@@ -323,7 +323,7 @@ const Cart = () => {
                     You must{' '}
                     <Link
                       to="/login"
-                      className="text-[#E73725] hover:text-red-800 underline"
+                      className="text-[#e31837] hover:text-[#333f48] underline"
                     >
                       to log in
                     </Link>{' '}

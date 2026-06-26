@@ -83,17 +83,17 @@ const OrderCheckout = () => {
   // Jos ostoskori on tyhjä, ohjaa käyttäjä kauppaan
   if (cart.length === 0) {
     return (
-      <section className="py-12 md:py-24 min-h-screen font-librecaslon">
+      <section className="py-12 md:py-24 min-h-screen font-oswaldVariable">
         <div className="container px-4 mx-auto">
-          <div className="bg-[#FFFFFF] rounded-xl border border-gray-200 shadow-xl p-8 max-w-lg mx-auto text-center">
-            <h1 className="text-3xl font-normal mb-6">Your cart is empty</h1>
-            <p className="mb-6">
+          <div className="bg-[#eceef1] rounded-xl border border-gray-200 shadow-xl p-8 max-w-lg mx-auto text-center">
+            <h1 className="font-racingSansOne text-3xl font-normal mb-6">Your cart is empty</h1>
+            <p className="font-oswaldVariable mb-6">
               Please add items to your cart before checking out.
             </p>
 
             <button
               onClick={() => navigate('/shop')}
-              className="bg-[#E73725] text-white px-6 py-3 rounded-md hover:bg-red-700 transition-colors mx-auto"
+              className="bg-[#e31837] font-oswaldVariable text-white px-6 py-3 rounded-md hover:bg-[#333f48] transition-colors mx-auto"
             >
               Go to Shop
             </button>
@@ -393,13 +393,13 @@ const OrderCheckout = () => {
   };
 
   return (
-    <section className="bg-[#FFFFFF] py-12 min-h-screen font-librecaslon ">
+    <section className="bg-[#eceef1] py-12 min-h-screen font-oswaldVariable ">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ml-6 mr-6">
           {/* Shipping and Payment Form */}
 
-          <div className="bg-[#FFFFFF] rounded-xl border border-gray-200 shadow-xl pl-4 pr-4 py-8">
-            <h2 className="text-2xl font-bold mb-6">
+          <div className="bg-[#eceef1] rounded-xl border border-gray-200 shadow-xl pl-4 pr-4 py-8">
+            <h2 className="font-racingSansOne text-2xl font-bold mb-6">
               Toimitus- ja maksutiedot
             </h2>
 
@@ -424,7 +424,7 @@ const OrderCheckout = () => {
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   />
                 </div>
@@ -442,7 +442,7 @@ const OrderCheckout = () => {
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   />
                 </div>
@@ -461,7 +461,7 @@ const OrderCheckout = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                   required
                 />
               </div>
@@ -479,7 +479,7 @@ const OrderCheckout = () => {
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
-                  className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                   required
                 />
               </div>
@@ -498,7 +498,7 @@ const OrderCheckout = () => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   />
                 </div>
@@ -516,7 +516,7 @@ const OrderCheckout = () => {
                     name="postalCode"
                     value={formData.postalCode}
                     onChange={handleChange}
-                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   />
                 </div>
@@ -534,7 +534,7 @@ const OrderCheckout = () => {
                   name="country"
                   value={formData.country}
                   onChange={handleChange}
-                  className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="bg-white w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                   required
                 >
                   <option value="">Valitse maa</option>
@@ -546,7 +546,7 @@ const OrderCheckout = () => {
                 </select>
               </div>
 
-              <h3 className="text-xl font-bold mb-4">Maksutapa</h3>
+              <h3 className="font-racingSansOne text-xl font-bold mb-4">Maksutapa</h3>
 
               <div className="mb-8 space-y-4">
                 <div className="flex items-center">
@@ -557,7 +557,7 @@ const OrderCheckout = () => {
                     value="paytrail"
                     checked={formData.paymentMethod === 'paytrail'}
                     onChange={handleChange}
-                    className="bg-white h-5 w-5 text-red-600"
+                    className="bg-white h-5 w-5 text-[#b9975b]"
                   />
                   <label
                     htmlFor="paytrail"
@@ -581,7 +581,7 @@ const OrderCheckout = () => {
                     value="visma-pay"
                     checked={formData.paymentMethod === 'visma-pay'}
                     onChange={handleChange}
-                    className="bg-white h-5 w-5 text-red-600"
+                    className="bg-white h-5 w-5 text-[#b9975b]"
                   />
                   <label
                     htmlFor="visma-pay"
@@ -605,7 +605,7 @@ const OrderCheckout = () => {
                     value="credit-card"
                     checked={formData.paymentMethod === 'credit-card'}
                     onChange={handleChange}
-                    className="h-5 w-5 text-red-600"
+                    className="h-5 w-5 text-[#b9975b]"
                   />
                   <label htmlFor="credit-card" className="ml-2 text-gray-700">
                     Luottokortti
@@ -620,7 +620,7 @@ const OrderCheckout = () => {
                     value="bank-transfer"
                     checked={formData.paymentMethod === 'bank-transfer'}
                     onChange={handleChange}
-                    className="h-5 w-5 text-red-600"
+                    className="h-5 w-5 text-[#b9975b]"
                   />
                   <label htmlFor="bank-transfer" className="ml-2 text-gray-700">
                     Pankkisiirto
@@ -638,7 +638,7 @@ const OrderCheckout = () => {
               )}
               <button
                 type="submit"
-                className="w-full bg-[#E73725] text-white px-6 py-3 rounded-md hover:bg-red-700 transition-colors focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 disabled:opacity-50"
+                className="w-full bg-[#e31837] font-oswaldVariable text-white px-6 py-3 rounded-md hover:bg-[#333f48] transition-colors focus:outline-none focus:ring-2 focus:ring-[#e31837] focus:ring-offset-2 disabled:opacity-50"
                 disabled={loading}
               >
                 {loading
@@ -652,8 +652,8 @@ const OrderCheckout = () => {
 
           {/* Order Summary */}
 
-          <div className="bg-[#FFFFFF] rounded-xl border border-gray-200 shadow-xl p-8">
-            <h2 className="text-2xl font-bold mb-6">Tilauksesi</h2>
+          <div className="bg-[#eceef1] rounded-xl border border-gray-200 shadow-xl p-8">
+            <h2 className="font-racingSansOne text-2xl font-bold mb-6">Tilauksesi</h2>
             <div className="space-y-6 mb-8">
               {cart.map((item) => (
                 <div key={item.id} className="flex items-center space-x-4">

@@ -225,18 +225,18 @@ const ProductManager = () => {
       <div className="hidden md:block">
         <Header />
       </div>
-      <div className="container mx-auto px-4 pt-2 pb-8 bg-[#FFFFFF] font-librecaslon">
+      <div className="container mx-auto px-4 pt-2 pb-8 bg-[#eceef1] font-oswaldVariable">
         <div className="flex flex-col justify-center items-center mt-2 mb-8">
           <button
             onClick={openAddModal}
-            className="w-full bg-[#E73725] hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            className="w-full bg-[#e31837] hover:bg-[#333f48] text-white font-bold py-2 px-4 rounded"
           >
             Lisää tuote
           </button>
         </div>
 
         {/* Tuotteiden taulukko */}
-        <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl overflow-hidden">
+        <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl overflow-hidden">
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white">
               <thead>
@@ -317,9 +317,9 @@ const ProductManager = () => {
         {isModalOpen && (
           <div className="fixed inset-0 flex items-center justify-center z-50">
             <div className="absolute inset-0 bg-black opacity-50"></div>
-            <div className="bg-[#FFFFFF] rounded-lg shadow-lg p-6 w-full max-w-2xl z-10 overflow-y-auto max-h-screen">
+            <div className="bg-[#eceef1] rounded-lg shadow-lg p-6 w-full max-w-2xl z-10 overflow-y-auto max-h-screen">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-2xl font-bold">
+                <h2 className="font-racingSansOne text-2xl font-bold">
                   {currentProduct ? 'Muokkaa tuotetta' : 'Lisää uusi tuote'}
                 </h2>
                 <button
@@ -462,7 +462,7 @@ const ProductManager = () => {
                   </button>
                   <button
                     type="submit"
-                    className="w-full md:w-auto bg-[#E73725] hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                    className="w-full md:w-auto bg-[#e31837] hover:bg-[#333f48] text-white font-bold py-2 px-4 rounded"
                     disabled={saving}
                   >
                     {saving ? 'Tallennetaan...' : 'Tallenna'}
@@ -476,7 +476,7 @@ const ProductManager = () => {
       <div className="md:hidden mt-4 mb-12 flex flex-col justify-center items-center">
         <Link
           to="/admin"
-          className="bg-[#E73725] hover:bg-red-700 font-librecaslon text-white px-4 pt-2 pb-2 rounded"
+          className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white px-4 pt-2 pb-2 rounded"
         >
           Takaisin hallintapaneeliin
         </Link>

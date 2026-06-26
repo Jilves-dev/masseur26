@@ -170,14 +170,14 @@ const Contact = () => {
           const infoWindow = new google.maps.InfoWindow({
             content: `
               <div style="padding: 10px; font-family: Arial, sans-serif; max-width: 250px;">
-                <h3 style="margin: 0 0 8px 0; color: #b07d54; font-size: 16px;">Urheiluhieroja</h3>
+                <h3 style="margin: 0 0 8px 0; color: #b9975b; font-size: 16px;">Urheiluhieroja</h3>
                 <p style="margin: 4px 0; font-size: 14px;"><strong>📍 Osoite:</strong><br>Finlaysoninkatu 25<br>33210 Tampere</p>
                 <p style="margin: 4px 0; font-size: 14px;"><strong>📞 Puhelin:</strong> +358 50 123 4567</p>
                 <p style="margin: 4px 0; font-size: 14px;"><strong>🕒 Aukioloajat:</strong><br>Ma-Pe: 10-19<br>La: 10-17<br>Su: 12-16</p>
                 <div style="margin-top: 10px;">
                   <a href="https://maps.google.com/dir/?api=1&destination=Finlaysoninkatu+25,+33210+Tampere"
                      target="_blank"
-                     style="color: #b07d54; text-decoration: none; font-weight: bold;">
+                     style="color: #b9975b; text-decoration: none; font-weight: bold;">
                     🧭 Reittiohjeet →
                   </a>
                 </div>
@@ -255,11 +255,11 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-[#e1e3e7]">
+    <div className="bg-[#eceef1]">
       <button
         onClick={handleBackToMenu}
-        className={`md:hidden fixed left-4 z-50 w-10 h-10 bg-[#fcefc8] rounded-full
-          shadow-xl flex items-center justify-center text-[#2e3538] hover:text-[#b07d54]
+        className={`md:hidden fixed left-4 z-50 w-10 h-10 bg-[#eceef1] rounded-full
+          shadow-xl flex items-center justify-center text-[#333f48] hover:text-[#b9975b]
           transition-all duration-300 ease-in-out 
           ${isScrolled ? 'top-4' : 'top-22'}`}
         aria-label="Takaisin valikkoon"
@@ -274,7 +274,7 @@ const Contact = () => {
             variants={fadeUp(0.2)}
             initial="hidden"
             whileInView="show"
-            className="font-racingSansOne text-3xl font-semibold sm:font-semibold text-center mb-12"
+            className="font-racingSansOne text-3xl font-medium sm:font-medium text-center mb-12"
           >
             Ota yhteyttä
           </motion.h1>
@@ -287,10 +287,10 @@ const Contact = () => {
                 variants={fadeUp(0.3 + index * 0.1)}
                 initial="hidden"
                 whileInView="show"
-                className="bg-[#fcefc8] p-6 rounded-xl border border-[#b7bcc1] shadow-xl text-center hover:shadow-lg transition-shadow"
+                className="bg-[#eceef1] p-6 rounded-xl border border-[#b9975b]/30 shadow-xl text-center hover:shadow-lg transition-shadow"
               >
                 <div className="flex justify-center mb-4">
-                  <div className="text-2xl text-[#b07d54]">{item.icon}</div>
+                  <div className="text-2xl text-[#b9975b]">{item.icon}</div>
                 </div>
                 <h3 className="text-xl font-racingSansOne font-semibold sm:font-medium mb-2">
                   {item.title}
@@ -308,7 +308,7 @@ const Contact = () => {
               variants={fadeUp(0.4)}
               initial="hidden"
               whileInView="show"
-              className="bg-[#fcefc8] p-8 rounded-xl border border-[#b7bcc1] shadow-xl"
+              className="bg-[#eceef1] p-8 rounded-xl border border-[#b9975b]/30 shadow-xl"
             >
               <h2 className="text-2xl font-oswaldVariable font-normal mb-6">
                 Yhteydenottolomake
@@ -340,7 +340,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-white font-oswaldVariable w-full px-4 py-2 border border-[#b7bcc1] rounded-md focus:outline-none focus:ring-2 focus:ring-[#b07d54]"
+                    className="bg-white font-oswaldVariable w-full px-4 py-2 border border-[#b9975b]/30 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   />
                 </div>
@@ -358,7 +358,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-white w-full px-4 py-2 border border-[#b7bcc1] rounded-md focus:outline-none focus:ring-2 focus:ring-[#b07d54]"
+                    className="bg-white w-full px-4 py-2 border border-[#b9975b]/30 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   />
                 </div>
@@ -376,7 +376,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="bg-white w-full px-4 py-2 border border-[#b7bcc1] rounded-md focus:outline-none focus:ring-2 focus:ring-[#b07d54]"
+                    className="bg-white w-full px-4 py-2 border border-[#b9975b]/30 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   />
                 </div>
@@ -394,14 +394,14 @@ const Contact = () => {
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
-                    className="bg-white w-full px-4 py-2 border border-[#b7bcc1] rounded-md focus:outline-none focus:ring-2 focus:ring-[#b07d54]"
+                    className="bg-white w-full px-4 py-2 border border-[#b9975b]/30 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b9975b]"
                     required
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-[#b07d54] font-oswaldVariable text-[#fcefc8] text-lg px-6 py-3 rounded-md hover:bg-[#2e3538] transition-colors focus:outline-none focus:ring-2 focus:ring-[#b07d54] focus:ring-offset-2 w-full"
+                  className="bg-[#b9975b] font-oswaldVariable text-[#eceef1] text-lg px-6 py-3 rounded-md hover:bg-[#333f48] transition-colors focus:outline-none focus:ring-2 focus:ring-[#b9975b] focus:ring-offset-2 w-full"
                 >
                   Lähetä viesti
                 </button>
@@ -415,12 +415,12 @@ const Contact = () => {
               whileInView="show"
               className="relative"
             >
-              <div className="bg-[#fcefc8] p-2 rounded-xl border border-[#b7bcc1] shadow-md overflow-hidden h-[400px]">
+              <div className="bg-[#eceef1] p-2 rounded-xl border border-[#b9975b]/30 shadow-md overflow-hidden h-[400px]">
                 {mapError ? (
                   // Fallback jos Google Maps ei lataudu
                   <div className="w-full h-full bg-gray-200 rounded-lg flex flex-col items-center justify-center text-center p-4">
-                    <FaMapMarkerAlt className="text-[#b07d54] text-4xl mb-4" />
-                    <h3 className="font-oswaldVariable font-bold text-[#2e3538] mb-2">
+                    <FaMapMarkerAlt className="text-[#b9975b] text-4xl mb-4" />
+                    <h3 className="font-oswaldVariable font-bold text-[#333f48] mb-2">
                       Tervetuloa hierontaamme
                     </h3>
                     <p className="font-oswaldVariable text-gray-500 mb-2">
@@ -432,7 +432,7 @@ const Contact = () => {
                       href="https://maps.google.com/dir/?api=1&destination=Finlaysoninkatu+25,+33210+Tampere"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#b07d54] font-oswaldVariable text-[#fcefc8] px-4 py-2 rounded-md hover:bg-[#2e3538] transition-colors text-sm"
+                      className="bg-[#b9975b] font-oswaldVariable text-[#eceef1] px-4 py-2 rounded-md hover:bg-[#333f48] transition-colors text-sm"
                     >
                       🧭 Reittiohjeet →
                     </a>
@@ -447,7 +447,7 @@ const Contact = () => {
                 )}
               </div>
 
-              <div className="bg-[#2e3538] text-[#fcefc8] text-2xl p-4 text-center mt-4 rounded-md border border-[#b7bcc1] shadow-xl">
+              <div className="bg-[#333f48] text-[#eceef1] text-2xl p-4 text-center mt-4 rounded-md border border-[#b9975b]/30 shadow-xl">
                 <h3 className="font-oswaldVariable font-medium mb-1">
                   Käy hierontatilassamme
                 </h3>
@@ -476,7 +476,7 @@ const Contact = () => {
                 whileInView="show"
                 className="space-y-6"
               >
-                <div className="bg-[#fcefc8] p-6 rounded-xl border border-[#b7bcc1] shadow-md">
+                <div className="bg-[#eceef1] p-6 rounded-xl border border-[#b9975b]/30 shadow-md">
                   <h3 className="font-oswaldVariable text-xl font-medium mb-2">
                     Kuinka pitkiä hierontoja tarjoatte?
                   </h3>
@@ -487,7 +487,7 @@ const Contact = () => {
                   </p>
                 </div>
 
-                <div className="bg-[#fcefc8] p-6 rounded-xl border border-[#b7bcc1] shadow-md">
+                <div className="bg-[#eceef1] p-6 rounded-xl border border-[#b9975b]/30 shadow-md">
                   <h3 className="font-oswaldVariable text-xl font-medium mb-2">
                     Tarvitseeko ajan varata etukäteen?
                   </h3>
@@ -498,7 +498,7 @@ const Contact = () => {
                   </p>
                 </div>
 
-                <div className="bg-[#fcefc8] p-6 rounded-xl border border-[#b7bcc1] shadow-md">
+                <div className="bg-[#eceef1] p-6 rounded-xl border border-[#b9975b]/30 shadow-md">
                   <h3 className="font-oswaldVariable text-xl font-medium mb-2">
                     Myyttekö lahjakortteja?
                   </h3>
@@ -509,7 +509,7 @@ const Contact = () => {
                   </p>
                 </div>
 
-                <div className="bg-[#fcefc8] p-6 rounded-xl border border-[#b7bcc1] shadow-md">
+                <div className="bg-[#eceef1] p-6 rounded-xl border border-[#b9975b]/30 shadow-md">
                   <h3 className="font-oswaldVariable text-xl font-medium mb-2">
                     Onko hierontatilan lähellä pysäköintimahdollisuus?
                   </h3>

@@ -47,17 +47,17 @@ const DAY_NAMES = {
 };
 
 // ── Shared style tokens ──────────────────────────────────────
-const btnPrimary = `w-full h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
-  text-base rounded-lg shadow hover:bg-[#c92516] transition-colors duration-200
+const btnPrimary = `w-full h-11 bg-[#e31837] text-white font-oswaldVariable font-bold
+  text-base rounded-lg shadow hover:bg-[#333f48] transition-colors duration-200
   disabled:opacity-40 disabled:cursor-not-allowed`;
 
-const btnSecondary = `flex-1 h-11 border border-[#E1E1E1] text-gray-500
-  font-oswaldVariable text-base rounded-lg hover:border-[#E73725]
-  hover:text-[#E73725] transition-colors duration-200`;
+const btnSecondary = `flex-1 h-11 border border-[#b9975b]/30 text-gray-500
+  font-oswaldVariable text-base rounded-lg hover:border-[#e31837]
+  hover:text-[#e31837] transition-colors duration-200`;
 
-const inputClass = `w-full bg-white border border-[#E1E1E1] rounded-lg
-  font-oswaldVariable text-sm text-[#2e3538] placeholder-gray-400
-  px-4 py-3 outline-none focus:border-[#E73725] transition-colors duration-200`;
+const inputClass = `w-full bg-white border border-[#b9975b]/30 rounded-lg
+  font-oswaldVariable text-sm text-[#333f48] placeholder-gray-400
+  px-4 py-3 outline-none focus:border-[#e31837] transition-colors duration-200`;
 
 const labelClass = 'font-oswaldVariable text-xs text-gray-500 uppercase tracking-wider';
 
@@ -79,19 +79,19 @@ function StepIndicator({ step }) {
             <div className="flex flex-col items-center">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center
                 font-oswaldVariable text-sm font-bold transition-all duration-300
-                ${done   ? 'bg-[#E73725] text-white'
-                : active ? 'bg-[#010000] text-white'
-                         : 'bg-[#E1E1E1] text-gray-400'}`}>
+                ${done   ? 'bg-[#e31837] text-white'
+                : active ? 'bg-[#333f48] text-white'
+                         : 'bg-[#333f48]/10 text-gray-400'}`}>
                 {done ? '✓' : num}
               </div>
               <span className={`font-oswaldVariable text-xs mt-1
-                ${active ? 'text-[#2e3538] font-semibold' : 'text-gray-400'}`}>
+                ${active ? 'text-[#333f48] font-semibold' : 'text-gray-400'}`}>
                 {label}
               </span>
             </div>
             {i < steps.length - 1 && (
               <div className={`w-5 h-px mx-1 mb-5 transition-all duration-300
-                ${done ? 'bg-[#E73725]' : 'bg-[#E1E1E1]'}`} />
+                ${done ? 'bg-[#e31837]' : 'bg-[#333f48]/10'}`} />
             )}
           </div>
         );
@@ -111,7 +111,7 @@ function StepServiceSelect({ onNext, language }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingSelectService')}</h2>
+      <h2 className="font-racingSansOne text-2xl text-[#333f48]">{t('bookingSelectService')}</h2>
       <p className="font-oswaldVariable text-sm text-gray-500">{t('bookingSelectServiceSub')}</p>
 
       <div className="flex flex-col gap-2 mt-2">
@@ -125,11 +125,11 @@ function StepServiceSelect({ onNext, language }) {
             className={`w-full flex justify-between items-center px-4 py-3
               border rounded-lg font-oswaldVariable text-sm transition-all duration-200
               ${selected?.id === s.id
-                ? 'border-[#E73725] bg-[#E73725]/8 text-[#2e3538]'
-                : 'border-[#E1E1E1] text-[#2e3538] hover:border-[#E73725]/60'}`}
+                ? 'border-[#e31837] bg-[#e31837]/8 text-[#333f48]'
+                : 'border-[#b9975b]/30 text-[#333f48] hover:border-[#e31837]/60'}`}
           >
             <span>{getLang(s, 'name', language)}</span>
-            <span className="text-[#E73725] ml-4 font-bold shrink-0">
+            <span className="text-[#e31837] ml-4 font-bold shrink-0">
               {getLang(s, 'price', language)}
             </span>
           </button>
@@ -190,20 +190,20 @@ function StepDatePicker({ onNext, onBack, language }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingSelectDate')}</h2>
+      <h2 className="font-racingSansOne text-2xl text-[#333f48]">{t('bookingSelectDate')}</h2>
       <p className="font-oswaldVariable text-sm text-gray-500">{t('bookingSelectDateSub')}</p>
 
       {/* Month navigation */}
       <div className="flex items-center justify-between mt-2">
         <button onClick={prevMonth}
-          className="font-oswaldVariable text-gray-400 hover:text-[#E73725] text-2xl px-2 transition-colors">
+          className="font-oswaldVariable text-gray-400 hover:text-[#e31837] text-2xl px-2 transition-colors">
           ‹
         </button>
-        <span className="font-racingSansOne text-[#2e3538] text-lg">
+        <span className="font-racingSansOne text-[#333f48] text-lg">
           {monthNames[viewMonth]} {viewYear}
         </span>
         <button onClick={nextMonth}
-          className="font-oswaldVariable text-gray-400 hover:text-[#E73725] text-2xl px-2 transition-colors">
+          className="font-oswaldVariable text-gray-400 hover:text-[#e31837] text-2xl px-2 transition-colors">
           ›
         </button>
       </div>
@@ -227,9 +227,9 @@ function StepDatePicker({ onNext, onBack, language }) {
               className={`aspect-square rounded-lg font-oswaldVariable text-sm
                 transition-all duration-200 flex items-center justify-center
                 ${isSel
-                  ? 'bg-[#E73725] text-white font-bold'
+                  ? 'bg-[#e31837] text-white font-bold'
                   : available && !past
-                    ? 'bg-[#E73725]/10 text-[#2e3538] hover:bg-[#E73725]/20 border border-[#E73725]/30'
+                    ? 'bg-[#e31837]/10 text-[#333f48] hover:bg-[#e31837]/20 border border-[#e31837]/30'
                     : 'text-gray-300 cursor-not-allowed'}`}
             >
               {day}
@@ -240,7 +240,7 @@ function StepDatePicker({ onNext, onBack, language }) {
 
       {/* Legend */}
       <div className="flex items-center gap-2 text-xs font-oswaldVariable text-gray-400">
-        <div className="w-3 h-3 rounded bg-[#E73725]/20 border border-[#E73725]/30" />
+        <div className="w-3 h-3 rounded bg-[#e31837]/20 border border-[#e31837]/30" />
         {t('bookingLegendAvailable')}
       </div>
 
@@ -249,8 +249,8 @@ function StepDatePicker({ onNext, onBack, language }) {
         <button
           disabled={!selected}
           onClick={() => onNext({ date: selected, availDoc: availMap[selected] })}
-          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
-            text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200
+          className={`flex-1 h-11 bg-[#e31837] text-white font-oswaldVariable font-bold
+            text-base rounded-lg hover:bg-[#333f48] transition-colors duration-200
             disabled:opacity-40 disabled:cursor-not-allowed`}
         >
           {t('bookingNext')}
@@ -268,7 +268,7 @@ function StepTimePicker({ booking, onNext, onBack }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingSelectTime')}</h2>
+      <h2 className="font-racingSansOne text-2xl text-[#333f48]">{t('bookingSelectTime')}</h2>
       <p className="font-oswaldVariable text-sm text-gray-500">
         {t('bookingSelectTimeSub')} {booking.date}
       </p>
@@ -287,8 +287,8 @@ function StepTimePicker({ booking, onNext, onBack }) {
             className={`py-3 rounded-lg font-oswaldVariable text-sm font-medium
               transition-all duration-200
               ${selected === slot
-                ? 'bg-[#E73725] text-white shadow'
-                : 'border border-[#E1E1E1] text-[#2e3538] hover:border-[#E73725]/60 hover:bg-[#E73725]/8'}`}
+                ? 'bg-[#e31837] text-white shadow'
+                : 'border border-[#b9975b]/30 text-[#333f48] hover:border-[#e31837]/60 hover:bg-[#e31837]/8'}`}
           >
             {slot}
           </button>
@@ -300,8 +300,8 @@ function StepTimePicker({ booking, onNext, onBack }) {
         <button
           disabled={!selected}
           onClick={() => onNext({ time: selected })}
-          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
-            text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200
+          className={`flex-1 h-11 bg-[#e31837] text-white font-oswaldVariable font-bold
+            text-base rounded-lg hover:bg-[#333f48] transition-colors duration-200
             disabled:opacity-40 disabled:cursor-not-allowed`}
         >
           {t('bookingNext')}
@@ -327,7 +327,7 @@ function StepContactForm({ onNext, onBack }) {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingContact')}</h2>
+      <h2 className="font-racingSansOne text-2xl text-[#333f48]">{t('bookingContact')}</h2>
       <p className="font-oswaldVariable text-sm text-gray-500 mb-1">{t('bookingContactSub')}</p>
 
       <label className={labelClass}>{t('bookingLabelName')} *</label>
@@ -352,8 +352,8 @@ function StepContactForm({ onNext, onBack }) {
       <div className="flex gap-3 mt-2">
         <button type="button" onClick={onBack} className={btnSecondary}>{t('bookingBack')}</button>
         <button type="submit"
-          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
-            text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200`}>
+          className={`flex-1 h-11 bg-[#e31837] text-white font-oswaldVariable font-bold
+            text-base rounded-lg hover:bg-[#333f48] transition-colors duration-200`}>
           {t('bookingNext')}
         </button>
       </div>
@@ -401,8 +401,8 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
         message: {
           subject: 'Varauksesi on vahvistettu – Urheiluhieroja',
           html: `
-            <div style="font-family: Georgia, serif; max-width: 520px; color: #2e3538;">
-              <h2 style="font-size: 24px; color: #E73725; margin-bottom: 8px;">Urheiluhieroja</h2>
+            <div style="font-family: Georgia, serif; max-width: 520px; color: #333f48;">
+              <h2 style="font-size: 24px; color: #e31837; margin-bottom: 8px;">Urheiluhieroja</h2>
               <p>Hei <strong>${booking.name}</strong>,</p>
               <p>Varauksesi on vastaanotettu. Tässä yhteenveto:</p>
               <table style="border-collapse: collapse; width: 100%; margin: 16px 0;">
@@ -421,7 +421,7 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
                 Otamme sinuun pian yhteyttä varauksen vahvistamista varten.<br/>
                 Finlaysoninkatu 25, 33210 Tampere — <a href="tel:+358501234567">+358 50 123 4567</a>
               </p>
-              <p style="color: #E73725; font-size: 13px;">– Urheiluhieroja</p>
+              <p style="color: #e31837; font-size: 13px;">– Urheiluhieroja</p>
             </div>
           `,
         },
@@ -433,8 +433,8 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
         message: {
           subject: `Uusi varaus: ${booking.name} — ${booking.date} klo ${booking.time}`,
           html: `
-            <div style="font-family: Georgia, serif; max-width: 520px; color: #2e3538;">
-              <h2 style="font-size: 22px; color: #E73725; margin-bottom: 4px;">Uusi varaus📆</h2>
+            <div style="font-family: Georgia, serif; max-width: 520px; color: #333f48;">
+              <h2 style="font-size: 22px; color: #e31837; margin-bottom: 4px;">Uusi varaus📆</h2>
               <table style="border-collapse: collapse; width: 100%; margin: 16px 0;">
                 <tr><td style="padding: 6px 0; color: #6b7280; width: 110px;">Asiakas</td>
                     <td><strong>${booking.name}</strong></td></tr>
@@ -469,10 +469,10 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
   if (done) {
     return (
       <div className="flex flex-col items-center gap-4 py-6 text-center">
-        <div className="w-16 h-16 rounded-full bg-[#E73725]/15 flex items-center justify-center">
-          <FaCheckCircle className="text-3xl text-[#E73725]" />
+        <div className="w-16 h-16 rounded-full bg-[#e31837]/15 flex items-center justify-center">
+          <FaCheckCircle className="text-3xl text-[#e31837]" />
         </div>
-        <h2 className="font-racingSansOne text-3xl text-[#2e3538]">{t('bookingDone')}</h2>
+        <h2 className="font-racingSansOne text-3xl text-[#333f48]">{t('bookingDone')}</h2>
         <p className="font-oswaldVariable text-sm text-gray-600 leading-relaxed max-w-xs">
           {t('bookingDoneSub')} <strong>{booking.email}</strong>.{t('bookingDoneContact')}
         </p>
@@ -497,17 +497,17 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingConfirm')}</h2>
+      <h2 className="font-racingSansOne text-2xl text-[#333f48]">{t('bookingConfirm')}</h2>
       <p className="font-oswaldVariable text-sm text-gray-500">{t('bookingConfirmSub')}</p>
 
-      <div className="flex flex-col gap-2 mt-2 border border-[#E1E1E1] rounded-lg p-4">
+      <div className="flex flex-col gap-2 mt-2 border border-[#b9975b]/30 rounded-lg p-4">
         {rows.map(([label, value]) => (
           <div key={label} className="flex justify-between items-start gap-4
-            border-b border-[#E1E1E1]/60 pb-2 last:border-0 last:pb-0">
+            border-b border-[#b9975b]/20 pb-2 last:border-0 last:pb-0">
             <span className="font-oswaldVariable text-xs text-gray-400 shrink-0 pt-0.5 uppercase tracking-wide">
               {label}
             </span>
-            <span className="font-oswaldVariable text-sm text-[#2e3538] text-right font-medium">
+            <span className="font-oswaldVariable text-sm text-[#333f48] text-right font-medium">
               {value}
             </span>
           </div>
@@ -525,8 +525,8 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
         <button
           onClick={handleConfirm}
           disabled={submitting}
-          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
-            text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200
+          className={`flex-1 h-11 bg-[#e31837] text-white font-oswaldVariable font-bold
+            text-base rounded-lg hover:bg-[#333f48] transition-colors duration-200
             disabled:opacity-60 disabled:cursor-not-allowed`}
         >
           {submitting ? t('bookingSubmitting') : t('bookingSubmit')}
@@ -551,13 +551,13 @@ export default function BookingPage() {
   const reset = () => { setBooking({}); setStep(1); window.scrollTo(0, 0); };
 
   return (
-    <div className="bg-[#FFFFFF] min-h-screen py-12">
+    <div className="bg-[#eceef1] min-h-screen py-12">
       {/* Hero strip */}
-      <div className="bg-[#010000] py-10 px-4 text-center mb-10">
+      <div className="bg-[#333f48] py-10 px-4 text-center mb-10">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <FaHandSparkles className="text-[#E73725] text-2xl" />
+          <FaHandSparkles className="text-[#e31837] text-2xl" />
           <h1 className="font-racingSansOne text-4xl text-white">{t('booking')}</h1>
-          <FaCalendarAlt className="text-[#E73725] text-2xl" />
+          <FaCalendarAlt className="text-[#e31837] text-2xl" />
         </div>
         <p className="font-oswaldVariable text-white/70 text-base max-w-md mx-auto">
           {t('bookingTagline')}
@@ -566,7 +566,7 @@ export default function BookingPage() {
 
       {/* Form card */}
       <div className="max-w-md mx-auto px-4 pb-16">
-        <div className="bg-white border border-[#E1E1E1] rounded-xl shadow-lg px-6 py-8">
+        <div className="bg-white border border-[#b9975b]/30 rounded-xl shadow-lg px-6 py-8">
           <StepIndicator step={step} />
 
           {step === 1 && <StepServiceSelect  onNext={next} language={language} />}
@@ -584,7 +584,7 @@ export default function BookingPage() {
         </div>
 
         <p className="font-oswaldVariable text-center text-sm text-gray-400 mt-6">
-          Tarvitsetko apua? Soita: <a href="tel:+358501234567" className="text-[#E73725] hover:underline">+358 50 123 4567</a>
+          Tarvitsetko apua? Soita: <a href="tel:+358501234567" className="text-[#e31837] hover:underline">+358 50 123 4567</a>
         </p>
       </div>
     </div>

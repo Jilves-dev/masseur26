@@ -219,26 +219,26 @@ const UserManager = () => {
         <Header />
       </div>
 
-      <div className="container mx-auto px-4 py-8 bg-[#FFFFFF] font-librecaslon">
+      <div className="container mx-auto px-4 py-8 bg-[#eceef1] font-oswaldVariable">
         {error && (
-          <div className="bg-[#E73725] border border-red-400 text-white px-4 py-3 rounded mb-4">
+          <div className="bg-[#e31837] border border-red-400 text-white px-4 py-3 rounded mb-4">
             {error}
           </div>
         )}
 
         {/* Tilastot */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
-          <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-[#E73725]">
+          <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-[#e31837]">
               Käyttäjiä yhteensä
             </h3>
-            <p className="text-3xl font-bold text-[#E73725]">
+            <p className="text-3xl font-bold text-[#e31837]">
               {userStats.totalUsers}
             </p>
           </div>
 
-          <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-[#0BA334]">
+          <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-[#0BA334]">
               Ylläpitäjät
             </h3>
             <p className="text-3xl font-bold text-[#0BA334]">
@@ -246,15 +246,15 @@ const UserManager = () => {
             </p>
           </div>
 
-          <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-[#0B7AA3]">Asiakkaat</h3>
+          <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-[#0B7AA3]">Asiakkaat</h3>
             <p className="text-3xl font-bold text-[#0B7AA3]">
               {userStats.customerUsers}
             </p>
           </div>
 
-          <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-[#7AA30B]">
+          <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-[#7AA30B]">
               Uudet (7 pv)
             </h3>
             <p className="text-3xl font-bold text-[#7AA30B]">
@@ -262,8 +262,8 @@ const UserManager = () => {
             </p>
           </div>
 
-          <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-[#340BA3]">
+          <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+            <h3 className="font-racingSansOne text-lg font-semibold text-[#340BA3]">
               Aktiiviset (30 pv)
             </h3>
             <p className="text-3xl font-bold text-[#340BA3]">
@@ -273,7 +273,7 @@ const UserManager = () => {
         </div>
 
         {/* Suodattimet ja haku */}
-        <div className="bg-[#FFFFFF] text-base rounded-lg shadow-lg p-6 mb-6">
+        <div className="bg-[#eceef1] text-base rounded-lg shadow-lg p-6 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div>
               <label className="block font-medium text-gray-700 mb-2">
@@ -337,9 +337,9 @@ const UserManager = () => {
         </div>
 
         {/* Käyttäjätaulukko */}
-        <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl">
+        <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl">
           <div className="px-6 py-4 border-b">
-            <h2 className="text-xl font-semibold">
+            <h2 className="font-racingSansOne text-xl font-semibold">
               Käyttäjät ({filteredAndSortedUsers.length})
             </h2>
           </div>
@@ -355,7 +355,7 @@ const UserManager = () => {
           ) : (
             <div className="overflow-x-auto">
               <table className="min-w-full">
-                <thead className="bg-[#FFFFFF]">
+                <thead className="bg-[#eceef1]">
                   <tr>
                     <th className="px-6 py-3 text-left text-base font-medium text-gray-500 uppercase">
                       Käyttäjä
@@ -432,7 +432,7 @@ const UserManager = () => {
                           </Link>
                           <button
                             onClick={() => deleteUser(user.id, user.email)}
-                            className="text-[#E73725] hover:text-red-900 text-base"
+                            className="text-[#e31837] hover:text-red-900 text-base"
                             disabled={user.role === 'admin'}
                           >
                             {user.role === 'admin' ? 'Suojattu' : 'Poista'}
@@ -450,7 +450,7 @@ const UserManager = () => {
       <div className="md:hidden mt-4 mb-12 flex flex-col justify-center items-center">
         <Link
           to="/admin"
-          className="bg-[#E73725] hover:bg-red-700 font-librecaslon text-white text-base px-4 pt-2 pb-2 rounded"
+          className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white text-base px-4 pt-2 pb-2 rounded"
         >
           Takaisin hallintapaneeliin
         </Link>

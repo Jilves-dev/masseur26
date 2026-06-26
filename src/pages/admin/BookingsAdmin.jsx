@@ -14,7 +14,7 @@ const STATUS_LABELS = {
 function StatusBadge({ status }) {
   const s = STATUS_LABELS[status] ?? STATUS_LABELS.pending;
   return (
-    <span className={`font-librecaslon text-xs px-2 py-0.5 rounded-full border ${s.color}`}>
+    <span className={`font-oswaldVariable text-xs px-2 py-0.5 rounded-full border ${s.color}`}>
       {s.fi}
     </span>
   );
@@ -40,30 +40,30 @@ function BookingCard({ b }) {
       await addDoc(collection(db, 'mail'), {
         to: b.email,
         message: {
-          subject: 'Varauksesi on peruutettu – Freewheel Bikes',
+          subject: 'Varauksesi on peruutettu – Urheiluhieroja',
           html: `
-            <div style="font-family: Georgia, serif; max-width: 520px; color: #010000;">
-              <h2 style="font-size: 22px; margin-bottom: 4px;">Freewheel Bikes</h2>
+            <div style="font-family: Georgia, serif; max-width: 520px; color: #333f48;">
+              <h2 style="font-size: 22px; margin-bottom: 4px;">Urheiluhieroja</h2>
               <p>Hei <strong>${b.name}</strong>,</p>
               <p>Valitettavasti varauksesi on peruutettu.</p>
               <table style="border-collapse: collapse; width: 100%; margin: 16px 0;">
-                <tr><td style="padding: 6px 0; color: #E73725; width: 100px;">Palvelu</td>
+                <tr><td style="padding: 6px 0; color: #e31837; width: 100px;">Palvelu</td>
                     <td><strong>${b.serviceName}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #E73725;">Päivä</td>
+                <tr><td style="padding: 6px 0; color: #e31837;">Päivä</td>
                     <td><strong>${b.date}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #E73725;">Kellonaika</td>
+                <tr><td style="padding: 6px 0; color: #e31837;">Kellonaika</td>
                     <td><strong>${b.time}</strong></td></tr>
               </table>
               <p>Voit tehdä uuden varauksen osoitteessa:</p>
               <a href="https://bike26-2ffd8.web.app/booking"
-                 style="display:inline-block; background:#E73725; color:#FFFFFF;
+                 style="display:inline-block; background:#e31837; color:#eceef1;
                         padding: 10px 24px; border-radius: 999px; font-size: 14px;
                         text-decoration: none; margin-top: 4px;">
                 Varaa uusi aika →
               </a>
-              <p style="color: #E73725; font-size: 13px; margin-top: 16px;">
+              <p style="color: #e31837; font-size: 13px; margin-top: 16px;">
                 Pahoittelemme aiheutunutta haittaa.<br/>
-                Freewheel Bikes
+                Urheiluhieroja
               </p>
             </div>
           `,
@@ -77,17 +77,17 @@ function BookingCard({ b }) {
     <div
       className={`border rounded-lg transition-all duration-200
         ${b.status === 'cancelled' ? 'border-gray-100 opacity-60' :
-          b.status === 'confirmed' ? 'border-green-200' : 'border-[#E73725]/40'}`}
+          b.status === 'confirmed' ? 'border-green-200' : 'border-[#e31837]/40'}`}
     >
       <button
         onClick={() => setExpanded(e => !e)}
         className="w-full flex items-center justify-between px-4 py-3 text-left gap-2"
       >
         <div className="flex flex-col min-w-0">
-          <span className="font-zaslia text-base text-[#010000] truncate">
+          <span className="font-racingSansOne text-base text-[#333f48] truncate">
             {b.name}
           </span>
-          <span className="font-librecaslon text-xs text-gray-500">
+          <span className="font-oswaldVariable text-xs text-gray-500">
             {b.date} · {b.time}
           </span>
         </div>
@@ -108,10 +108,10 @@ function BookingCard({ b }) {
               ...(b.note ? [['Lisätiedot', b.note]] : []),
             ].map(([label, value]) => (
               <div key={label} className="col-span-2 flex gap-2 items-baseline">
-                <span className="font-librecaslon text-xs text-gray-500 shrink-0 w-20">
+                <span className="font-oswaldVariable text-xs text-gray-500 shrink-0 w-20">
                   {label}
                 </span>
-                <span className="font-librecaslon text-sm text-[#010000]">{value}</span>
+                <span className="font-oswaldVariable text-sm text-[#333f48]">{value}</span>
               </div>
             ))}
           </div>
@@ -122,7 +122,7 @@ function BookingCard({ b }) {
                 <button
                   disabled={loading}
                   onClick={() => update('confirmed')}
-                  className="flex-1 h-9 bg-green-600 text-white font-zaslia
+                  className="flex-1 h-9 bg-green-600 text-white font-racingSansOne
                     text-sm rounded-full hover:bg-green-700 transition-colors duration-200
                     disabled:opacity-50"
                 >
@@ -132,7 +132,7 @@ function BookingCard({ b }) {
               <button
                 disabled={loading}
                 onClick={() => update('cancelled')}
-                className="flex-1 h-9 border border-red-400 text-red-500 font-zaslia
+                className="flex-1 h-9 border border-red-400 text-red-500 font-racingSansOne
                   text-sm rounded-full hover:bg-red-50 transition-colors duration-200
                   disabled:opacity-50"
               >
@@ -181,23 +181,23 @@ export default function BookingsAdmin() {
       <AdminMobileHeader pageTitle="Varaukset" />
       <div className="hidden md:block"><Header /></div>
 
-      <div className="min-h-screen bg-[#FFFFFF] flex flex-col items-center px-4 py-12">
-        <div className="w-full max-w-md bg-[#FFFFFF] border border-gray-200
+      <div className="min-h-screen bg-[#eceef1] flex flex-col items-center px-4 py-12">
+        <div className="w-full max-w-md bg-[#eceef1] border border-gray-200
           rounded-xl shadow-xl px-6 py-8 flex flex-col gap-4">
 
-          <p className="font-librecaslon text-sm text-gray-500">Ylläpito</p>
-          <h1 className="font-zaslia text-4xl text-[#010000]">Varaukset</h1>
+          <p className="font-oswaldVariable text-sm text-gray-500">Ylläpito</p>
+          <h1 className="font-racingSansOne text-4xl text-[#333f48]">Varaukset</h1>
 
           <div className="flex gap-2 flex-wrap">
             {filterBtns.map(({ key, label }) => (
               <button
                 key={key}
                 onClick={() => setFilter(key)}
-                className={`font-librecaslon text-xs px-3 py-1.5 rounded-full border
+                className={`font-oswaldVariable text-xs px-3 py-1.5 rounded-full border
                   transition-colors duration-200
                   ${filter === key
-                    ? 'bg-[#E73725] text-white border-[#E73725]'
-                    : 'border-gray-200 text-gray-500 hover:border-[#E73725] hover:text-[#E73725]'}`}
+                    ? 'bg-[#e31837] text-white border-[#e31837]'
+                    : 'border-gray-200 text-gray-500 hover:border-[#e31837] hover:text-[#e31837]'}`}
               >
                 {label}
                 <span className="ml-1 opacity-70">({counts[key]})</span>
@@ -207,10 +207,10 @@ export default function BookingsAdmin() {
 
           <div className="flex flex-col gap-2 mt-1">
             {!bookings && (
-              <p className="font-librecaslon text-sm text-gray-500 italic">Ladataan...</p>
+              <p className="font-oswaldVariable text-sm text-gray-500 italic">Ladataan...</p>
             )}
             {bookings && filtered.length === 0 && (
-              <p className="font-librecaslon text-sm text-gray-500 italic">
+              <p className="font-oswaldVariable text-sm text-gray-500 italic">
                 Ei varauksia tässä kategoriassa.
               </p>
             )}
