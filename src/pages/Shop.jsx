@@ -330,7 +330,7 @@ const Shop = () => {
   }
 
   return (
-    <div className="bg-[#FFFFFF] md:bg-[#FFFFFF]">
+    <div className="bg-[#e1e3e7] md:bg-[#e1e3e7]">
       {/* Lisätila topbarin ja shop-headerin väliin - vain mobiili */}
       <div className="block md:hidden h-4" />
 
@@ -352,12 +352,12 @@ const Shop = () => {
 
           {/* KESKI: Kategoria-otsikko Header-tyylillä */}
           <div className="shop-mobile-category font-racingSansOne">
-            <span className="font-medium text-4xl md:text-3xl black">
+            <span className="font-medium text-4xl md:text-3xl text-[#2e3538]">
               {selectedCategory
                 ? selectedCategory.charAt(0).toUpperCase()
                 : 'K'}
             </span>
-            <span className="font-medium text-4xl md:text-3xl text-black">
+            <span className="font-medium text-4xl md:text-3xl text-[#2e3538]">
               {selectedCategory
                 ? selectedCategory.slice(1).toUpperCase()
                 : 'AUPPA'}
@@ -392,7 +392,7 @@ const Shop = () => {
           DESKTOP PAGE HEADING
           Näkyy VAIN (>= md)
           ==================================== */}
-      <div className="hidden md:block bg-[#FFFFFF]">
+      <div className="hidden md:block bg-[#e1e3e7]">
         <PageHeading
           home={'ETUSIVU'}
           pagename={selectedCategory ? selectedCategory.toUpperCase() : 'KAUPPA'}
@@ -405,15 +405,15 @@ const Shop = () => {
           ==================================== */}
       {isMobileMenuOpen && (
         <div
-          className={`fixed inset-0 z-50 bg-[#FFFFFF] flex flex-col md:hidden ${isClosing ? 'mobile-menu-closing' : 'mobile-menu-overlay'}`}
+          className={`fixed inset-0 z-50 bg-[#e1e3e7] flex flex-col md:hidden ${isClosing ? 'mobile-menu-closing' : 'mobile-menu-overlay'}`}
         >
           {/* Menu Header */}
-          <div className="flex-shrink-0 flex p-4 bg-[#FFFFFF]">
-            {/*Takaisin-nuoliborder-b border-[#E73725] */}
+          <div className="flex-shrink-0 flex p-4 bg-[#e1e3e7]">
+            {/*Takaisin-nuoliborder-b border-[#b07d54] */}
 
             <button
               onClick={() => closeMenuAndNavigate('/')}
-              className="text-lg text-black hover:text-[#E73725] p-2 -ml-2"
+              className="text-lg text-[#2e3538] hover:text-[#b07d54] p-2 -ml-2"
               aria-label="Back to home"
             >
               <IoMdArrowRoundBack />
@@ -421,22 +421,22 @@ const Shop = () => {
 
             {/* Logo menussa - Vie etusivulle */}
             <Link
-              className="bg-[#FFFFFF] modal-logotext-xl font-racingSansOne font-medium flex items-center pl-2"
+              className="bg-[#e1e3e7] modal-logotext-xl font-racingSansOne font-medium flex items-center pl-2"
               to="/"
               onClick={() => closeMenuAndNavigate('/')}
             >
-              <span className="text-[#E73725] text-3xl">URHEILU</span>
-              <span className="text-black text-3xl">HIEROJA</span>
+              <span className="text-[#b07d54] text-3xl">URHEILU</span>
+              <span className="text-[#2e3538] text-3xl">HIEROJA</span>
             </Link>
           </div>
 
           {/* Skrollaava sisältö */}
-          <div className="flex-1 overflow-y-auto bg-[#FFFFFF]">
-            <div className="flex-shrink-0 flex items-center justify-center p-4 bg-[#FFFFFF]">
+          <div className="flex-1 overflow-y-auto bg-[#e1e3e7]">
+            <div className="flex-shrink-0 flex items-center justify-center p-4 bg-[#e1e3e7]">
               <div className="flex items-center justify-center w-full max-w-xs gap-2">
                 <Link
                   to="/shop"
-                  className="text-xl text-black hover:text-[#E73725]"
+                  className="text-xl text-[#2e3538] hover:text-[#b07d54]"
                   onClick={() => closeMenuAndNavigate('/shop')}
                   aria-label="Search"
                 >
@@ -447,7 +447,7 @@ const Shop = () => {
                 {currentUser ? (
                   <Link
                     to={isAdmin() ? '/admin' : '/profile'}
-                    className="text-xl text-black hover:text-[#E73725]"
+                    className="text-xl text-[#2e3538] hover:text-[#b07d54]"
                     onClick={() =>
                       closeMenuAndNavigate(isAdmin() ? '/admin' : '/profile')
                     }
@@ -458,7 +458,7 @@ const Shop = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-xl text-black hover:text-[#E73725]"
+                    className="text-xl text-[#2e3538] hover:text-[#b07d54]"
                     onClick={() => closeMenuAndNavigate('/login')}
                     aria-label="Login"
                   >
@@ -473,7 +473,7 @@ const Shop = () => {
                       toggleSidebar();
                       toggleMobileMenu(); // ✅ Sulkee menun
                     }}
-                    className="text-xl text-black hover:text-[#E73725]"
+                    className="text-xl text-[#2e3538] hover:text-[#b07d54]"
                     aria-label="Shopping cart"
                   >
                     <BiShoppingBag />
@@ -494,7 +494,7 @@ const Shop = () => {
                         handleLogout();
                         toggleMobileMenu();
                       }}
-                      className="text-xl text-black hover:text-[#E73725]"
+                      className="text-xl text-[#2e3538] hover:text-[#b07d54]"
                       aria-label="Logout"
                     >
                       <BiLogOut strokeWidth={1.5} />
@@ -506,20 +506,20 @@ const Shop = () => {
 
             {/* VIIVA - erillinen elementti paddingilla */}
             <div className="px-4">
-              <div className="border-b border-[#E73725]"></div>
+              <div className="border-b border-[#b07d54]"></div>
             </div>
 
             <div className="p-6 pb-24">
               {/* ✅ UUSI: Admin Dashboard -linkit (näkyy vain admineille) */}
               {isAdmin() && (
-                <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
+                <div className="mb-8 font-racingSansOne border-b border-[#b07d54] pb-6">
                   <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                     Hallintapaneeli
                   </h3>
                   <nav className="space-y-3">
                     <Link
                       to="/admin"
-                      className="block text-xl text-black font-md hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl text-[#2e3538] font-md hover:text-[#b07d54] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin')}
                     >
                       Hallintapaneeli
@@ -527,7 +527,7 @@ const Shop = () => {
 
                     <Link
                       to="/admin/orders"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/orders')}
                     >
                       Tilaustenhallinta
@@ -535,7 +535,7 @@ const Shop = () => {
 
                     <Link
                       to="/admin/products"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/products')}
                     >
                       Tuotehallinta
@@ -543,7 +543,7 @@ const Shop = () => {
 
                     <Link
                       to="/admin/users"
-                      className="block text-xl font-md text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/admin/users')}
                     >
                       Käyttäjähallinta
@@ -554,14 +554,14 @@ const Shop = () => {
 
               {/* ✅ UUSI: USER DASHBOARD - Näkyy vain kirjautuneille EI-ADMIN käyttäjille */}
               {currentUser && !isAdmin() && (
-                <div className="mb-8 font-racingSansOne font-medium border-b border-[#E73725] pb-6">
+                <div className="mb-8 font-racingSansOne font-medium border-b border-[#b07d54] pb-6">
                   <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                     OMAT TIEDOT
                   </h3>
                   <nav className="space-y-3">
                     <Link
                       to="/profile"
-                      className="block text-xl text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl text-[#2e3538] hover:text-[#b07d54] py-2 transition-colors"
                       onClick={() => closeMenuAndNavigate('/profile')}
                     >
                       PROFIILI
@@ -569,7 +569,7 @@ const Shop = () => {
 
                     <Link
                       to="/profile?tab=orders"
-                      className="block text-xl text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl text-[#2e3538] hover:text-[#b07d54] py-2 transition-colors"
                       onClick={() =>
                         closeMenuAndNavigate('/profile?tab=orders')
                       }
@@ -579,7 +579,7 @@ const Shop = () => {
 
                     <Link
                       to="/profile?tab=password"
-                      className="block text-xl text-black hover:text-[#E73725] py-2 transition-colors"
+                      className="block text-xl text-[#2e3538] hover:text-[#b07d54] py-2 transition-colors"
                       onClick={() =>
                         closeMenuAndNavigate('/profile?tab=password')
                       }
@@ -591,14 +591,14 @@ const Shop = () => {
               )}
 
               {/* Muut linkit */}
-              <div className="mb-8 font-racingSansOne border-b border-[#E73725] pb-6">
+              <div className="mb-8 font-racingSansOne border-b border-[#b07d54] pb-6">
                 <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
                   Sivut
                 </h3>
                 <nav className="space-y-3">
                   <Link
                     to="/"
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-2"
+                    className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-2"
                     onClick={() => closeMenuAndNavigate('/')}
                   >
                     ETUSIVU
@@ -606,7 +606,7 @@ const Shop = () => {
 
                   <Link
                     to="/repairs"
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-2"
+                    className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-2"
                     onClick={() => closeMenuAndNavigate('/repairs')}
                   >
                     PALVELUT
@@ -614,7 +614,7 @@ const Shop = () => {
 
                   <Link
                     to="/contact"
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-2"
+                    className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-2"
                     onClick={() => closeMenuAndNavigate('/contact')}
                   >
                     YHTEYSTIEDOT
@@ -622,7 +622,7 @@ const Shop = () => {
 
                   <Link
                     to="/about"
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-2"
+                    className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-2"
                     onClick={() => closeMenuAndNavigate('/about')}
                   >
                     MEISTÄ
@@ -638,7 +638,7 @@ const Shop = () => {
                 <nav className="space-y-3">
                   <Link
                     to="/shop"
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors border-b border-gray-100"
+                    className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-3 transition-colors border-b border-gray-100"
                     onClick={() => closeMenuAndNavigate('/shop')}
                   >
                     KAIKKI TUOTTEET
@@ -646,7 +646,7 @@ const Shop = () => {
 
                   <Link
                     to={`/shop?category=${CATEGORIES.GIFT_CARDS}`}
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors border-b border-gray-100"
+                    className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-3 transition-colors border-b border-gray-100"
                     onClick={() =>
                       closeMenuAndNavigate(
                         `/shop?category=${CATEGORIES.GIFT_CARDS}`
@@ -658,7 +658,7 @@ const Shop = () => {
 
                   <Link
                     to={`/shop?category=${CATEGORIES.SUPPLEMENTS}`}
-                    className="block text-xl font-md text-black hover:text-[#E73725] py-3 transition-colors border-b border-gray-100"
+                    className="block text-xl font-md text-[#2e3538] hover:text-[#b07d54] py-3 transition-colors border-b border-gray-100"
                     onClick={() =>
                       closeMenuAndNavigate(
                         `/shop?category=${CATEGORIES.SUPPLEMENTS}`
@@ -671,8 +671,8 @@ const Shop = () => {
               </div>
 
               {/* Social Media - NYT NÄKYY! */}
-              <div className="border-t border-[#E73725] pt-6 pb-8">
-                <h4 className="text-lg font-racingSansOne font-md text-black text-center mb-4 uppercase tracking-wider">
+              <div className="border-t border-[#b07d54] pt-6 pb-8">
+                <h4 className="text-lg font-racingSansOne font-md text-[#2e3538] text-center mb-4 uppercase tracking-wider">
                   Seuraa meitä
                 </h4>
                 <div className="flex gap-6 justify-center">
@@ -704,7 +704,7 @@ const Shop = () => {
       {/* ====================================
           HAKUPALKKI
           ==================================== */}
-      <div className="w-full pt-2 bg-[#FFFFFF] md:bg-[#FFFFFF]">
+      <div className="w-full pt-2 bg-[#e1e3e7] md:bg-[#e1e3e7]">
         <div className="w-10/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Otsikko vain desktopilla */}
           <div className="hidden md:flex items-center">
@@ -717,14 +717,14 @@ const Shop = () => {
           <form onSubmit={handleSearch} className="flex w-full md:w-auto">
             <input
               type="text"
-              className="bg-white border border-[#E1E1E1] font-racingSansOne rounded-l rounded-r-none px-4 py-2 w-full md:w-60"
+              className="bg-[#fcefc8] border border-[#b7bcc1] font-racingSansOne rounded-l rounded-r-none px-4 py-2 w-full md:w-60"
               placeholder="Hae tuotteita..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
             <button
               type="submit"
-              className="bg-[#E73725] text-white px-4 py-2 rounded-r"
+              className="bg-[#b07d54] text-white px-4 py-2 rounded-r"
             >
               <BiSearch />
             </button>
@@ -735,13 +735,13 @@ const Shop = () => {
       {/* ====================================
           TUOTELISTAUS
           ==================================== */}
-      <div className="w-10/12 mx-auto pt-6 pb-8 bg-[#FFFFFF]">
+      <div className="w-10/12 mx-auto pt-6 pb-8 bg-[#e1e3e7]">
         <div className="flex flex-col md:flex-row gap-8">
           {/* ====================================
               KATEGORIA-SIVUPALKKI - VAIN DESKTOP
               ==================================== */}
           <div className="hidden md:block md:w-1/4">
-            <div className="bg-[#FFFFFF] p-4 rounded-lg border border-[#E1E1E1] shadow-xl">
+            <div className="bg-[#fcefc8] p-4 rounded-lg border border-[#b7bcc1] shadow-xl">
               <h3 className="font-racingSansOne text-lg sm:text-2xl font-medium mb-4">
                 Kategoriat
               </h3>
@@ -749,7 +749,7 @@ const Shop = () => {
                 <li>
                   <button
                     onClick={() => filterByCategory('')}
-                    className={`w-full font-racingSansOne text-left px-2 py-1 rounded ${selectedCategory === '' ? 'text-[#E73725]' : ''}`}
+                    className={`w-full font-racingSansOne text-left px-2 py-1 rounded ${selectedCategory === '' ? 'text-[#b07d54]' : ''}`}
                   >
                     Kaikki tuotteet
                   </button>
@@ -758,7 +758,7 @@ const Shop = () => {
                   <li key={key}>
                     <button
                       onClick={() => filterByCategory(value)}
-                      className={`w-full font-racingSansOne text-left px-2 py-1 rounded ${selectedCategory === value ? 'text-[#E73725]' : ''}`}
+                      className={`w-full font-racingSansOne text-left px-2 py-1 rounded ${selectedCategory === value ? 'text-[#b07d54]' : ''}`}
                     >
                       {value}
                     </button>
@@ -773,14 +773,14 @@ const Shop = () => {
               ==================================== */}
           <div className="w-full md:w-3/4">
             {error && (
-              <div className="bg-[#FFFFFF] border border-[#E73725] text-black px-4 py-3 rounded mb-4">
+              <div className="bg-[#fcefc8] border border-[#b07d54] text-[#2e3538] px-4 py-3 rounded mb-4">
                 {error}
               </div>
             )}
 
             {filteredProducts.length === 0 ? (
               <div className="text-center py-8">
-                <p className="font-robotoVariable font-medium text-xl mb-4">
+                <p className="font-oswaldVariable font-medium text-xl mb-4">
                   Tuotteita ei löytynyt
                 </p>
                 <button
@@ -788,7 +788,7 @@ const Shop = () => {
                     setSearchTerm('');
                     setFilteredProducts(products);
                   }}
-                  className="font-robotoVariable font-medium text-xl text-black bg-[#E73725] hover:bg-red-700 px-4 py-2 rounded mx-auto block"
+                  className="font-oswaldVariable font-medium text-xl text-[#fcefc8] bg-[#b07d54] hover:bg-[#2e3538] px-4 py-2 rounded mx-auto block"
                 >
                   Näytä kaikki tuotteet
                 </button>
@@ -812,8 +812,8 @@ const Shop = () => {
                           <button
                             className={`w-7 h-7 md:w-10 md:h-10 rounded-full bg-white shadow-md flex items-center justify-center transition-colors ${
                               likedProducts.has(product.id)
-                                ? 'text-[#E73725]'
-                                : 'text-[#7AA30B] hover:text-[#E73725]'
+                                ? 'text-[#b07d54]'
+                                : 'text-[#7AA30B] hover:text-[#b07d54]'
                             }`}
                             onClick={() => handleLike(product.id)}
                           >
@@ -824,14 +824,14 @@ const Shop = () => {
                         {/* Tag *
                         {product.tag && (
                           <div className="hidden sm:flex absolute top-2 left-2">
-                            <span className="w-11 h-11 md:w-10 md:h-10 flex items-center justify-center bg-[#010000] text-white text-xs px-2 py-3 rounded-full">
+                            <span className="w-11 h-11 md:w-10 md:h-10 flex items-center justify-center bg-[#2e3538] text-white text-xs px-2 py-3 rounded-full">
                               {product.tag}
                             </span>
                           </div>
                         )}
 
                         {/* Hover Overlay - pienillä aina näkyvissä, md+ vain hoverilla *
-                        <div className="block opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 absolute bottom-0 bg-[#E73725] w-full text-center text-white pt-4 pb-4 transition-all duration-300 ease-out">
+                        <div className="block opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 absolute bottom-0 bg-[#b07d54] w-full text-center text-white pt-4 pb-4 transition-all duration-300 ease-out">
                           <div className="flex justify-center align-middle">
                             <button
                               className="hidden md:block text-2xl mr-2"
@@ -853,7 +853,7 @@ const Shop = () => {
                       {/* Product Info - Responsiivinen padding ja tekstikoot *
                       <div className="p-2 md:p-3">
                         {/*<p className="text-xs text-gray-600 mb-1">{val.short_description}</p>*
-                        <h3 className="font-racingSansOne font-medium text-xl text-black md:text-xl mb-2 line-clamp-2 text-center">
+                        <h3 className="font-racingSansOne font-medium text-xl text-[#2e3538] md:text-xl mb-2 line-clamp-2 text-center">
                           {product.title}
                         </h3>
 
@@ -934,7 +934,7 @@ const Shop = () => {
                         </div>
 
                         <div className="text-center">
-                          <span className="font-robotoVariable text-[#333333] font-medium text-lg md:text-base">
+                          <span className="font-oswaldVariable text-[#333333] font-medium text-lg md:text-base">
                             €{product.price}
                           </span>
                         </div>
@@ -946,7 +946,7 @@ const Shop = () => {
 
                 {filteredProducts.map((product) => (
                   <div key={product.id}>
-                    <div className="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-md group
+                    <div className="bg-[#fcefc8] border border-gray-100 rounded-lg overflow-hidden shadow-md group
                                     hover:shadow-xl transition-shadow duration-300">
 
                       {/* Kuva-alue — aspect-[3/4] pakottaa pystysuuntaisen kehyksen */}
@@ -958,14 +958,14 @@ const Shop = () => {
                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                           />
                         ) : (
-                          <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-[#010000] text-white">
-                            <span className="text-4xl text-[#E73725]">{product.icon}</span>
+                          <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-[#2e3538] text-[#fcefc8]">
+                            <span className="text-4xl text-[#b07d54]">{product.icon}</span>
                             <span className="font-racingSansOne text-2xl font-bold">€{product.price}</span>
                           </div>
                         )}
 
                         {product.tag && (
-                          <div className="absolute top-3 left-3 z-20 bg-[#E73725] font-racingSansOne text-white
+                          <div className="absolute top-3 left-3 z-20 bg-[#b07d54] font-racingSansOne text-[#fcefc8]
                                           text-xs font-semibold uppercase tracking-wide px-2 py-0.5 shadow">
                             {product.tag}
                           </div>
@@ -977,8 +977,8 @@ const Shop = () => {
                           className={`absolute top-3 right-3 z-20 w-8 h-8 rounded-full flex items-center justify-center
                                       shadow transition-colors duration-200 ${
                             likedProducts.has(product.id)
-                              ? 'bg-[#E73725] text-white'
-                              : 'bg-white text-[#E73725]'
+                              ? 'bg-[#b07d54] text-[#fcefc8]'
+                              : 'bg-[#fcefc8] text-[#b07d54]'
                           }`}
                         >
                           <BiHeart size={16} />
@@ -986,8 +986,8 @@ const Shop = () => {
                       </div>
 
                       {/* Info-paneeli */}
-                      <div className="px-3 py-3 bg-white">
-                        <h3 className="font-racingSansOne text-[#010000] text-base leading-snug line-clamp-2 mb-1.5">
+                      <div className="px-3 py-3 bg-[#fcefc8]">
+                        <h3 className="font-racingSansOne text-[#2e3538] text-base leading-snug line-clamp-2 mb-1.5">
                           {product.title}
                         </h3>
 
@@ -1014,24 +1014,24 @@ const Shop = () => {
                         </div>
 
                         <div className="flex items-center justify-between">
-                          <span className="font-robotoVariable text-[#010000] font-bold text-xl">
+                          <span className="font-oswaldVariable text-[#2e3538] font-bold text-xl">
                             €{product.price}
                           </span>
                           <div className="flex gap-1.5">
                             <button
                               onClick={() => quickAddToCart(product)}
                               aria-label="Add to cart"
-                              className="w-8 h-8 flex items-center justify-center bg-[#010000] text-white
-                                         rounded hover:bg-[#E73725] transition-colors duration-200"
+                              className="w-8 h-8 flex items-center justify-center bg-[#2e3538] text-[#fcefc8]
+                                         rounded hover:bg-[#b07d54] transition-colors duration-200"
                             >
                               <BiCart size={16} />
                             </button>
                             <button
                               type="button"
                               onClick={() => handleOpen(product.id)}
-                              className="px-3 h-8 font-robotoVariable text-xs font-semibold uppercase tracking-wide
-                                         border border-[#010000] text-[#010000] rounded
-                                         hover:bg-[#010000] hover:text-white transition-colors duration-200"
+                              className="px-3 h-8 font-oswaldVariable text-xs font-semibold uppercase tracking-wide
+                                         border border-[#2e3538] text-[#2e3538] rounded
+                                         hover:bg-[#2e3538] hover:text-[#fcefc8] transition-colors duration-200"
                             >
                               Valinnat
                             </button>

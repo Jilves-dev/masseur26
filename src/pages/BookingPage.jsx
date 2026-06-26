@@ -7,16 +7,16 @@ import {
 import { useCollection } from '../hooks/useCollection';
 import { useTranslation } from '../context/LanguageContext';
 import { useNavigate } from 'react-router-dom';
-import { FaCalendarAlt, FaCheckCircle, FaWrench } from 'react-icons/fa';
+import { FaCalendarAlt, FaCheckCircle, FaHandSparkles } from 'react-icons/fa';
 
-// Static repair services shown when Firestore 'services' collection is empty
-const REPAIR_SERVICES = [
-  { id: 'full-service', nameEn: 'Full Service Package', priceEn: '€79.99', nameFi: 'Täyshuolto', priceFi: '€79.99' },
-  { id: 'flat-tire',   nameEn: 'Flat Tire Repair',      priceEn: '€14.99', nameFi: 'Rengasrikko', priceFi: '€14.99' },
-  { id: 'brake-adj',   nameEn: 'Brake Adjustment',      priceEn: '€24.99', nameFi: 'Jarrusäätö',  priceFi: '€24.99' },
-  { id: 'gear-tuning', nameEn: 'Gear Tuning',           priceEn: '€29.99', nameFi: 'Vaihdesäätö', priceFi: '€29.99' },
-  { id: 'chain',       nameEn: 'Chain Replacement',     priceEn: '€34.99', nameFi: 'Ketjun vaihto', priceFi: '€34.99' },
-  { id: 'safety',      nameEn: 'Safety Inspection',     priceEn: '€19.99', nameFi: 'Turvatarkistus', priceFi: '€19.99' },
+// Static massage services shown when Firestore 'services' collection is empty
+const MASSAGE_SERVICES = [
+  { id: 'sports-30', nameFi: 'Urheiluhieronta 30 min', priceFi: '39 €', nameSv: 'Idrottsmassage 30 min', priceSv: '39 €', nameEn: 'Sports Massage 30 min', priceEn: '€39', nameRu: 'Спортивный массаж 30 мин', priceRu: '39 €' },
+  { id: 'sports-60', nameFi: 'Urheiluhieronta 60 min', priceFi: '65 €', nameSv: 'Idrottsmassage 60 min', priceSv: '65 €', nameEn: 'Sports Massage 60 min', priceEn: '€65', nameRu: 'Спортивный массаж 60 мин', priceRu: '65 €' },
+  { id: 'sports-90', nameFi: 'Urheiluhieronta 90 min', priceFi: '89 €', nameSv: 'Idrottsmassage 90 min', priceSv: '89 €', nameEn: 'Sports Massage 90 min', priceEn: '€89', nameRu: 'Спортивный массаж 90 мин', priceRu: '89 €' },
+  { id: 'deep-60',   nameFi: 'Syvähieronta 60 min', priceFi: '70 €', nameSv: 'Djupmassage 60 min', priceSv: '70 €', nameEn: 'Deep Tissue Massage 60 min', priceEn: '€70', nameRu: 'Глубокий массаж 60 мин', priceRu: '70 €' },
+  { id: 'cupping',   nameFi: 'Kuppaushoito', priceFi: '45 €', nameSv: 'Cupping-behandling', priceSv: '45 €', nameEn: 'Cupping Therapy', priceEn: '€45', nameRu: 'Баночный массаж', priceRu: '45 €' },
+  { id: 'mobility',  nameFi: 'Liikkuvuus- ja venyttelyhoito', priceFi: '49 €', nameSv: 'Rörlighets- och stretchbehandling', priceSv: '49 €', nameEn: 'Mobility & Stretching Treatment', priceEn: '€49', nameRu: 'Растяжка и подвижность', priceRu: '49 €' },
 ];
 
 // Get a localised field from a Firestore service document
@@ -47,19 +47,19 @@ const DAY_NAMES = {
 };
 
 // ── Shared style tokens ──────────────────────────────────────
-const btnPrimary = `w-full h-11 bg-[#E73725] text-white font-librecaslon font-bold
+const btnPrimary = `w-full h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
   text-base rounded-lg shadow hover:bg-[#c92516] transition-colors duration-200
   disabled:opacity-40 disabled:cursor-not-allowed`;
 
 const btnSecondary = `flex-1 h-11 border border-[#E1E1E1] text-gray-500
-  font-librecaslon text-base rounded-lg hover:border-[#E73725]
+  font-oswaldVariable text-base rounded-lg hover:border-[#E73725]
   hover:text-[#E73725] transition-colors duration-200`;
 
 const inputClass = `w-full bg-white border border-[#E1E1E1] rounded-lg
-  font-librecaslon text-sm text-[#010000] placeholder-gray-400
+  font-oswaldVariable text-sm text-[#2e3538] placeholder-gray-400
   px-4 py-3 outline-none focus:border-[#E73725] transition-colors duration-200`;
 
-const labelClass = 'font-librecaslon text-xs text-gray-500 uppercase tracking-wider';
+const labelClass = 'font-oswaldVariable text-xs text-gray-500 uppercase tracking-wider';
 
 // ── Step indicator ───────────────────────────────────────────
 function StepIndicator({ step }) {
@@ -78,14 +78,14 @@ function StepIndicator({ step }) {
           <div key={i} className="flex items-center">
             <div className="flex flex-col items-center">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center
-                font-librecaslon text-sm font-bold transition-all duration-300
+                font-oswaldVariable text-sm font-bold transition-all duration-300
                 ${done   ? 'bg-[#E73725] text-white'
                 : active ? 'bg-[#010000] text-white'
                          : 'bg-[#E1E1E1] text-gray-400'}`}>
                 {done ? '✓' : num}
               </div>
-              <span className={`font-librecaslon text-xs mt-1
-                ${active ? 'text-[#010000] font-semibold' : 'text-gray-400'}`}>
+              <span className={`font-oswaldVariable text-xs mt-1
+                ${active ? 'text-[#2e3538] font-semibold' : 'text-gray-400'}`}>
                 {label}
               </span>
             </div>
@@ -107,26 +107,26 @@ function StepServiceSelect({ onNext, language }) {
   const [selected, setSelected] = useState(null);
 
   // Use Firestore services if available, otherwise fall back to static list
-  const services = documents?.length > 0 ? documents : REPAIR_SERVICES;
+  const services = documents?.length > 0 ? documents : MASSAGE_SERVICES;
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-zaslia text-2xl text-[#010000]">{t('bookingSelectService')}</h2>
-      <p className="font-librecaslon text-sm text-gray-500">{t('bookingSelectServiceSub')}</p>
+      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingSelectService')}</h2>
+      <p className="font-oswaldVariable text-sm text-gray-500">{t('bookingSelectServiceSub')}</p>
 
       <div className="flex flex-col gap-2 mt-2">
         {!documents && (
-          <p className="font-librecaslon text-sm text-gray-400 italic">Loading...</p>
+          <p className="font-oswaldVariable text-sm text-gray-400 italic">Loading...</p>
         )}
         {services.map((s) => (
           <button
             key={s.id}
             onClick={() => setSelected(s)}
             className={`w-full flex justify-between items-center px-4 py-3
-              border rounded-lg font-librecaslon text-sm transition-all duration-200
+              border rounded-lg font-oswaldVariable text-sm transition-all duration-200
               ${selected?.id === s.id
-                ? 'border-[#E73725] bg-[#E73725]/8 text-[#010000]'
-                : 'border-[#E1E1E1] text-[#010000] hover:border-[#E73725]/60'}`}
+                ? 'border-[#E73725] bg-[#E73725]/8 text-[#2e3538]'
+                : 'border-[#E1E1E1] text-[#2e3538] hover:border-[#E73725]/60'}`}
           >
             <span>{getLang(s, 'name', language)}</span>
             <span className="text-[#E73725] ml-4 font-bold shrink-0">
@@ -190,20 +190,20 @@ function StepDatePicker({ onNext, onBack, language }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-zaslia text-2xl text-[#010000]">{t('bookingSelectDate')}</h2>
-      <p className="font-librecaslon text-sm text-gray-500">{t('bookingSelectDateSub')}</p>
+      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingSelectDate')}</h2>
+      <p className="font-oswaldVariable text-sm text-gray-500">{t('bookingSelectDateSub')}</p>
 
       {/* Month navigation */}
       <div className="flex items-center justify-between mt-2">
         <button onClick={prevMonth}
-          className="font-librecaslon text-gray-400 hover:text-[#E73725] text-2xl px-2 transition-colors">
+          className="font-oswaldVariable text-gray-400 hover:text-[#E73725] text-2xl px-2 transition-colors">
           ‹
         </button>
-        <span className="font-zaslia text-[#010000] text-lg">
+        <span className="font-racingSansOne text-[#2e3538] text-lg">
           {monthNames[viewMonth]} {viewYear}
         </span>
         <button onClick={nextMonth}
-          className="font-librecaslon text-gray-400 hover:text-[#E73725] text-2xl px-2 transition-colors">
+          className="font-oswaldVariable text-gray-400 hover:text-[#E73725] text-2xl px-2 transition-colors">
           ›
         </button>
       </div>
@@ -211,7 +211,7 @@ function StepDatePicker({ onNext, onBack, language }) {
       {/* Day grid */}
       <div className="grid grid-cols-7 gap-1 text-center">
         {dayNames.map((d) => (
-          <div key={d} className="font-librecaslon text-xs text-gray-400 py-1">{d}</div>
+          <div key={d} className="font-oswaldVariable text-xs text-gray-400 py-1">{d}</div>
         ))}
         {Array.from({ length: firstDay }).map((_, i) => <div key={`e${i}`} />)}
         {Array.from({ length: daysInMonth }, (_, i) => i + 1).map((day) => {
@@ -224,12 +224,12 @@ function StepDatePicker({ onNext, onBack, language }) {
               key={day}
               disabled={past || !available}
               onClick={() => setSelected(dateStr)}
-              className={`aspect-square rounded-lg font-librecaslon text-sm
+              className={`aspect-square rounded-lg font-oswaldVariable text-sm
                 transition-all duration-200 flex items-center justify-center
                 ${isSel
                   ? 'bg-[#E73725] text-white font-bold'
                   : available && !past
-                    ? 'bg-[#E73725]/10 text-[#010000] hover:bg-[#E73725]/20 border border-[#E73725]/30'
+                    ? 'bg-[#E73725]/10 text-[#2e3538] hover:bg-[#E73725]/20 border border-[#E73725]/30'
                     : 'text-gray-300 cursor-not-allowed'}`}
             >
               {day}
@@ -239,7 +239,7 @@ function StepDatePicker({ onNext, onBack, language }) {
       </div>
 
       {/* Legend */}
-      <div className="flex items-center gap-2 text-xs font-librecaslon text-gray-400">
+      <div className="flex items-center gap-2 text-xs font-oswaldVariable text-gray-400">
         <div className="w-3 h-3 rounded bg-[#E73725]/20 border border-[#E73725]/30" />
         {t('bookingLegendAvailable')}
       </div>
@@ -249,7 +249,7 @@ function StepDatePicker({ onNext, onBack, language }) {
         <button
           disabled={!selected}
           onClick={() => onNext({ date: selected, availDoc: availMap[selected] })}
-          className={`flex-1 h-11 bg-[#E73725] text-white font-librecaslon font-bold
+          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
             text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200
             disabled:opacity-40 disabled:cursor-not-allowed`}
         >
@@ -268,13 +268,13 @@ function StepTimePicker({ booking, onNext, onBack }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-zaslia text-2xl text-[#010000]">{t('bookingSelectTime')}</h2>
-      <p className="font-librecaslon text-sm text-gray-500">
+      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingSelectTime')}</h2>
+      <p className="font-oswaldVariable text-sm text-gray-500">
         {t('bookingSelectTimeSub')} {booking.date}
       </p>
 
       {slots.length === 0 && (
-        <p className="font-librecaslon text-sm text-gray-400 italic mt-2">
+        <p className="font-oswaldVariable text-sm text-gray-400 italic mt-2">
           {t('bookingNoSlots')}
         </p>
       )}
@@ -284,11 +284,11 @@ function StepTimePicker({ booking, onNext, onBack }) {
           <button
             key={slot}
             onClick={() => setSelected(slot)}
-            className={`py-3 rounded-lg font-librecaslon text-sm font-medium
+            className={`py-3 rounded-lg font-oswaldVariable text-sm font-medium
               transition-all duration-200
               ${selected === slot
                 ? 'bg-[#E73725] text-white shadow'
-                : 'border border-[#E1E1E1] text-[#010000] hover:border-[#E73725]/60 hover:bg-[#E73725]/8'}`}
+                : 'border border-[#E1E1E1] text-[#2e3538] hover:border-[#E73725]/60 hover:bg-[#E73725]/8'}`}
           >
             {slot}
           </button>
@@ -300,7 +300,7 @@ function StepTimePicker({ booking, onNext, onBack }) {
         <button
           disabled={!selected}
           onClick={() => onNext({ time: selected })}
-          className={`flex-1 h-11 bg-[#E73725] text-white font-librecaslon font-bold
+          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
             text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200
             disabled:opacity-40 disabled:cursor-not-allowed`}
         >
@@ -327,8 +327,8 @@ function StepContactForm({ onNext, onBack }) {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <h2 className="font-zaslia text-2xl text-[#010000]">{t('bookingContact')}</h2>
-      <p className="font-librecaslon text-sm text-gray-500 mb-1">{t('bookingContactSub')}</p>
+      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingContact')}</h2>
+      <p className="font-oswaldVariable text-sm text-gray-500 mb-1">{t('bookingContactSub')}</p>
 
       <label className={labelClass}>{t('bookingLabelName')} *</label>
       <input required value={name} onChange={(e) => setName(e.target.value)}
@@ -352,7 +352,7 @@ function StepContactForm({ onNext, onBack }) {
       <div className="flex gap-3 mt-2">
         <button type="button" onClick={onBack} className={btnSecondary}>{t('bookingBack')}</button>
         <button type="submit"
-          className={`flex-1 h-11 bg-[#E73725] text-white font-librecaslon font-bold
+          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
             text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200`}>
           {t('bookingNext')}
         </button>
@@ -399,29 +399,29 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
       await addDoc(collection(db, 'mail'), {
         to: booking.email,
         message: {
-          subject: 'Your booking is confirmed – Freewheel Bikes🚴',
+          subject: 'Varauksesi on vahvistettu – Urheiluhieroja',
           html: `
-            <div style="font-family: Georgia, serif; max-width: 520px; color: #010000;">
-              <h2 style="font-size: 24px; color: #E73725; margin-bottom: 8px;">Freewheel Bikes🚴</h2>
-              <p>Hi <strong>${booking.name}</strong>,</p>
-              <p>Your repair booking has been received. Here is your summary:</p>
+            <div style="font-family: Georgia, serif; max-width: 520px; color: #2e3538;">
+              <h2 style="font-size: 24px; color: #E73725; margin-bottom: 8px;">Urheiluhieroja</h2>
+              <p>Hei <strong>${booking.name}</strong>,</p>
+              <p>Varauksesi on vastaanotettu. Tässä yhteenveto:</p>
               <table style="border-collapse: collapse; width: 100%; margin: 16px 0;">
-                <tr><td style="padding: 6px 0; color: #6b7280;">Service</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Palvelu</td>
                     <td style="padding: 6px 0;"><strong>${serviceName}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Date</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Päivä</td>
                     <td style="padding: 6px 0;"><strong>${booking.date}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Time</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Aika</td>
                     <td style="padding: 6px 0;"><strong>${booking.time}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Price estimate</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Hinta-arvio</td>
                     <td style="padding: 6px 0;"><strong>${servicePrice}</strong></td></tr>
-                ${booking.note ? `<tr><td style="padding: 6px 0; color: #6b7280;">Note</td>
+                ${booking.note ? `<tr><td style="padding: 6px 0; color: #6b7280;">Lisätiedot</td>
                     <td style="padding: 6px 0;">${booking.note}</td></tr>` : ''}
               </table>
               <p style="color: #6b7280; font-size: 13px;">
-                We will contact you shortly to confirm your appointment.<br/>
-                Finlaysoninkatu 25, Tampere — <a href="tel:+358501234567">+358 50 123 4567</a>
+                Otamme sinuun pian yhteyttä varauksen vahvistamista varten.<br/>
+                Finlaysoninkatu 25, 33210 Tampere — <a href="tel:+358501234567">+358 50 123 4567</a>
               </p>
-              <p style="color: #E73725; font-size: 13px;">– Freewheel Bikes🚴Team</p>
+              <p style="color: #E73725; font-size: 13px;">– Urheiluhieroja</p>
             </div>
           `,
         },
@@ -429,26 +429,26 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
 
       // 4. Admin notification
       await addDoc(collection(db, 'mail'), {
-        to: 'jukka.ilveskorpi@gmail.com',
+        to: 'info@urheiluhieroja.fi',
         message: {
-          subject: `New booking: ${booking.name} — ${booking.date} at ${booking.time}`,
+          subject: `Uusi varaus: ${booking.name} — ${booking.date} klo ${booking.time}`,
           html: `
-            <div style="font-family: Georgia, serif; max-width: 520px; color: #010000;">
-              <h2 style="font-size: 22px; color: #E73725; margin-bottom: 4px;">New Repair Booking📆</h2>
+            <div style="font-family: Georgia, serif; max-width: 520px; color: #2e3538;">
+              <h2 style="font-size: 22px; color: #E73725; margin-bottom: 4px;">Uusi varaus📆</h2>
               <table style="border-collapse: collapse; width: 100%; margin: 16px 0;">
-                <tr><td style="padding: 6px 0; color: #6b7280; width: 110px;">Customer</td>
+                <tr><td style="padding: 6px 0; color: #6b7280; width: 110px;">Asiakas</td>
                     <td><strong>${booking.name}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Phone</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Puhelin</td>
                     <td>${booking.phone}</td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Email</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Sähköposti</td>
                     <td>${booking.email}</td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Service</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Palvelu</td>
                     <td><strong>${serviceName}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Date</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Päivä</td>
                     <td><strong>${booking.date}</strong></td></tr>
-                <tr><td style="padding: 6px 0; color: #6b7280;">Time</td>
+                <tr><td style="padding: 6px 0; color: #6b7280;">Aika</td>
                     <td><strong>${booking.time}🕑</strong></td></tr>
-                ${booking.note ? `<tr><td style="padding: 6px 0; color: #6b7280;">Note</td>
+                ${booking.note ? `<tr><td style="padding: 6px 0; color: #6b7280;">Lisätiedot</td>
                     <td>${booking.note}</td></tr>` : ''}
               </table>
             </div>
@@ -472,8 +472,8 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
         <div className="w-16 h-16 rounded-full bg-[#E73725]/15 flex items-center justify-center">
           <FaCheckCircle className="text-3xl text-[#E73725]" />
         </div>
-        <h2 className="font-zaslia text-3xl text-[#010000]">{t('bookingDone')}</h2>
-        <p className="font-librecaslon text-sm text-gray-600 leading-relaxed max-w-xs">
+        <h2 className="font-racingSansOne text-3xl text-[#2e3538]">{t('bookingDone')}</h2>
+        <p className="font-oswaldVariable text-sm text-gray-600 leading-relaxed max-w-xs">
           {t('bookingDoneSub')} <strong>{booking.email}</strong>.{t('bookingDoneContact')}
         </p>
         <button onClick={onDone} className={`${btnPrimary} max-w-xs mt-2`}>
@@ -497,17 +497,17 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h2 className="font-zaslia text-2xl text-[#010000]">{t('bookingConfirm')}</h2>
-      <p className="font-librecaslon text-sm text-gray-500">{t('bookingConfirmSub')}</p>
+      <h2 className="font-racingSansOne text-2xl text-[#2e3538]">{t('bookingConfirm')}</h2>
+      <p className="font-oswaldVariable text-sm text-gray-500">{t('bookingConfirmSub')}</p>
 
       <div className="flex flex-col gap-2 mt-2 border border-[#E1E1E1] rounded-lg p-4">
         {rows.map(([label, value]) => (
           <div key={label} className="flex justify-between items-start gap-4
             border-b border-[#E1E1E1]/60 pb-2 last:border-0 last:pb-0">
-            <span className="font-librecaslon text-xs text-gray-400 shrink-0 pt-0.5 uppercase tracking-wide">
+            <span className="font-oswaldVariable text-xs text-gray-400 shrink-0 pt-0.5 uppercase tracking-wide">
               {label}
             </span>
-            <span className="font-librecaslon text-sm text-[#010000] text-right font-medium">
+            <span className="font-oswaldVariable text-sm text-[#2e3538] text-right font-medium">
               {value}
             </span>
           </div>
@@ -515,7 +515,7 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
       </div>
 
       {error && (
-        <p className="font-librecaslon text-sm text-red-600 text-center">{error}</p>
+        <p className="font-oswaldVariable text-sm text-red-600 text-center">{error}</p>
       )}
 
       <div className="flex gap-3 mt-2">
@@ -525,7 +525,7 @@ function StepConfirmation({ booking, language, onBack, onDone }) {
         <button
           onClick={handleConfirm}
           disabled={submitting}
-          className={`flex-1 h-11 bg-[#E73725] text-white font-librecaslon font-bold
+          className={`flex-1 h-11 bg-[#E73725] text-white font-oswaldVariable font-bold
             text-base rounded-lg hover:bg-[#c92516] transition-colors duration-200
             disabled:opacity-60 disabled:cursor-not-allowed`}
         >
@@ -555,11 +555,11 @@ export default function BookingPage() {
       {/* Hero strip */}
       <div className="bg-[#010000] py-10 px-4 text-center mb-10">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <FaWrench className="text-[#E73725] text-2xl" />
-          <h1 className="font-zaslia text-4xl text-white">{t('booking')}</h1>
+          <FaHandSparkles className="text-[#E73725] text-2xl" />
+          <h1 className="font-racingSansOne text-4xl text-white">{t('booking')}</h1>
           <FaCalendarAlt className="text-[#E73725] text-2xl" />
         </div>
-        <p className="font-librecaslon text-white/70 text-base max-w-md mx-auto">
+        <p className="font-oswaldVariable text-white/70 text-base max-w-md mx-auto">
           {t('bookingTagline')}
         </p>
       </div>
@@ -583,8 +583,8 @@ export default function BookingPage() {
           )}
         </div>
 
-        <p className="font-librecaslon text-center text-sm text-gray-400 mt-6">
-          Need help? Call us: <a href="tel:+358501234567" className="text-[#E73725] hover:underline">+358 50 123 4567</a>
+        <p className="font-oswaldVariable text-center text-sm text-gray-400 mt-6">
+          Tarvitsetko apua? Soita: <a href="tel:+358501234567" className="text-[#E73725] hover:underline">+358 50 123 4567</a>
         </p>
       </div>
     </div>

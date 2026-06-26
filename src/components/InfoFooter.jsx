@@ -13,9 +13,9 @@ export default function InfoFooter() {
         <div>
           <div className="flex items-center gap-2 mb-5">
             <FaClock className="text-[#F7F4F1] text-lg" />
-            <h3 className="font-dmserif text-xl text-white">{t('openingHours')}</h3>
+            <h3 className="font-racingSansOne text-xl text-white">{t('openingHours')}</h3>
           </div>
-          <ul className="font-wintersolace text-sm space-y-2">
+          <ul className="font-oswaldVariable text-sm space-y-2">
             {t('hours').map(({ day, time }) => (
               <li key={day} className="flex justify-between border-b border-[#d1bfa7] pb-1">
                 <span>{day}</span>
@@ -29,8 +29,8 @@ export default function InfoFooter() {
 
         {/* Yhteystiedot */}
         <div>
-          <h3 className="font-dmserif text-xl text-white mb-5">{t('contactInfo')}</h3>
-          <ul className="font-wintersolace text-sm space-y-4">
+          <h3 className="font-racingSansOne text-xl text-white mb-5">{t('contactInfo')}</h3>
+          <ul className="font-oswaldVariable text-sm space-y-4">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-[#F7F4F1] mt-0.5 shrink-0" />
               <span className="text-white">
@@ -46,8 +46,8 @@ export default function InfoFooter() {
             </li>
             <li className="flex items-center gap-3 text-white">
               <FaEnvelope className="text-[#F7F4F1] shrink-0" />
-              <a href="mailto:kim&Jenna@urheiluhieroja.fi" className="hover:text-[#E97B52] transition-colors">
-                kim&Jenna@urheiluhieroja.fi
+              <a href="mailto:werner&jasmin@urheiluhieroja.fi" className="hover:text-[#E97B52] transition-colors">
+                werner&jasmin@urheiluhieroja.fi
               </a>
             </li>
           </ul>
@@ -55,10 +55,10 @@ export default function InfoFooter() {
 
         {/* Google Maps */}
         <div>
-          <h3 className="font-dmserif text-xl text-white mb-5">{t('findUs')}</h3>
+          <h3 className="font-racingSansOne text-xl text-white mb-5">{t('findUs')}</h3>
           <div className="rounded-md overflow-hidden shadow-lg border border-[#3a3a3a]">
             <iframe
-              title="kim&Jenna@urheiluhieroja.fi Google Maps-sijainti"
+              title="werner&jasmin@urheiluhieroja.fi Google Maps-sijainti"
               src="https://maps.google.com/maps?q=Aleksanterinkatu+15,+00100+Helsinki&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="200"
@@ -73,8 +73,8 @@ export default function InfoFooter() {
       </div>
 
       {/* Alakapea */}
-      <div className="border-t border-[#3a3a3a] py-4 text-center font-wintersolace text-xs text-[#666]">
-        © {new Date().getFullYear()} kim&Jenna@urheiluhieroja.fi &mdash; {t('footerCopyright')}
+      <div className="border-t border-[#3a3a3a] py-4 text-center font-oswaldVariable text-xs text-[#666]">
+        © {new Date().getFullYear()} werner&jasmin@urheiluhieroja.fi &mdash; {t('footerCopyright')}
       </div>
     </footer>
   );

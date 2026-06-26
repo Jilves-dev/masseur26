@@ -161,7 +161,7 @@ const Header = () => {
           <div className="flex flex-wrap justify-between items-center pt-4 pb-0 w-10/12 mx-auto">
             <div className="ml-6">
               <Link
-                className="desktop-logo font-eordeoghlakat text-2xl flex items-center"
+                className="desktop-logo font-racingSansOne text-2xl flex items-center"
                 to="/"
               >
                 <span className="text-[#b07d54]">URHEILU</span>
@@ -252,7 +252,7 @@ const Header = () => {
               </li>
             </ul>
 
-            <div className="flex flex-wrap text-2xl items-center">
+            <div className="flex flex-wrap text-2xl items-center text-[#2e3538]">
               <Link to="/shop" className="mr-4 hover:text-[#00303F]">
                 <BiSearch />
               </Link>

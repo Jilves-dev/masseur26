@@ -16,22 +16,7 @@
   font-family: Kedebideri-Regular;
   src: url("../src/fonts/Kedebideri-Regular.ttf");
 }
-  
-@font-face {
-  font-family: 'Qiswah Regular';
-  src: url('../src/fonts/Qiswah.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'Zaslia';
-  src: url('../src/fonts/Zaslia.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'Oranienbaum';
@@ -106,13 +91,7 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Crimson Text Regular';
-  src: url('../src/fonts/CrimsonText-Regular.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 
 
@@ -174,6 +153,45 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Montserrat-VariableFont_wght';
+  src: url('../src/fonts/Montserrat-VariableFont_wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-VariableFont_wght';
+  src: url('../src/fonts/RobotoCondensed-VariableFont_wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TaiHeritagePro-Regular';
+  src: url('../src/fonts/TaiHeritagePro-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DMSans-VariableFont_opsz,wght';
+  src: url('../src/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald-VariableFont_wght';
+  src: url('../src/fonts/Oswald-VariableFont_wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* 3. Tuo Tailwindin tyylit */
 @import "tailwindcss";
@@ -199,16 +217,18 @@
    --font-sandovalspeed: Sandoval Speed, serif;
    --font-heavyheaprg: Heavy Heap RG, serif;
    --font-robotoVariable: Roboto-VariableFont_wdth,wght, sans-serif;
-   --font-crimsontext: Crimson Text Regular, serif;
-    
     --font-soccerleague: SoccerLeague, serif;
     --font-schkorycza: Schkorycza, serif;
-
     --font-octinsportsrg: Octin Sports Rg, serif;
     --font-daggersquare: DAGGERSQUARE, serif;
     --font-eordeoghlakat: Eordeoghlakat, serif;
     --font-emilio20: Emilio 20, serif;
     --font-drexs: Drexs, serif;
+    --font-montserratVariable: Montserrat-VariableFont_wght, sans-serif;
+    --font-robotoCondensedVariable: RobotoCondensed-VariableFont_wght, sans-serif;
+    --font-taiHeritagePro: TaiHeritagePro-Regular, serif;
+    --font-dmSansVariable: DMSans-VariableFont_opsz,wght, sans-serif;
+    --font-oswaldVariable: Oswald-VariableFont_wght, sans-serif;
 }
 
 

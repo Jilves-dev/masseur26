@@ -16,7 +16,7 @@ export const translations = {
     hey: 'Hei, me olemme',
     role: 'Urheiluhieroja',
     heroDescription:
-      'Urheiluhieroja on kahden kokeneen hierojan yritys Tampereen sydämessä. Yhdistämme ammattitaitoisen urheiluhieronnan, modernin osaamisen ja aidosti henkilökohtaisen palvelun. Autamme sinua palautumaan nopeammin, ehkäisemään vammoja ja voimaan paremmin — ilman turhia mutkia.',
+      'Urheiluhieroja on kahden nuoren ja motivoituneen hierojan yritys Tampereen sydämessä. Yhdistämme ammattitaitoisen urheiluhieronnan, modernin osaamisen ja aidosti henkilökohtaisen palvelun. Autamme sinua palautumaan nopeammin, ehkäisemään vammoja ja voimaan paremmin — ilman turhia mutkia.',
     contactMe: 'Varaa hierontaaika',
 
     // Palvelukortit (hero-grid)
