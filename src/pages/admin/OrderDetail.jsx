@@ -412,7 +412,7 @@ const OrderDetail = () => {
 
       <div className="container mx-auto px-4 py-8 bg-[#eceef1] font-oswaldVariable min-h-screen">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-          <h1 className="font-racingSansOne text-2xl md:text-3xl font-bold">
+          <h1 className="font-racingSansOne text-2xl md:text-3xl font-medium">
             Tilaus #{order.id.slice(0, 8)}
           </h1>
           <div className="flex flex-wrap gap-2 w-full md:w-auto">

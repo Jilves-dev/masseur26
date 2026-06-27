@@ -555,9 +555,9 @@ export default function BookingPage() {
       {/* Hero strip */}
       <div className="bg-[#333f48] py-10 px-4 text-center mb-10">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <FaHandSparkles className="text-[#e31837] text-2xl" />
+          <FaHandSparkles className="text-[#b9975b] text-2xl" />
           <h1 className="font-racingSansOne text-4xl text-white">{t('booking')}</h1>
-          <FaCalendarAlt className="text-[#e31837] text-2xl" />
+          <FaCalendarAlt className="text-[#b9975b] text-2xl" />
         </div>
         <p className="font-oswaldVariable text-white/70 text-base max-w-md mx-auto">
           {t('bookingTagline')}

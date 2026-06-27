@@ -134,7 +134,7 @@ export default function ServicesAdmin() {
           <button
             type="submit"
             className="w-full h-11 bg-[#333f48] text-[#eceef1] font-racingSansOne
-                       text-base font-bold rounded-full shadow-[0_0_10px_#b9975b]
+                       text-base font-medium rounded-full shadow-[0_0_10px_#b9975b]
                        hover:bg-[#b9975b] hover:text-white transition-colors duration-300"
           >
             Lisää palvelu
@@ -144,7 +144,7 @@ export default function ServicesAdmin() {
         <button
           onClick={logout}
           className="w-full h-11 mt-2 bg-[#333f48] text-[#eceef1] font-racingSansOne
-                     text-base font-bold rounded-full shadow-[0_0_10px_#b9975b]
+                     text-base font-medium rounded-full shadow-[0_0_10px_#b9975b]
                      hover:bg-[#b9975b] hover:text-white transition-colors duration-300"
         >
           Kirjaudu ulos

@@ -1021,8 +1021,8 @@ const Shop = () => {
                             <button
                               onClick={() => quickAddToCart(product)}
                               aria-label="Add to cart"
-                              className="w-8 h-8 flex items-center justify-center bg-[#333f48] text-[#eceef1]
-                                         rounded hover:bg-[#b9975b] transition-colors duration-200"
+                              className="w-8 h-8 flex items-center justify-center bg-[#b9975b] text-[#eceef1]
+                                         rounded hover:bg-[#e31837] transition-colors duration-200"
                             >
                               <BiCart size={16} />
                             </button>

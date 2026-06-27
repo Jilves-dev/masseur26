@@ -136,24 +136,24 @@ const AdminDashboard = () => {
       <div className="hidden md:block">
         <Header />
       </div>
-      <div className="container mx-auto px-4 py-8 bg-[#FFFFFF] font-librecaslon">
+      <div className="container mx-auto px-4 py-8 bg-[#eceef1] font-oswaldVariable">
         {/* Otsikko ja käyttäjän toiminnot - Responsiivinen asettelu 
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
-        <h1 className="font-zaslia text-3xl font-bold mb-4 sm:mb-0">Hallintapaneeli</h1>
-        <div className="font-librecaslon flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+        <h1 className="font-racingSansOne text-3xl font-medium mb-4 sm:mb-0">Hallintapaneeli</h1>
+        <div className="font-oswaldVariable flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
           <span>Tervetuloa, {currentUser?.displayName || currentUser?.email}</span>
           <button 
             onClick={handleLogout}
-            className="bg-[#E73725] hover:bg-gray-700 text-white px-4 py-2 rounded w-full sm:w-auto"
+            className="bg-[#e31837] hover:bg-[#333f48] text-white px-4 py-2 rounded w-full sm:w-auto"
           >
             Kirjaudu ulos
           </button>
         </div>
       </div>*/}
 
-        <div className="bg-[#FFFFFF] mb-6 flex flex-col gap-4 justify-center items-center md:flex-row md:justify-between md:items-center">
+        <div className="bg-[#eceef1] mb-6 flex flex-col gap-4 justify-center items-center md:flex-row md:justify-between md:items-center">
           <div className="text-center md:text-left">
-            <h2 className="text-xl font-bold">
+            <h2 className="font-racingSansOne text-xl font-medium">
               Tervetuloa, {currentUser?.displayName || currentUser?.email}
             </h2>
             <p className="text-lg text-gray-600">
@@ -163,7 +163,7 @@ const AdminDashboard = () => {
           <div className="hidden md:block">
             <button
               onClick={handleLogout}
-              className="text-base bg-[#E73725] hover:bg-red-700 text-white px-4 py-2 rounded"
+              className="text-base bg-[#e31837] hover:bg-[#333f48] text-white px-4 py-2 rounded"
             >
               Kirjaudu ulos
             </button>
@@ -172,56 +172,56 @@ const AdminDashboard = () => {
 
         {/* Tilastolaatikot */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="font-qiswah text-xl font-semibold mb-2">Tuotteet</h2>
-            <p className="text-3xl font-bold text-[#E73725]">{productCount}</p>
+          <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
+            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Tuotteet</h2>
+            <p className="text-3xl font-bold text-[#e31837]">{productCount}</p>
             <Link
               to="/admin/products"
-              className="font-librecaslon text-[#E73725] hover:text-red-800 text-base mt-2 inline-block"
+              className="font-oswaldVariable text-[#e31837] hover:text-[#333f48] text-base mt-2 inline-block"
             >
               Hallitse tuotteita →
             </Link>
           </div>
 
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="text-xl font-semibold mb-2">Tilaukset</h2>
-            <p className="text-3xl font-bold text-[#E73725]">{orderCount}</p>
+          <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
+            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Tilaukset</h2>
+            <p className="text-3xl font-bold text-[#e31837]">{orderCount}</p>
             <Link
               to="/admin/orders"
-              className="text-[#E73725] hover:text-red-800 text-base mt-2 inline-block"
+              className="text-[#e31837] hover:text-[#333f48] text-base mt-2 inline-block"
             >
               Hallitse tilauksia →
             </Link>
           </div>
 
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="text-xl font-semibold mb-2">Käyttäjät</h2>
-            <p className="text-3xl font-bold text-[#E73725]">{userCount}</p>
+          <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
+            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Käyttäjät</h2>
+            <p className="text-3xl font-bold text-[#e31837]">{userCount}</p>
             <Link
               to="/admin/users"
-              className="text-[#E73725] hover:text-red-800 text-base mt-2 inline-block"
+              className="text-[#e31837] hover:text-[#333f48] text-base mt-2 inline-block"
             >
               Hallitse käyttäjiä →
             </Link>
           </div>
 
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="text-xl font-semibold mb-2">Varaukset</h2>
-            <p className="text-3xl font-bold text-[#E73725]">📅</p>
+          <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
+            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Varaukset</h2>
+            <p className="text-3xl font-bold text-[#e31837]">📅</p>
             <Link
               to="/admin/bookings"
-              className="text-[#E73725] hover:text-red-800 text-base mt-2 inline-block"
+              className="text-[#e31837] hover:text-[#333f48] text-base mt-2 inline-block"
             >
               Hallitse varauksia →
             </Link>
           </div>
 
-          <div className="bg-[#FFFFFF] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="text-xl font-semibold mb-2">Kalenteri</h2>
-            <p className="text-3xl font-bold text-[#E73725]">🗓</p>
+          <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
+            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Kalenteri</h2>
+            <p className="text-3xl font-bold text-[#e31837]">🗓</p>
             <Link
               to="/admin/availability"
-              className="text-[#E73725] hover:text-red-800 text-base mt-2 inline-block"
+              className="text-[#e31837] hover:text-[#333f48] text-base mt-2 inline-block"
             >
               Hallitse saatavuutta →
             </Link>
@@ -229,14 +229,14 @@ const AdminDashboard = () => {
         </div>
 
         {/* Viimeisimmät tilaukset */}
-        <div className="bg-[#FFFFFF] rounded-lg border border-gray-300 shadow-xl p-6">
-          <h2 className="text-xl font-semibold mb-4">Viimeisimmät tilaukset</h2>
+        <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
+          <h2 className="font-racingSansOne text-xl font-semibold mb-4">Viimeisimmät tilaukset</h2>
 
           {recentOrders.length === 0 ? (
             <p className="text-gray-500 text-base">Ei tilauksia</p>
           ) : (
             <div className="overflow-x-auto">
-              <table className="min-w-full bg-[#FFFFFF] hover:white">
+              <table className="min-w-full bg-[#eceef1] hover:white">
                 <thead>
                   <tr>
                     <th className="py-2 px-4 border-b text-left">Tilaus ID</th>
@@ -328,7 +328,7 @@ const AdminDashboard = () => {
           <div className="mt-4">
             <Link
               to="/admin/orders"
-              className="text-[#E73725] hover:text-red-800"
+              className="text-[#e31837] hover:text-[#333f48]"
             >
               Näytä kaikki tilaukset →
             </Link>
@@ -338,7 +338,7 @@ const AdminDashboard = () => {
         <div className="md:hidden mt-8 mb-6 flex flex-col justify-center items-center">
           <button
             onClick={handleLogout}
-            className="w-full text-base bg-[#E73725] hover:bg-red-700 text-white px-4 py-2 rounded"
+            className="w-full text-base bg-[#e31837] hover:bg-[#333f48] text-white px-4 py-2 rounded"
           >
             Kirjaudu ulos
           </button>

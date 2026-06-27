@@ -319,7 +319,7 @@ const ProductManager = () => {
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="bg-[#eceef1] rounded-lg shadow-lg p-6 w-full max-w-2xl z-10 overflow-y-auto max-h-screen">
               <div className="flex justify-between items-center mb-4">
-                <h2 className="font-racingSansOne text-2xl font-bold">
+                <h2 className="font-racingSansOne text-2xl font-medium">
                   {currentProduct ? 'Muokkaa tuotetta' : 'Lisää uusi tuote'}
                 </h2>
                 <button

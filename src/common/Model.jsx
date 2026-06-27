@@ -91,26 +91,30 @@ export const Model = ({ isModalOpen, data, handleClose }) => {
                 <FaTimes className="text-xl md:text-2xl" />
               </button>
               <div className="flex flex-col md:flex-row">
-                <div className="relative">
-                  <div className="modal-poster">
+                <div className="relative w-full md:w-72 h-64 md:h-80 shrink-0 rounded-lg overflow-hidden bg-[#333f48] flex items-center justify-center">
+                  {data.img ? (
                     <img
                       src={data.img}
                       alt={data.title}
-                      className="max-w-none"
+                      className="w-full h-full object-cover"
                     />
-                  </div>
+                  ) : (
+                    <span className="text-6xl text-[#b9975b]">
+                      {data.icon || '🎁'}
+                    </span>
+                  )}
 
-                  <div className="tag absolute top-0 right-0 z-10">
-                    <p className="bg-[#b9975b] m-2 rounded-full w-12 h-12 grid place-items-center text-white">
+                  {data.tag && (
+                    <div className="absolute top-3 left-3 z-10 bg-[#b9975b] font-racingSansOne text-[#eceef1] text-xs font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full shadow">
                       {data.tag}
-                    </p>
-                  </div>
+                    </div>
+                  )}
                 </div>
-                <div className="modal-info ml-6">
-                  <h2 className="font-zaslia font-bold text-4xl">
+                <div className="modal-info ml-0 mt-4 md:ml-6 md:mt-0">
+                  <h2 className="font-racingSansOne font-medium text-4xl text-[#333f48]">
                     {data.title}
                   </h2>
-                  <p className="font-zaslia mt-4 text-2xl">
+                  <p className="font-oswaldVariable mt-4 text-2xl text-[#333f48]">
                     {data.short_description}
                   </p>
                   <div className="flex mb-4 mt-4 text-yellow-700">
@@ -122,11 +126,11 @@ export const Model = ({ isModalOpen, data, handleClose }) => {
                         </span>
                       ))}
                   </div>
-                  <p className="font-librecaslon text-[#e31837] text-2xl">
+                  <p className="font-oswaldVariable text-[#e31837] text-2xl font-bold">
                     {data.price}€
                   </p>
 
-                  <p className="font-librecaslon text-xl mt-2">
+                  <p className="font-oswaldVariable text-xl mt-2 text-[#333f48]">
                     {data.description}
                   </p>
                   {/* Näytetään koot vain Carpets-kategorialle 
@@ -149,7 +153,7 @@ export const Model = ({ isModalOpen, data, handleClose }) => {
                       </div>
                     </div>
                   )}*/}
-                  <p className="font-librecaslon text-green-700 mt-2">
+                  <p className="font-oswaldVariable text-green-700 mt-2">
                     In Stock 300 Items
                   </p>
                   <div className="mt-4 flex flex-col md:flex-row md:items-center gap-4">

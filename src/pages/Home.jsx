@@ -121,7 +121,7 @@ function App() {
                   >
                     <button
                       className="px-4 shadow-md shadow-[#333f48] py-3 mt-6 group
-                      flex items-center border border-[#b9975b] rounded-md font-oswaldVariable
+                      flex items-center border border-[#b9975b] rounded-md font-racingSansOne
                       text-base text-[#333f48] bg-[#eceef1] hover:bg-[#333f48] hover:text-[#eceef1] hover:border-[#333f48]"
                     >
                       {t('contactMe')}

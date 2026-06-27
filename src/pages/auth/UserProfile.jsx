@@ -493,7 +493,7 @@ const UserProfile = () => {
         <div className="bg-[#eceef1] rounded-xl border border-gray-300 shadow-xl p-6">
           <div className="mb-6 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
             <div>
-              <h2 className="font-racingSansOne text-xl font-bold">
+              <h2 className="font-racingSansOne text-xl font-medium">
                 Tervetuloa, {userProfile.displayName || currentUser.email}
               </h2>
               <p className="font-oswaldVariable text-lg text-gray-600">

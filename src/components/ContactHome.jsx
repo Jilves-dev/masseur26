@@ -138,7 +138,7 @@ const ContactHome = () => {
               ></textarea>
               <button
                 className="group border-[#b9975b] border-1 shadow-[#333f48] shadow px-6 py-3 my-8 rounded-md text-[#333f48]
-                           hover:bg-[#333f48] hover:text-[#eceef1] hover:border-[#e31837] mx-auto flex items-center font-oswaldVariable text-base sm:text-lg"
+                           hover:bg-[#333f48] hover:text-[#eceef1] hover:border-[#e31837] mx-auto flex items-center font-racingSansOne text-base sm:text-lg"
               >
                 {t('collaborate')}
               </button>
