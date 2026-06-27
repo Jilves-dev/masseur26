@@ -86,7 +86,7 @@ const OrderCheckout = () => {
       <section className="py-12 md:py-24 min-h-screen font-oswaldVariable">
         <div className="container px-4 mx-auto">
           <div className="bg-[#eceef1] rounded-xl border border-gray-200 shadow-xl p-8 max-w-lg mx-auto text-center">
-            <h1 className="font-racingSansOne text-3xl font-normal mb-6">Your cart is empty</h1>
+            <h1 className="font-racingSansOne text-3xl font-medium mb-6">Your cart is empty</h1>
             <p className="font-oswaldVariable mb-6">
               Please add items to your cart before checking out.
             </p>
@@ -399,7 +399,7 @@ const OrderCheckout = () => {
           {/* Shipping and Payment Form */}
 
           <div className="bg-[#eceef1] rounded-xl border border-gray-200 shadow-xl pl-4 pr-4 py-8">
-            <h2 className="font-racingSansOne text-2xl font-bold mb-6">
+            <h2 className="font-racingSansOne text-2xl font-medium mb-6">
               Toimitus- ja maksutiedot
             </h2>
 
@@ -546,7 +546,7 @@ const OrderCheckout = () => {
                 </select>
               </div>
 
-              <h3 className="font-racingSansOne text-xl font-bold mb-4">Maksutapa</h3>
+              <h3 className="font-racingSansOne text-xl font-medium mb-4">Maksutapa</h3>
 
               <div className="mb-8 space-y-4">
                 <div className="flex items-center">
@@ -653,7 +653,7 @@ const OrderCheckout = () => {
           {/* Order Summary */}
 
           <div className="bg-[#eceef1] rounded-xl border border-gray-200 shadow-xl p-8">
-            <h2 className="font-racingSansOne text-2xl font-bold mb-6">Tilauksesi</h2>
+            <h2 className="font-racingSansOne text-2xl font-medium mb-6">Tilauksesi</h2>
             <div className="space-y-6 mb-8">
               {cart.map((item) => (
                 <div key={item.id} className="flex items-center space-x-4">
