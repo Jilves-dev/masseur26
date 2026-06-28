@@ -13,7 +13,7 @@ const TopBar = () => {
       <div className="block md:hidden">
         {/* Ylärivi: Summer Sale */}
         <div className="flex items-center justify-center py-2 px-2">
-          <span className="text-white text-sm font-zaslia font-medium flex items-center gap-1">
+          <span className="text-white text-sm font-oswaldVariable font-medium flex items-center gap-1">
             <FaSun className="text-yellow-400 text-base" />
             KESÄ 2026 ALE
             <FaSun className="text-yellow-400 text-base" />
@@ -22,7 +22,7 @@ const TopBar = () => {
 
         {/* Alarivi: Free shipping */}
         <div className="flex items-center justify-center py-2 px-2">
-          <span className="text-white text-md font-librecaslon font-medium flex items-center gap-1">
+          <span className="text-white text-md font-oswaldVariable font-medium flex items-center gap-1">
             Ilmainen postitus🚚kaikkiin yli €150 ostoksiin
           </span>
         </div>
@@ -30,7 +30,7 @@ const TopBar = () => {
 
       {/* Desktop Layout */}
       <div className="hidden md:block p-2">
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full font-oswaldVariable">
           <div className="flex items-center">
             <Link className="mr-2 text-white uppercase border-l-2 pr-4 pl-4 border-r-2 text-sm hover:bg-red-700 transition-colors">
               ENGLISH

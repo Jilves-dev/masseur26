@@ -1,6 +1,6 @@
 import './Home.css';
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import heroImage from '../assets/h1.png';
 import ContactHome from '../components/ContactHome';
 {/*import About from './About';*/}
@@ -68,6 +68,46 @@ function App() {
   };
 
   return (
+
+   <div> 
+
+   <div className="flex sm:hidden flex-row items-center justify-center w-full px-2 py-1 relative overflow-x-auto">
+            <ul className="flex flex-row flex-nowrap items-center justify-center gap-1 font-racingSansOne font-normal text-xs whitespace-nowrap">
+                <li>
+                  <a
+                    href="#palvelut"
+                    onClick={() => setArrowRotated(false)}
+                    className="text-[#b9975b] hover:text-[#333f48]"
+                  >
+                    Palvelut
+                  </a>
+                </li>
+                <li>
+                  <Link to="/shop" className="text-[#b9975b] hover:text-[#333f48] font-racingSansOne">
+                    Kauppa
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" className="text-[#b9975b] hover:text-[#333f48] font-racingSansOne">
+                    Meistä
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/booking" className="text-[#b9975b] hover:text-[#333f48] font-racingSansOne">
+                    Ajanvaraus
+                    </Link>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="text-[#b9975b] hover:text-[#333f48]"
+                  > Yhteydenotto
+                  </a>
+                </li>
+              </ul>
+          </div>
+
+
     <div className="w-full flex flex-col items-center overflow-x-hidden">
       {/* Hero section */}
       <main className="relative w-full">
@@ -373,7 +413,7 @@ function App() {
     </div>
   ))}
 </div>*/}
-
+ </div>
     </div>
   );
 }

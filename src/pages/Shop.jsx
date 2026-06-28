@@ -960,13 +960,13 @@ const Shop = () => {
                         ) : (
                           <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-[#333f48] text-[#eceef1]">
                             <span className="text-4xl text-[#b9975b]">{product.icon}</span>
-                            <span className="font-racingSansOne text-2xl font-bold">€{product.price}</span>
+                            <span className="font-racingSansOne text-2xl font-medium">€{product.price}</span>
                           </div>
                         )}
 
                         {product.tag && (
                           <div className="absolute top-3 left-3 z-20 bg-[#b9975b] font-racingSansOne text-[#eceef1]
-                                          text-xs font-semibold uppercase tracking-wide px-2 py-0.5 shadow">
+                                          text-xs font-medium uppercase tracking-wide px-2 py-0.5 shadow">
                             {product.tag}
                           </div>
                         )}

@@ -907,7 +907,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   /* Better touch targets */
-  button, a {
+  button {
     min-height: 44px;
     min-width: 44px;
     display: flex;
@@ -939,7 +939,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.50rem 1rem;
+    padding: 0.125rem 1rem;
     background-color: #eceef1;
     font-family: var(--font-oswaldVariable);
   }

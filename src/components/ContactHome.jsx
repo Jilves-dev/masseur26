@@ -149,19 +149,19 @@ const ContactHome = () => {
 
       <div className="flex justify-center md:hidden w-full">
               <div className="grid grid-cols-3 gap-6 w-fit mx-auto">
-                <div className="flex items-center justify-center text-[#e31837]">
+                <div className="flex items-center justify-center text-[#b9975b]">
                   <a href="https://wa.me/358405142954?text=How%20can%20I%20help%20you%3F">
-                    <FaWhatsapp size={38} />
+                    <FaWhatsapp size={34} />
                   </a>
                 </div>
-                    <div className="flex items-center justify-center text-[#e31837]">
+                    <div className="flex items-center justify-center text-[#b9975b]">
                   <a href="">
-                    <FaFacebook size={38} />
+                    <FaFacebook size={34} />
                   </a>
                 </div>
-                <div className="flex items-center justify-center text-[#e31837]">
+                <div className="flex items-center justify-center text-[#b9975b]">
                   <a href="">
-                    <FaInstagram size={38} />
+                    <FaInstagram size={34} />
                   </a>
                 </div>
               </div>

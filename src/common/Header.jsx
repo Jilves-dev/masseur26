@@ -134,8 +134,8 @@ const Header = () => {
 
             {/* KESKI: Logo */}
             <Link className="mobile-logo-center font-racingSansOne" to="/">
-              <span className="font-medium text-3xl text-[#e31837]">URHEILU</span>
-              <span className="font-medium text-3xl text-[#333f48]">HIEROJAT</span>
+              <span className="font-medium text-2xl text-[#b9975b]">URHEILU</span>
+              <span className="font-medium text-2xl text-[#333f48]">HIEROJAT</span>
             </Link>
 
             {/* OIKEA: Ostoskori */}
@@ -321,7 +321,7 @@ const Header = () => {
 
             {/* Logo menussa */}
             <Link
-              className="modal-logotext-xl font-racingSansOne font-extrabold flex items-center pl-2"
+              className="modal-logotext-xl font-racingSansOne font-medium flex items-center pl-2"
               to="/"
               onClick={() => closeMenuAndNavigate('/')}
             >

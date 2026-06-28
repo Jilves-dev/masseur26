@@ -149,7 +149,7 @@ const OrderConfirmation = () => {
           </div>
         ) : error ? (
           <div className="text-center py-12">
-            <h2 className="font-racingSansOne text-3xl font-bold text-red-600 mb-4">Virhe</h2>
+            <h2 className="font-racingSansOne text-3xl font-medium text-red-600 mb-4">Virhe</h2>
             <p className="text-gray-700 mb-6">{error}</p>
             <Link
               to="/"
@@ -177,7 +177,7 @@ const OrderConfirmation = () => {
                   />
                 </svg>
               </div>
-              <h1 className="font-racingSansOne text-4xl font-bold mb-2">Kiitos tilauksestasi!</h1>
+              <h1 className="font-racingSansOne text-4xl font-medium mb-2">Kiitos tilauksestasi!</h1>
               <p className="text-lg text-gray-600">Tilausnumero: #{orderId}</p>
               <p className="text-lg text-gray-600 mt-2">
                 Tilausaika: {formatDate(order.createdAt)}
@@ -185,7 +185,7 @@ const OrderConfirmation = () => {
             </div>
 
             <div className="border-t border-gray-200 pt-6 mb-6">
-              <h2 className="font-racingSansOne text-2xl font-bold mb-4">Tilauksen tiedot</h2>
+              <h2 className="font-racingSansOne text-2xl font-medium mb-4">Tilauksen tiedot</h2>
 
               <div className="space-y-4 mb-6">
                 {(order.orderItems || []).map((item, index) => {
@@ -253,7 +253,7 @@ const OrderConfirmation = () => {
                       <span className="text-gray-600">Toimitus</span>
                       <span>{formatCurrency(shippingFee)}</span>
                     </div>
-                    <div className="flex justify-between font-bold text-lg">
+                    <div className="flex justify-between font-medium text-lg">
                       <span>Yhteensä</span>
                       <span>
                         {formatCurrency(finalTotalAmount + shippingFee)}
@@ -279,7 +279,7 @@ const OrderConfirmation = () => {
             </div>
 
             <div className="border-t border-gray-200 pt-6 mb-6">
-              <h2 className="font-racingSansOne text-2xl font-bold mb-4">Toimitustiedot</h2>
+              <h2 className="font-racingSansOne text-2xl font-medium mb-4">Toimitustiedot</h2>
               {order.shippingDetails || order.customerDetails ? (
                 <>
                   <p className="mb-1 text-lg">
@@ -315,7 +315,7 @@ const OrderConfirmation = () => {
             </div>
 
             <div className="border-t border-gray-200 pt-6 mb-6">
-              <h2 className="font-racingSansOne text-2xl font-bold mb-4">Maksutapa</h2>
+              <h2 className="font-racingSansOne text-2xl font-medium mb-4">Maksutapa</h2>
               <p className="text-lg">
                 {order.paymentMethod === 'credit-card'
                   ? 'Luottokortti'
@@ -345,7 +345,7 @@ const OrderConfirmation = () => {
           </>
         ) : (
           <div className="text-center py-12">
-            <h2 className="font-racingSansOne text-lg font-bold text-red-600 mb-4">
+            <h2 className="font-racingSansOne text-lg font-medium text-red-600 mb-4">
               Tilausta ei löydy
             </h2>
             <Link
