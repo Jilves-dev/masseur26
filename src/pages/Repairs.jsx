@@ -138,7 +138,7 @@ const Repairs = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-[#333f48]/35" />
-          <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
+          <div className="relative z-10 h-full flex flex-col items-center justify-center pt-4 px-4 text-center">
             <motion.h1
               variants={fadeUp(0.1)}
               initial="hidden"
@@ -175,9 +175,9 @@ const Repairs = () => {
                 <FaCalendarAlt className="text-xl" />
                 Varaa hierontaaika
               </button>
-              <p className="font-oswaldVariable text-[#eceef1]/70 text-sm mt-3">
+                 {/*<p className="font-oswaldVariable text-[#eceef1]/70 text-sm mt-3">
                 Online-ajanvarauskalenteri tulossa pian — ota yhteyttä ja varaa aika nyt
-              </p>
+              </p>*/}
             </motion.div>
           </div>
         </div>
@@ -258,7 +258,7 @@ const Repairs = () => {
                   }`}
               >
                 {service.tag && (
-                  <span className="absolute -top-3 left-4 bg-[#eceef1] text-[#b9975b] text-xs font-bold px-3 py-1 rounded-full tracking-wide">
+                  <span className="absolute -top-3 left-4 bg-[#eceef1] text-[#b9975b] border border-[#e31837] text-xs font-bold px-3 py-1 rounded-full tracking-wide">
                     {service.tag}
                   </span>
                 )}

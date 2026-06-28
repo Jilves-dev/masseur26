@@ -906,11 +906,26 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px;
   }
   
-  /* Better touch targets */
+  /* Better touch targets
+     HUOM: pelkkä "a"-selektori EI käy tähän - plain CSS (ei Tailwindin
+     @layer-kerroksessa) voittaa AINA Tailwindin utility-luokat kuten
+     "block", riippumatta spesifisyydestä, ja rikkoo siten kaikki
+     linkit jotka käyttävät niitä (esim. pystysuorat valikkolinkit
+     ahtautuisivat samalle riville). Käytä siksi omaa luokkaa ja lisää
+     se vain ikoni-linkkeihin (esim. Header.jsx:n haku/kirjautumis-
+     ikonit) joissa min-width/height-kosketuskohde on tarpeen. */
   button {
     min-height: 44px;
     min-width: 44px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
   }

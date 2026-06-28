@@ -40,11 +40,11 @@ const AdminMobileHeader = ({ pageTitle }) => {
   return (
     <>
       {/* MOBILE HEADER - Näkyy vain sm ja pienemmillä */}
-      <div className="md:hidden bg-[#FFFFFF]">
+      <div className="md:hidden bg-[#eceef1]">
         {/* Hamburger nappi - Fixed position */}
         <button
           onClick={handleBackToMenu}
-          className={`fixed left-4 z-50 w-10 h-10 bg-[#FFFFFF] rounded-full 
+          className={`fixed left-4 z-50 w-10 h-10 bg-[#eceef1] rounded-full 
           shadow-xl flex items-center justify-center text-black hover:text-[#A30B2E] 
           transition-all duration-300 ease-in-out 
           ${isScrolled ? 'top-4' : 'top-22'}`}

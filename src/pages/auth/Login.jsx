@@ -87,7 +87,7 @@ const Login = () => {
               <div className="flex justify-between">
                 <button
                   onClick={handleForceLogout}
-                  className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white font-bold py-2 px-4 rounded"
+                  className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white font-medium py-2 px-4 rounded"
                 >
                   Log out
                 </button>
@@ -99,7 +99,7 @@ const Login = () => {
                         : '/profile'
                     )
                   }
-                  className="bg-blue-600 hover:bg-blue-700 font-oswaldVariable text-white font-bold py-2 px-4 rounded"
+                  className="bg-blue-600 hover:bg-blue-700 font-oswaldVariable text-white font-medium py-2 px-4 rounded"
                 >
                   Go to profile
                 </button>
@@ -189,14 +189,14 @@ const Login = () => {
 
               <div className="flex items-center justify-between">
                 <button
-                  className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-[#e31837] hover:bg-[#333f48] font-oswaldVariable text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                   disabled={loading}
                 >
                   {loading ? 'Sign in...' : 'Sign in'}
                 </button>
                 <Link
-                  className="inline-block align-baseline font-oswaldVariable font-bold text-sm text-[#e31837] hover:text-[#333f48]"
+                  className="inline-block align-baseline font-oswaldVariable font-medium text-sm text-[#e31837] hover:text-[#333f48]"
                   to="/reset-password"
                 >
                   Forget Password?

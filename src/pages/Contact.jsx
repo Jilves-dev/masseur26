@@ -292,7 +292,7 @@ const Contact = () => {
                 <div className="flex justify-center mb-4">
                   <div className="text-2xl text-[#b9975b]">{item.icon}</div>
                 </div>
-                <h3 className="text-xl font-racingSansOne font-semibold sm:font-medium mb-2">
+                <h3 className="text-xl font-racingSansOne font-medium sm:font-medium mb-2">
                   {item.title}
                 </h3>
                 <p className="font-oswaldVariable font-medium mb-1">{item.info}</p>

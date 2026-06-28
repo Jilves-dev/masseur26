@@ -62,7 +62,7 @@ export default function About() {
             <p className="font-oswaldVariable text-sm text-[#b9975b] uppercase tracking-widest mb-3">
               {t('aboutTagline')}
             </p>
-            <h2 className="font-racingSansOne text-5xl sm:text-7xl text-[#333f48] leading-tight">
+            <h2 className="font-racingSansOne text-4xl sm:text-6xl text-[#333f48] leading-tight break-words">
               {t('aboutHeroTitle')}
             </h2>
             <p className="mt-6 font-oswaldVariable text-gray-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">

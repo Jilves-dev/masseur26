@@ -325,7 +325,7 @@ const Header = () => {
               to="/"
               onClick={() => closeMenuAndNavigate('/')}
             >
-              <span className="text-[#e31837] text-3xl">URHEILU</span>
+              <span className="text-[#b9975b] text-3xl">URHEILU</span>
               <span className="text-[#333f48] text-3xl">HIEROJA</span>
             </Link>
           </div>
@@ -335,11 +335,11 @@ const Header = () => {
             ==================================== */}
           <div className="flex-1 overflow-y-auto bg-[#eceef1]">
             <div className="flex-shrink-0 flex items-center justify-center p-4 bg-[#eceef1]">
-              <div className="flex items-center justify-center w-full max-w-xs gap-2">
+              <div className="flex flex-nowrap items-center justify-center w-full max-w-xs gap-2">
                 {/* Haku */}
                 <Link
                   to="/shop"
-                  className="text-xl text-[#333f48] hover:text-[#e31837]"
+                  className="icon-touch-target text-xl text-[#333f48] hover:text-[#e31837]"
                   onClick={() => closeMenuAndNavigate('/shop')}
                   aria-label="Search"
                 >
@@ -350,7 +350,7 @@ const Header = () => {
                 {currentUser ? (
                   <Link
                     to={isAdmin() ? '/admin' : '/profile'}
-                    className="text-xl text-[#333f48] hover:text-[#e31837]"
+                    className="icon-touch-target text-xl text-[#333f48] hover:text-[#e31837]"
                     onClick={() =>
                       closeMenuAndNavigate(isAdmin() ? '/admin' : '/profile')
                     }
@@ -361,7 +361,7 @@ const Header = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-xl text-[#333f48] hover:text-[#e31837]"
+                    className="icon-touch-target text-xl text-[#333f48] hover:text-[#e31837]"
                     onClick={() => closeMenuAndNavigate('/login')}
                     aria-label="Login"
                   >
@@ -623,7 +623,6 @@ const Header = () => {
           </div>
         </div>
       )}
-
       <Sidebar isSidebarOpen={isSidebarOpen} closeSidebar={toggleSidebar} />
     </>
   );

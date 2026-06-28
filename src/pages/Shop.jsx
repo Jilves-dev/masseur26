@@ -433,10 +433,10 @@ const Shop = () => {
           {/* Skrollaava sisältö */}
           <div className="flex-1 overflow-y-auto bg-[#eceef1]">
             <div className="flex-shrink-0 flex items-center justify-center p-4 bg-[#eceef1]">
-              <div className="flex items-center justify-center w-full max-w-xs gap-2">
+              <div className="flex flex-nowrap items-center justify-center w-full max-w-xs gap-2">
                 <Link
                   to="/shop"
-                  className="text-xl text-[#333f48] hover:text-[#b9975b]"
+                  className="icon-touch-target text-xl text-[#333f48] hover:text-[#b9975b]"
                   onClick={() => closeMenuAndNavigate('/shop')}
                   aria-label="Search"
                 >
@@ -447,7 +447,7 @@ const Shop = () => {
                 {currentUser ? (
                   <Link
                     to={isAdmin() ? '/admin' : '/profile'}
-                    className="text-xl text-[#333f48] hover:text-[#b9975b]"
+                    className="icon-touch-target text-xl text-[#333f48] hover:text-[#b9975b]"
                     onClick={() =>
                       closeMenuAndNavigate(isAdmin() ? '/admin' : '/profile')
                     }
@@ -458,7 +458,7 @@ const Shop = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-xl text-[#333f48] hover:text-[#b9975b]"
+                    className="icon-touch-target text-xl text-[#333f48] hover:text-[#b9975b]"
                     onClick={() => closeMenuAndNavigate('/login')}
                     aria-label="Login"
                   >
