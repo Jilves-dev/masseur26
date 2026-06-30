@@ -43,19 +43,19 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
 
         <div
           className={`
-          fixed top-0 right-0 h-screen bg-[#FFFFFF] shadow-lg z-50 overflow-y-auto
+          fixed top-0 right-0 h-screen bg-[#eceef1] shadow-lg z-50 overflow-y-auto
           transition-transform duration-300 ease-in-out
           w-screen md:w-96
           ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}
-          font-librecaslon
+          font-oswaldVariable
         `}
         >
           {/* Sidebarin yläosa ja sulkemispainike */}
 
-          <div className="border-b border-[#B8F3FF] mb-4 p-4 flex justify-between items-center bg-[#FFFFFF]">
-            <h1 className="text-2xl font-medium">Your Cart</h1>
+          <div className="border-b border-[#b9975b]/30 mb-4 p-4 flex justify-between items-center bg-[#eceef1]">
+            <h1 className="font-racingSansOne text-2xl font-medium">Your Cart</h1>
             <span
-              className="cursor-pointer text-gray-600 hover:text-[#A30B2E] transition-colors"
+              className="cursor-pointer text-gray-600 hover:text-[#e31837] transition-colors"
               onClick={closeSidebar}
             >
               <FaTimes size={24} />
@@ -67,7 +67,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
                 <p className="text-xl font-medium mb-6">Your cart is empty</p>
                 <Link
                   to="/shop"
-                  className="bg-[#A30B2E] text-white py-3 px-6 rounded-md hover:bg-red-700 transition-colors inline-block font-medium"
+                  className="bg-[#e31837] text-white py-3 px-6 rounded-md hover:bg-[#333f48] transition-colors inline-block font-medium"
                   onClick={closeSidebar}
                 >
                   Start Shopping
@@ -89,7 +89,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
                             className="w-full h-full object-cover rounded-md"
                           />
                           <span
-                            className="absolute -top-2 -left-2 bg-white rounded-full p-1 shadow-md text-gray-400 hover:text-[#A30B2E] cursor-pointer border border-gray-200 transition-colors"
+                            className="absolute -top-2 -left-2 bg-white rounded-full p-1 shadow-md text-gray-400 hover:text-[#e31837] cursor-pointer border border-gray-200 transition-colors"
                             onClick={() => removeItemFromCart(item.id)}
                           >
                             <FaTimes size={12} />
@@ -110,10 +110,10 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
                         </div>
                       </div>
                       <div className="flex flex-col justify-between items-end py-1">
-                        <p className="font-medium text-[#A30B2E]">
+                        <p className="font-medium text-[#e31837]">
                           {parseFloat(item.price).toFixed(2)}€
                         </p>
-                        <p className="font-bold text-[#A30B2E]">
+                        <p className="font-bold text-[#e31837]">
                           {(parseFloat(item.price) * item.quantity).toFixed(2)}€
                         </p>
                       </div>
@@ -124,7 +124,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
                 <div className="border-t border-gray-200 pt-4 mt-2 mb-6">
                   <div className="flex justify-between items-center text-xl font-bold">
                     <span className="text-gray-800">Total amount:</span>
-                    <span className="text-[#A30B2E]">
+                    <span className="text-[#e31837]">
                       {totalAmount.toFixed(2)}€
                     </span>
                   </div>
@@ -135,14 +135,14 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
 
                 <div className="flex flex-col gap-3">
                   <button
-                    className="bg-[#A30B2E] hover:bg-red-700 text-white py-3 px-4 w-full rounded-md font-medium transition-colors text-lg"
+                    className="bg-[#e31837] hover:bg-[#333f48] text-white py-3 px-4 w-full rounded-md font-medium transition-colors text-lg"
                     onClick={handleCheckout}
                   >
                     Checkout
                   </button>
 
                   <button
-                    className="border border-[#A30B2E] text-[#A30B2E] hover:bg-red-50 py-3 px-4 w-full rounded-md font-medium transition-colors"
+                    className="border border-[#e31837] text-[#e31837] hover:bg-[#e31837] hover:text-[#eceef1] py-3 px-4 w-full rounded-md font-medium transition-colors"
                     onClick={closeSidebar}
                   >
                     Continue Shopping

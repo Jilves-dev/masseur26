@@ -235,5 +235,9 @@ export const generateStars = (rating, maxStars = 5) => {
 // Kategorialista
 export const CATEGORIES = {
   GIFT_CARDS: 'Lahjakortit',
-  SUPPLEMENTS: 'Lisäravinteet',
+  PROTEINS: 'Proteiinit',
+  CREATINE: 'Kreatiini',
+  AMINO_ACIDS: 'Aminohapot',
+  VITAMINS: 'Vitamiinit & Omega',
+  RECOVERY: 'Palautuminen',
 };

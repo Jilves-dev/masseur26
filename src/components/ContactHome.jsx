@@ -3,8 +3,10 @@ import './ContactHome.css';
 import whatsappz from '../assets/whatsappz.png';
 import paytrailkumppani from '../assets/paytrailkumppani.png';
 import { useTranslation } from '../context/LanguageContext';
-import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
 import linkedin from '../assets/linkedin-logo-png-2026.png';
+import whatsappIcon from '../assets/whatsapp.png';
+import facebookIcon from '../assets/facebook.png';
+import instagramIcon from '../assets/instagram.png';
 
 {/*const Footer = ({ title }) => {
   const isArray = Array.isArray(title);
@@ -147,21 +149,21 @@ const ContactHome = () => {
         </div>
       </section>
 
-      <div className="flex justify-center md:hidden w-full">
+            <div className="flex justify-center md:hidden w-full">
               <div className="grid grid-cols-3 gap-6 w-fit mx-auto">
-                <div className="flex items-center justify-center text-[#b9975b]">
+                <div className="flex items-center justify-center">
                   <a href="https://wa.me/358405142954?text=How%20can%20I%20help%20you%3F">
-                    <FaWhatsapp size={34} />
+                    <img src={whatsappIcon} alt="WhatsApp" className="w-9 h-9 object-contain" />
                   </a>
                 </div>
-                    <div className="flex items-center justify-center text-[#b9975b]">
+                <div className="flex items-center justify-center">
                   <a href="">
-                    <FaFacebook size={34} />
+                    <img src={facebookIcon} alt="Facebook" className="w-9 h-9 object-contain" />
                   </a>
                 </div>
-                <div className="flex items-center justify-center text-[#b9975b]">
+                <div className="flex items-center justify-center">
                   <a href="">
-                    <FaInstagram size={34} />
+                    <img src={instagramIcon} alt="Instagram" className="w-9 h-9 object-contain" />
                   </a>
                 </div>
               </div>

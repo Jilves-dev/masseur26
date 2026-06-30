@@ -130,7 +130,7 @@ const AdminDashboard = () => {
   return (
     <div>
       {/* ✅ Admin Mobile Header - Näkyy vain mobiilinäkymässä*/}
-      <AdminMobileHeader pageTitle="Admin Dashboard" />
+      <AdminMobileHeader pageTitle="Ylläpitäjän hallintapaneeli" />
 
       {/* ✅ Normaali Header - Näkyy vain desktop-näkymässä */}
       <div className="hidden md:block">
@@ -173,7 +173,7 @@ const AdminDashboard = () => {
         {/* Tilastolaatikot */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Tuotteet</h2>
+            <h2 className="font-racingSansOne text-xl font-medium mb-2">Tuotteet</h2>
             <p className="text-3xl font-bold text-[#e31837]">{productCount}</p>
             <Link
               to="/admin/products"
@@ -184,7 +184,7 @@ const AdminDashboard = () => {
           </div>
 
           <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Tilaukset</h2>
+            <h2 className="font-racingSansOne text-xl font-medium mb-2">Tilaukset</h2>
             <p className="text-3xl font-bold text-[#e31837]">{orderCount}</p>
             <Link
               to="/admin/orders"
@@ -195,7 +195,7 @@ const AdminDashboard = () => {
           </div>
 
           <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Käyttäjät</h2>
+            <h2 className="font-racingSansOne text-xl font-medium mb-2">Käyttäjät</h2>
             <p className="text-3xl font-bold text-[#e31837]">{userCount}</p>
             <Link
               to="/admin/users"
@@ -206,7 +206,7 @@ const AdminDashboard = () => {
           </div>
 
           <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Varaukset</h2>
+            <h2 className="font-racingSansOne text-xl font-medium mb-2">Varaukset</h2>
             <p className="text-3xl font-bold text-[#e31837]">📅</p>
             <Link
               to="/admin/bookings"
@@ -217,7 +217,7 @@ const AdminDashboard = () => {
           </div>
 
           <div className="bg-[#eceef1] border border-gray-300 rounded-lg shadow-xl p-6">
-            <h2 className="font-racingSansOne text-xl font-semibold mb-2">Kalenteri</h2>
+            <h2 className="font-racingSansOne text-xl font-medium mb-2">Kalenteri</h2>
             <p className="text-3xl font-bold text-[#e31837]">🗓</p>
             <Link
               to="/admin/availability"
@@ -230,7 +230,7 @@ const AdminDashboard = () => {
 
         {/* Viimeisimmät tilaukset */}
         <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-          <h2 className="font-racingSansOne text-xl font-semibold mb-4">Viimeisimmät tilaukset</h2>
+          <h2 className="font-racingSansOne text-xl font-medium mb-4">Viimeisimmät tilaukset</h2>
 
           {recentOrders.length === 0 ? (
             <p className="text-gray-500 text-base">Ei tilauksia</p>

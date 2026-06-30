@@ -17,6 +17,7 @@ import {
   deleteObject,
 } from 'firebase/storage';
 import { db, storage } from '../../firebase/firebase';
+import { CATEGORIES } from '../../services/productService';
 import AdminMobileHeader from '../../common/AdminMobileHeader';
 import Header from '../../common/Header';
 
@@ -220,7 +221,7 @@ const ProductManager = () => {
   return (
     <div>
       {/* ✅ Admin Mobile Header - Näkyy vain mobiilinäkymässä*/}
-      <AdminMobileHeader pageTitle="Product manager" />
+      <AdminMobileHeader pageTitle="Tuotteiden hallinta" />
       {/* ✅ Normaali Header - Näkyy vain desktop-näkymässä */}
       <div className="hidden md:block">
         <Header />
@@ -388,9 +389,9 @@ const ProductManager = () => {
                       required
                     >
                       <option value="">Valitse kategoria</option>
-                      <option value="Bikes">Bikes</option>
-                      <option value="Parts">Parts</option>
-                      <option value="Repairs">Repairs</option>
+                      {Object.values(CATEGORIES).map((cat) => (
+                        <option key={cat} value={cat}>{cat}</option>
+                      ))}
                     </select>
                   </div>
                 </div>

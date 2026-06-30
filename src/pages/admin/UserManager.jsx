@@ -212,7 +212,7 @@ const UserManager = () => {
   return (
     <div>
       {/* ✅ Admin Mobile Header - Näkyy vain mobiilinäkymässä*/}
-      <AdminMobileHeader pageTitle="User manager" />
+      <AdminMobileHeader pageTitle="Käyttäjien hallinta" />
 
       {/* ✅ Normaali Header - Näkyy vain desktop-näkymässä */}
       <div className="hidden md:block">
@@ -229,7 +229,7 @@ const UserManager = () => {
         {/* Tilastot */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
           <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-[#e31837]">
+            <h3 className="font-racingSansOne text-lg font-medium text-[#e31837]">
               Käyttäjiä yhteensä
             </h3>
             <p className="text-3xl font-bold text-[#e31837]">
@@ -238,7 +238,7 @@ const UserManager = () => {
           </div>
 
           <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-[#0BA334]">
+            <h3 className="font-racingSansOne text-lg font-medium text-[#0BA334]">
               Ylläpitäjät
             </h3>
             <p className="text-3xl font-bold text-[#0BA334]">
@@ -247,14 +247,14 @@ const UserManager = () => {
           </div>
 
           <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-[#0B7AA3]">Asiakkaat</h3>
+            <h3 className="font-racingSansOne text-lg font-medium text-[#0B7AA3]">Asiakkaat</h3>
             <p className="text-3xl font-bold text-[#0B7AA3]">
               {userStats.customerUsers}
             </p>
           </div>
 
           <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-[#7AA30B]">
+            <h3 className="font-racingSansOne text-lg font-medium text-[#7AA30B]">
               Uudet (7 pv)
             </h3>
             <p className="text-3xl font-bold text-[#7AA30B]">
@@ -263,7 +263,7 @@ const UserManager = () => {
           </div>
 
           <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-[#340BA3]">
+            <h3 className="font-racingSansOne text-lg font-medium text-[#340BA3]">
               Aktiiviset (30 pv)
             </h3>
             <p className="text-3xl font-bold text-[#340BA3]">
@@ -339,7 +339,7 @@ const UserManager = () => {
         {/* Käyttäjätaulukko */}
         <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl">
           <div className="px-6 py-4 border-b">
-            <h2 className="font-racingSansOne text-xl font-semibold">
+            <h2 className="font-racingSansOne text-xl font-medium">
               Käyttäjät ({filteredAndSortedUsers.length})
             </h2>
           </div>

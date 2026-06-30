@@ -444,7 +444,7 @@ const OrderDetail = () => {
             <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h2 className="font-racingSansOne text-xl font-semibold">Tilauksen tiedot</h2>
+                  <h2 className="font-racingSansOne text-xl font-medium">Tilauksen tiedot</h2>
                   <p className="text-gray-600">Tilaus #{order.id}</p>
                   <p className="text-sm text-gray-500">
                     Luotu:{' '}
@@ -478,7 +478,7 @@ const OrderDetail = () => {
 
             {/* Tuotteet */}
             <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Tilatut tuotteet</h3>
+              <h3 className="font-racingSansOne text-lg font-medium mb-4">Tilatut tuotteet</h3>
 
               <div className="space-y-3">
                 {order.orderItems.map((item, index) => (
@@ -548,7 +548,7 @@ const OrderDetail = () => {
           <div className="space-y-6">
             {/* Asiakastiedot */}
             <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Asiakastiedot</h3>
+              <h3 className="font-racingSansOne text-lg font-medium mb-4">Asiakastiedot</h3>
 
               <div className="space-y-3 text-base">
                 <div>
@@ -573,7 +573,7 @@ const OrderDetail = () => {
 
             {/* Toimitusosoite */}
             <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Toimitusosoite</h3>
+              <h3 className="font-racingSansOne text-lg font-medium mb-4">Toimitusosoite</h3>
 
               <div className="text-base">
                 <p>
@@ -596,7 +596,7 @@ const OrderDetail = () => {
 
             {/* Toiminnot */}
             <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl p-6">
-              <h3 className="font-racingSansOne text-lg font-semibold mb-4">Toiminnot</h3>
+              <h3 className="font-racingSansOne text-lg font-medium mb-4">Toiminnot</h3>
 
               <div className="space-y-4">
                 <div>
@@ -636,7 +636,7 @@ const OrderDetail = () => {
             {/* Debug-tiedot (kehitysympäristössä) 
           {process.env.NODE_ENV === 'development' && (
             <div className="bg-gray-100 rounded-lg p-4">
-              <h4 className="text-sm font-semibold mb-2">Debug-tiedot</h4>
+              <h4 className="text-sm font-medium mb-2">Debug-tiedot</h4>
               <div className="text-xs text-gray-600 space-y-1">
                 <div>Raw totalAmount: {order.amount || 'N/A'}</div>
                 <div>Normalized totalAmount: {order.totalAmount}</div>

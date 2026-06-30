@@ -459,7 +459,7 @@ const OrderManager = () => {
   return (
     <div>
       {/* ✅ Admin Mobile Header - Näkyy vain mobiilinäkymässä*/}
-      <AdminMobileHeader pageTitle="Order managment" />
+      <AdminMobileHeader pageTitle="Tilauksien hallinta" />
 
       {/* ✅ Normaali Header - Näkyy vain desktop-näkymässä */}
       <div className="hidden md:block">
@@ -470,7 +470,7 @@ const OrderManager = () => {
         {/* Tilastot */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">
+            <h3 className="font-racingSansOne text-lg font-medium text-gray-700">
               Tilauksia yhteensä
             </h3>
             <p className="text-3xl font-bold text-blue-600">
@@ -479,7 +479,7 @@ const OrderManager = () => {
           </div>
 
           <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">
+            <h3 className="font-racingSansOne text-lg font-medium text-gray-700">
               Kokonaismyynti
             </h3>
             <p className="text-3xl font-bold text-green-600">
@@ -488,14 +488,14 @@ const OrderManager = () => {
           </div>
 
           <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">Odottavat</h3>
+            <h3 className="font-racingSansOne text-lg font-medium text-gray-700">Odottavat</h3>
             <p className="text-3xl font-bold text-yellow-600">
               {summary.pendingOrders}
             </p>
           </div>
 
           <div className="bg-[#eceef1] border border-gray-300 rounded-2xl shadow-xl p-6">
-            <h3 className="font-racingSansOne text-lg font-semibold text-gray-700">Valmiit</h3>
+            <h3 className="font-racingSansOne text-lg font-medium text-gray-700">Valmiit</h3>
             <p className="text-3xl font-bold text-green-600">
               {summary.completedOrders}
             </p>
@@ -505,7 +505,7 @@ const OrderManager = () => {
         {/* Tilaukset */}
         <div className="bg-[#eceef1] rounded-lg border border-gray-300 shadow-xl">
           <div className="px-6 py-4 border-b">
-            <h2 className="font-racingSansOne text-xl font-semibold">
+            <h2 className="font-racingSansOne text-xl font-medium">
               Kaikki tilaukset ({orders.length})
             </h2>
           </div>

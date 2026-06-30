@@ -1121,11 +1121,18 @@ html, body {
   width: 100%;
 }
 
-/* Image optimization */
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+/* Image optimization
+   HUOM: @layer base on tärkeä - plain "img{}" (ei kerroksessa) voittaisi
+   AINA Tailwindin utility-luokat kuten h-full/w-auto/object-contain,
+   riippumatta spesifisyydestä, ja pakottaisi siten kaiken kuvan
+   height:auto-tilaan vaikka säiliö odottaisi täyttä korkeutta
+   (esim. Cart.jsx:n tuotekuvat aspect-square/h-32-laatikoissa). */
+@layer base {
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 /* Responsive tables */

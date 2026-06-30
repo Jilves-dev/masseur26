@@ -644,29 +644,16 @@ const Shop = () => {
                     KAIKKI TUOTTEET
                   </Link>
 
-                  <Link
-                    to={`/shop?category=${CATEGORIES.GIFT_CARDS}`}
-                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#b9975b] py-3 transition-colors border-b border-gray-100"
-                    onClick={() =>
-                      closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.GIFT_CARDS}`
-                      )
-                    }
-                  >
-                    LAHJAKORTIT
-                  </Link>
-
-                  <Link
-                    to={`/shop?category=${CATEGORIES.SUPPLEMENTS}`}
-                    className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#b9975b] py-3 transition-colors border-b border-gray-100"
-                    onClick={() =>
-                      closeMenuAndNavigate(
-                        `/shop?category=${CATEGORIES.SUPPLEMENTS}`
-                      )
-                    }
-                  >
-                    LISÄRAVINTEET
-                  </Link>
+                  {Object.values(CATEGORIES).map((cat) => (
+                    <Link
+                      key={cat}
+                      to={`/shop?category=${cat}`}
+                      className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#b9975b] py-3 transition-colors border-b border-gray-100"
+                      onClick={() => closeMenuAndNavigate(`/shop?category=${cat}`)}
+                    >
+                      {cat.toUpperCase()}
+                    </Link>
+                  ))}
                 </nav>
               </div>
 

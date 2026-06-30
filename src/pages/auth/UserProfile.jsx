@@ -483,7 +483,7 @@ const UserProfile = () => {
 
   return (
     <>
-      <AdminMobileHeader pageTitle="User Dashboard" />
+      <AdminMobileHeader pageTitle="Asiakas hallintapaneeli" />
       {/* ✅ Normaali Header - Näkyy vain desktop-näkymässä */}
       <div className="hidden md:block">
         <Header />
@@ -706,7 +706,7 @@ const UserProfile = () => {
           {activeTab === 'orders' && (
             <div>
               <div className="flex justify-between items-center mb-6">
-                <h3 className="font-racingSansOne text-xl font-semibold">
+                <h3 className="font-racingSansOne text-xl font-medium">
                   Tilaushistoria
                 </h3>
                 {orders.length > 0 && (
@@ -802,7 +802,7 @@ const UserProfile = () => {
                         <div className="px-6 py-4 border-b">
                           <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                             <div>
-                              <h4 className="font-racingSansOne font-semibold text-lg text-gray-900">
+                              <h4 className="font-racingSansOne font-medium text-lg text-gray-900">
                                 Tilaus #{order.id.slice(0, 8)}
                               </h4>
                               <p className="text-base text-gray-600">

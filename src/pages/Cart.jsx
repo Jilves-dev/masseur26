@@ -82,7 +82,7 @@ const Cart = () => {
         <div className="w-full px-4 py-16">
           <div className="max-w-md mx-auto text-center">
             <GiShoppingCart className="mx-auto text-5xl md:text-6xl text-gray-600 mb-4" />
-            <h2 className="font-racingSansOne text-xl md:text-2xl font-bold mb-4">
+            <h2 className="font-racingSansOne text-xl md:text-2xl font-medium mb-4">
               Your shopping cart is empty
             </h2>
             <p className="font-oswaldVariable text-gray-600 mb-6 md:mb-8 text-sm md:text-base">
