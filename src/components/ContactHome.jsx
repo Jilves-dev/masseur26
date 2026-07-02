@@ -6,7 +6,7 @@ import { useTranslation } from '../context/LanguageContext';
 import whatsappIcon from '../assets/whatsapp.png';
 import facebookIcon from '../assets/facebook.png';
 import instagramIcon from '../assets/instagram.png';
-import linkedIn from '../assets/instagram.png';
+import linkedIn from '../assets/linkedin.png';
 
 {/*const Footer = ({ title }) => {
   const isArray = Array.isArray(title);

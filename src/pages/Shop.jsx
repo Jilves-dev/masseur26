@@ -478,7 +478,7 @@ const Shop = () => {
                   >
                     <BiShoppingBag />
                     {totalItems > 0 && (
-                      <span className="absolute -top-2 -right-2 bg-[#e31837] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                      <span className="absolute -top-2 -right-2 bg-[#e31837] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-semibold">
                         {totalItems}
                       </span>
                     )}
@@ -736,7 +736,7 @@ const Shop = () => {
                 <li>
                   <button
                     onClick={() => filterByCategory('')}
-                    className={`w-full font-racingSansOne text-left px-2 py-1 rounded ${selectedCategory === '' ? 'text-[#b9975b]' : ''}`}
+                    className={`w-full font-racingSansOne font-medium text-left px-2 py-1 rounded ${selectedCategory === '' ? 'text-[#b9975b]' : ''}`}
                   >
                     Kaikki tuotteet
                   </button>
@@ -745,7 +745,7 @@ const Shop = () => {
                   <li key={key}>
                     <button
                       onClick={() => filterByCategory(value)}
-                      className={`w-full font-racingSansOne text-left px-2 py-1 rounded ${selectedCategory === value ? 'text-[#b9975b]' : ''}`}
+                      className={`w-full font-racingSansOne font-medium text-left px-2 py-1 rounded ${selectedCategory === value ? 'text-[#b9975b]' : ''}`}
                     >
                       {value}
                     </button>

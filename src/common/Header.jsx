@@ -178,7 +178,7 @@ const Header = () => {
 
               <li className="mr-5">
                 <Link className="hover:text-[#333f48]" to="/repairs">
-                  AJANVARAUS
+                  PALVELUT JA HINNAT
                 </Link>
               </li>
 
@@ -475,7 +475,7 @@ const Header = () => {
                 </div>
               )}
 
-              {/* ✅ UUSI: USER DASHBOARD - Näkyy vain kirjautuneille EI-ADMIN käyttäjille */}
+              {/* ✅ USER DASHBOARD - Näkyy vain kirjautuneille EI-ADMIN käyttäjille */}
               {currentUser && !isAdmin() && (
                 <div className="mb-8 font-racingSansOne border-b border-[#e31837] pb-6">
                   <h3 className="font-oswaldVariable text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
@@ -532,7 +532,7 @@ const Header = () => {
                     className="block text-xl font-oswaldVariable text-[#333f48] hover:text-[#e31837] py-2"
                     onClick={() => closeMenuAndNavigate('/repairs')}
                   >
-                    PALVELUT
+                    PALVELUT JA HINNAT
                   </Link>
 
                   <Link

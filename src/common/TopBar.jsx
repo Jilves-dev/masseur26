@@ -23,7 +23,7 @@ const TopBar = () => {
         {/* Alarivi: Free shipping */}
         <div className="flex items-center justify-center py-2 px-2">
           <span className="text-white text-md font-oswaldVariable font-medium flex items-center gap-1">
-            Ilmainen postitus🚚kaikkiin yli €150 ostoksiin
+            25% alennus kaikkiin yli €150 lahjakortti ostoksiin
           </span>
         </div>
       </div>
